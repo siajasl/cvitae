@@ -1,0 +1,258 @@
+{
+  "basics": {
+    "name": "Mark A. Conway-Greenslade",
+    "label": "Software Architect & Technology Leader",
+    "email": "macg@enthropic.io",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "siajsal",
+        "url": "https://github.com/siajsal"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "mark-conway-greenslade",
+        "url": "https://www.linkedin.com/in/mark-conway-greenslade/"
+      }
+    ],
+    "location": {
+      "city": "Zug",
+      "countryCode": "CH",
+      "country": "Switzerland"
+    },
+    "summary": "Swiss-based technology leader and polyglot software architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Proven at the frontier of R&D — quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing — and equally at home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Leadership grounded in values: integrity over expediency, candour with kindness, and the conviction that technology should serve people and planet — reflected in years devoted to climate research and privacy-preserving systems. Builds cultures of trust where exceptional teams do the best work of their careers. Member of the IEEE and the Central Bank Research Association."
+  },
+  "skills": [
+    {
+      "category": "Languages & Frameworks",
+      "items": [
+        "C#",
+        "Python",
+        "Rust",
+        "TypeScript",
+        "Bash",
+        "React",
+        "Vue",
+        "Svelte"
+      ]
+    },
+    {
+      "category": "Architecture",
+      "items": [
+        "Blockchain",
+        "Event Driven Architecture",
+        "Message Brokers",
+        "Micro-Services",
+        "Agentic Systems"
+      ]
+    },
+    {
+      "category": "Agentic (CCA-F Curriculum)",
+      "items": [
+        "Agentic Architecture",
+        "Claude Agent SDK",
+        "Model Context Protocol (MCP)",
+        "Prompt Engineering",
+        "Structured Output",
+        "Tool Design & Integration",
+        "Context & Reliability"
+      ]
+    },
+    {
+      "category": "Data & Messaging",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "Elasticsearch",
+        "Oracle",
+        "SQL Server",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "category": "DevOps & Platforms",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Ansible",
+        "AWS Cloud",
+        "Linux"
+      ]
+    },
+    {
+      "category": "Process",
+      "items": [
+        "Agile",
+        "Scrum",
+        "XP",
+        "Kanban",
+        "TDD",
+        "CI/CD",
+        "GitHub"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "position": "Head of Software",
+      "company": "QZabre @ ETH",
+      "location": "Zurich, Switzerland",
+      "startDate": "2021",
+      "endDate": "Present",
+      "summary": "Leading software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and led the adoption of Rust across the in-house QS3 platform. Mentor to both the engineering team and the executive suite.",
+      "url": "https://qzabre.com"
+    },
+    {
+      "position": "Head of Technical Strategy",
+      "company": "Inversed Tech",
+      "location": "Madrid, Spain",
+      "startDate": "2025",
+      "endDate": "2026",
+      "summary": "A hybrid role across an R&D company specialising in cryptography and distributed systems. As Rust engineer, built the genesis protocol and tooling for a biometric identity platform based on secure multi-party computation. As technical product owner, steered customer-facing projects including a regulated privacy-focused stablecoin and a privacy-preserving loyalty programme. As business development lead, represented the company at industry events, shaped strategy and tracked emerging trends."
+    },
+    {
+      "position": "Head of R&D",
+      "company": "Casper Association",
+      "location": "Zug, Switzerland",
+      "startDate": "2022",
+      "endDate": "2024",
+      "summary": "Led R&D in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup and a ZK light client.",
+      "url": "https://casper.network"
+    },
+    {
+      "position": "Software Architect",
+      "company": "Institut Pierre Simon Laplace @ La Sorbonne",
+      "location": "Paris, France",
+      "startDate": "2009",
+      "endDate": "2022",
+      "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project, and a driver of process change across the institute.",
+      "url": "https://www.ipsl.fr"
+    },
+    {
+      "position": "Software Architect",
+      "company": "Casper Labs AG",
+      "location": "Zug, Switzerland",
+      "startDate": "2019",
+      "endDate": "2021",
+      "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven, scalable fuzz-testing platform for surfacing consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
+    },
+    {
+      "position": "Software Architect",
+      "company": "Trinkler Software",
+      "location": "Zug, Switzerland",
+      "startDate": "2018",
+      "endDate": "2019",
+      "summary": "Helped build a decentralised finance ecosystem for a Zug start-up. Delivered a GraphQL trading API, a feature-rich command-line application, a multi-chain digital wallet and a Vue.js front end, while mentoring junior colleagues and reviewing ecosystem design."
+    },
+    {
+      "position": "Software Architect",
+      "company": "NTT Data",
+      "location": "Fribourg, Switzerland",
+      "startDate": "2008",
+      "endDate": "2013",
+      "summary": "Drove technology and process change in the Swiss arm of a global IT services company: introduced agile practice — Scrum, XP, CI/CD — designed a .NET SOA framework and mentored a seven-person development team.",
+      "url": "https://www.nttdata.com"
+    },
+    {
+      "position": "Software Architect",
+      "company": "British Telecom",
+      "location": "Dublin, Ireland",
+      "startDate": "2007",
+      "endDate": "2008",
+      "summary": "Designed and led development of an interoperable B2B order-processing web service, applying .NET 3.0, domain-driven design and SOA. Also designed a rules-based workflow engine.",
+      "url": "https://www.bt.com"
+    },
+    {
+      "position": "Software Engineer",
+      "company": "DeCare Systems",
+      "location": "Cork, Ireland",
+      "startDate": "2006",
+      "endDate": "2007",
+      "summary": "Designed and led development of a high-volume, real-time enrolment service for a US insurance provider, using an n-tier architecture with WCF communication between tiers."
+    },
+    {
+      "position": "Software Engineer",
+      "company": "SnapOn Diagnostics",
+      "location": "Cork, Ireland",
+      "startDate": "2006",
+      "endDate": "2006",
+      "summary": "Migrated C++ systems to .NET 2.0 under an agile process, and built web services sharing real-time automotive diagnostics across a suite of listening applications. Scrum, XP and TDD throughout."
+    },
+    {
+      "position": "Software Engineer",
+      "company": "Classic Car Collection",
+      "location": "Paris, France",
+      "startDate": "2005",
+      "endDate": "2005",
+      "summary": "Full-stack .NET engineer on a sales and management information system, covering architecture and design, web development, testing and deployment."
+    },
+    {
+      "position": "Earlier Career",
+      "company": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini",
+      "location": "UK",
+      "startDate": "1989",
+      "endDate": "2001",
+      "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini)."
+    }
+  ],
+  "education": [
+    {
+      "qualification": "Claude Certified Architect Foundation (in progress)",
+      "institution": "Anthropic",
+      "location": "",
+      "year": "2026"
+    },
+    {
+      "qualification": "Microsoft Certified Software Architect",
+      "institution": "Microsoft Campus",
+      "location": "San Francisco, USA",
+      "year": "2008"
+    },
+    {
+      "qualification": "B.Sc. Economics & Operational Research",
+      "institution": "University of Leeds",
+      "location": "Leeds, UK",
+      "year": "1989"
+    }
+  ],
+  "other": {
+    "residency": "UK & Ireland citizen with Swiss Residency Permit",
+    "civilStatus": "Married with 2 children.",
+    "languages": [
+      {
+        "language": "English",
+        "fluency": "fluent"
+      },
+      {
+        "language": "French",
+        "fluency": "fluent"
+      },
+      {
+        "language": "Italian",
+        "fluency": "advanced"
+      },
+      {
+        "language": "German",
+        "fluency": "average"
+      }
+    ],
+    "travel": [
+      "Japan",
+      "China",
+      "Europe",
+      "India",
+      "Middle-East",
+      "North & Central America"
+    ],
+    "interests": [
+      "Tennis",
+      "Cricket",
+      "Swimming",
+      "Cycling",
+      "Singing",
+      "History",
+      "Art"
+    ]
+  }
+}
