@@ -1,0 +1,1814 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Mark A. Conway-Greenslade — Software Architect &amp; Technology
+            Leader | Zug, Switzerland
+        </title>
+        <meta
+            name="description"
+            content="CV of Mark A. Conway-Greenslade: polyglot software architect and technology leader in Zug, Switzerland. Rust, blockchain, cryptography, quantum instrumentation and R&D leadership across Europe."
+        />
+        <meta name="author" content="Mark A. Conway-Greenslade" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#0b0f17" />
+        <link rel="canonical" href="https://markconwaygreenslade.com/" />
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://markconwaygreenslade.com/?lang=en"
+        />
+        <link
+            rel="alternate"
+            hreflang="fr"
+            href="https://markconwaygreenslade.com/?lang=fr"
+        />
+        <link
+            rel="alternate"
+            hreflang="zh"
+            href="https://markconwaygreenslade.com/?lang=zh"
+        />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://markconwaygreenslade.com/"
+        />
+        <!-- Open Graph / social -->
+        <meta property="og:type" content="profile" />
+        <meta
+            property="og:title"
+            content="Mark A. Conway-Greenslade — Software Architect & Technology Leader"
+        />
+        <meta
+            property="og:description"
+            content="Polyglot technologist: Rust, blockchain, cryptography, quantum instrumentation. 25+ years delivering complex systems across Europe."
+        />
+        <meta property="og:url" content="https://markconwaygreenslade.com/" />
+        <meta
+            property="og:image"
+            content="https://markconwaygreenslade.com/assets/headshot-web.jpg"
+        />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="zh_CN" />
+        <meta name="twitter:card" content="summary" />
+        <!-- Structured data for search engines & AI agents -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ProfilePage",
+                "dateModified": "2026-06-10",
+                "inLanguage": ["en", "fr", "zh"],
+                "mainEntity": {
+                    "@type": "Person",
+                    "name": "Mark A. Conway-Greenslade",
+                    "givenName": "Mark",
+                    "familyName": "Conway-Greenslade",
+                    "jobTitle": "Software Architect & Technology Leader",
+                    "email": "mailto:macg@enthropic.io",
+                    "image": "https://markconwaygreenslade.com/assets/headshot-web.jpg",
+                    "url": "https://markconwaygreenslade.com/",
+                    "sameAs": [
+                        "https://github.com/siajsal",
+                        "https://www.linkedin.com/in/mark-conway-greenslade/"
+                    ],
+                    "nationality": ["GB", "IE"],
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Zug",
+                        "addressCountry": "CH"
+                    },
+                    "knowsLanguage": ["en", "fr", "it", "de"],
+                    "knowsAbout": [
+                        "Rust",
+                        "C#",
+                        "Python",
+                        "TypeScript",
+                        "Blockchain",
+                        "Zero-Knowledge Cryptography",
+                        "Quantum Magnetometry Instrumentation",
+                        "Event-Driven Architecture",
+                        "Microservices",
+                        "Agile Process",
+                        "Agentic Engineering"
+                    ],
+                    "alumniOf": {
+                        "@type": "CollegeOrUniversity",
+                        "name": "University of Leeds",
+                        "sameAs": "https://www.leeds.ac.uk/"
+                    },
+                    "hasCredential": [
+                        {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "Microsoft Certified Software Architect",
+                            "dateCreated": "2008"
+                        },
+                        {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "B.Sc. Economics & Operational Research",
+                            "dateCreated": "1989"
+                        }
+                    ],
+                    "memberOf": [
+                        { "@type": "Organization", "name": "IEEE" },
+                        {
+                            "@type": "Organization",
+                            "name": "Central Bank Research Association"
+                        }
+                    ],
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "QZabre (ETH Zurich spin-off)",
+                        "location": "Zurich, Switzerland"
+                    }
+                }
+            }
+        </script>
+        <style>
+            @font-face {
+                font-family: "Lato";
+                src: url("fonts/Lato-Light.woff") format("woff");
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: "Lato";
+                src: url("fonts/Lato-Regular.woff") format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: "Lato";
+                src: url("fonts/Lato-Bold.woff") format("woff");
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: "Lato";
+                src: url("fonts/Lato-Black.woff") format("woff");
+                font-weight: 900;
+                font-style: normal;
+                font-display: swap;
+            }
+            :root {
+                --bg: #0b0f17;
+                --bg-2: #0f1522;
+                --panel: #121a2b;
+                --line: #1f2a40;
+                --line-strong: #4d6388;
+                --text: #dce3ec;
+                --muted: #93a1b5;
+                --accent: #7ef0a8;
+                --accent-2: #b48cff;
+                --mono:
+                    ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
+                    Menlo, Consolas, monospace;
+                --sans:
+                    "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
+                    "Noto Sans", "Noto Sans SC", sans-serif;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                html {
+                    scroll-behavior: auto;
+                }
+                *,
+                *::before,
+                *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: var(--sans);
+                line-height: 1.65;
+                font-size: 1rem;
+            }
+            .skip-link {
+                position: absolute;
+                left: -9999px;
+                top: 0;
+                background: var(--accent);
+                color: #04221b;
+                padding: 0.6rem 1rem;
+                font-weight: 700;
+                z-index: 100;
+                border-radius: 0 0 0.5rem 0;
+            }
+            .skip-link:focus {
+                left: 0;
+            }
+            a {
+                color: var(--accent);
+            }
+            a:focus-visible,
+            button:focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 3px;
+                border-radius: 2px;
+            }
+            /* header */
+            header.site {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: rgba(11, 15, 23, 0.88);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid var(--line);
+            }
+            .bar {
+                max-width: 62rem;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: 0.65rem 1.25rem;
+            }
+            @media (max-width: 46rem) {
+                header.site {
+                    position: static;
+                }
+                .bar {
+                    flex-wrap: wrap;
+                    row-gap: 0.45rem;
+                    padding: 0.55rem 1rem;
+                }
+                nav.main ul {
+                    gap: 0.75rem;
+                }
+                nav.main a {
+                    font-size: 0.78rem;
+                }
+            }
+            nav.main ul {
+                display: flex;
+                gap: 1.1rem;
+                list-style: none;
+                flex-wrap: wrap;
+            }
+            nav.main a {
+                color: var(--muted);
+                text-decoration: none;
+                font-family: var(--mono);
+                font-size: 0.82rem;
+            }
+            nav.main a:hover {
+                color: var(--accent);
+            }
+            .lang {
+                display: flex;
+                gap: 0.3rem;
+            }
+            .lang button {
+                background: transparent;
+                border: 1px solid var(--line-strong);
+                color: var(--muted);
+                font-family: var(--mono);
+                font-size: 0.78rem;
+                padding: 0.45rem 0.7rem;
+                min-width: 2.6rem;
+                min-height: 2rem;
+                border-radius: 0.35rem;
+                cursor: pointer;
+            }
+            .lang button[aria-pressed="true"] {
+                border-color: var(--accent);
+                color: var(--accent);
+            }
+            .lang button:hover {
+                color: var(--text);
+            }
+            /* hero */
+            .hero {
+                position: relative;
+                overflow: hidden;
+                border-bottom: 1px solid var(--line);
+                background:
+                    radial-gradient(
+                        60rem 30rem at 80% -10%,
+                        rgba(126, 240, 168, 0.07),
+                        transparent
+                    ),
+                    radial-gradient(
+                        50rem 28rem at 10% 110%,
+                        rgba(180, 140, 255, 0.08),
+                        transparent
+                    ),
+                    var(--bg-2);
+            }
+            #qubits {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .hero-in {
+                position: relative;
+                max-width: 62rem;
+                margin: 0 auto;
+                padding: 4rem 1.25rem 3.5rem;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 2.5rem;
+                align-items: center;
+            }
+            @media (max-width: 46rem) {
+                .hero-in {
+                    grid-template-columns: 1fr;
+                    padding-top: 2.2rem;
+                    gap: 1.2rem;
+                }
+            }
+            h1 {
+                font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+                font-weight: 900;
+                line-height: 1.15;
+                margin: 0.4rem 0 0.2rem;
+                color: #fff;
+            }
+            .tagline {
+                color: var(--accent);
+                font-family: var(--mono);
+                font-size: clamp(0.92rem, 2.4vw, 1.05rem);
+            }
+            .contact {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+                font-size: 0.88rem;
+                color: var(--muted);
+            }
+            .contact a {
+                text-decoration: none;
+            }
+            .contact a:hover {
+                text-decoration: underline;
+            }
+            .anim-toggle {
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+                z-index: 2;
+                width: 2.75rem;
+                height: 2.75rem;
+                border-radius: 50%;
+                border: 1px solid var(--line-strong);
+                background: rgba(8, 11, 18, 0.72);
+                color: var(--accent);
+                font-size: 1rem;
+                cursor: pointer;
+            }
+            .anim-toggle:hover {
+                border-color: var(--accent);
+            }
+            .headshot {
+                width: 13rem;
+                height: 13rem;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid var(--accent);
+                box-shadow:
+                    0 0 0 8px rgba(126, 240, 168, 0.07),
+                    0 20px 50px rgba(0, 0, 0, 0.5);
+            }
+            @media (max-width: 46rem) {
+                .headshot {
+                    width: 8.5rem;
+                    height: 8.5rem;
+                    justify-self: start;
+                    order: -1;
+                }
+            }
+            /* sections */
+            main {
+                max-width: 62rem;
+                margin: 0 auto;
+                padding: 0 1.25rem 4rem;
+            }
+            section {
+                padding-top: 3.2rem;
+            }
+            h2 {
+                font-family: var(--mono);
+                font-size: 1.15rem;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                margin-bottom: 1.3rem;
+            }
+            h2::before {
+                content: "//";
+                content: "//" / "";
+                color: var(--accent-2);
+            }
+            h2::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background: var(--line);
+            }
+            .lead {
+                color: var(--text);
+                max-width: 48rem;
+            }
+            /* skills */
+            .skills {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                gap: 0.9rem;
+                list-style: none;
+            }
+            .skills > li {
+                background: var(--panel);
+                border: 1px solid var(--line);
+                border-radius: 0.6rem;
+                padding: 0.9rem 1rem;
+            }
+            .skills h3 {
+                font-family: var(--mono);
+                font-size: 0.8rem;
+                color: var(--accent);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin-bottom: 0.5rem;
+            }
+            .chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.35rem;
+                list-style: none;
+            }
+            .chips li {
+                font-family: var(--mono);
+                font-size: 0.74rem;
+                color: var(--text);
+                background: rgba(126, 240, 168, 0.06);
+                border: 1px solid var(--line);
+                border-radius: 99px;
+                padding: 0.14rem 0.6rem;
+            }
+            /* timeline */
+            .timeline {
+                list-style: none;
+                position: relative;
+                margin-left: 0.4rem;
+            }
+            .timeline::before {
+                content: "";
+                position: absolute;
+                left: 0.45rem;
+                top: 0.3rem;
+                bottom: 0.3rem;
+                width: 2px;
+                background: linear-gradient(var(--accent), var(--accent-2));
+            }
+            .timeline > li {
+                position: relative;
+                padding: 0 0 2rem 2.2rem;
+            }
+            .timeline > li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.42rem;
+                width: 0.95rem;
+                height: 0.95rem;
+                border-radius: 50%;
+                background: var(--bg);
+                border: 2px solid var(--accent);
+                box-shadow: 0 0 10px rgba(126, 240, 168, 0.55);
+            }
+            .when {
+                font-family: var(--mono);
+                font-size: 0.78rem;
+                color: var(--accent-2);
+            }
+            h3.role {
+                font-size: 1.06rem;
+                color: #fff;
+                margin: 0.15rem 0 0.1rem;
+            }
+            .org {
+                color: var(--muted);
+                font-size: 0.9rem;
+                font-family: var(--mono);
+            }
+            .org a {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px dotted var(--line-strong);
+            }
+            .org a:hover {
+                color: var(--accent);
+                border-bottom-color: var(--accent);
+            }
+            .btn-cv {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 0.9rem;
+                padding: 0.5rem 1.05rem;
+                border: 1px solid var(--accent);
+                border-radius: 999px;
+                color: var(--accent);
+                text-decoration: none;
+                font-family: var(--mono);
+                font-size: 0.82rem;
+            }
+            .btn-cv:hover {
+                background: rgba(126, 240, 168, 0.08);
+            }
+            .timeline p {
+                margin-top: 0.45rem;
+                color: var(--text);
+                font-size: 0.93rem;
+                max-width: 46rem;
+            }
+            /* education + other */
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+                gap: 0.9rem;
+                list-style: none;
+            }
+            .cards > li {
+                background: var(--panel);
+                border: 1px solid var(--line);
+                border-radius: 0.6rem;
+                padding: 1rem 1.1rem;
+            }
+            .cards .y {
+                font-family: var(--mono);
+                color: var(--accent-2);
+                font-size: 0.8rem;
+            }
+            .cards h3 {
+                font-size: 0.98rem;
+                color: #fff;
+                margin: 0.15rem 0;
+            }
+            .cards p {
+                color: var(--muted);
+                font-size: 0.88rem;
+            }
+            dl.other {
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                gap: 0.5rem 1.4rem;
+                max-width: 46rem;
+            }
+            dl.other dt {
+                font-family: var(--mono);
+                color: var(--accent);
+                font-size: 0.85rem;
+                padding-top: 0.1rem;
+            }
+            dl.other dd {
+                color: var(--text);
+                font-size: 0.93rem;
+            }
+            @media (max-width: 34rem) {
+                dl.other {
+                    grid-template-columns: 1fr;
+                }
+                dl.other dd {
+                    margin-bottom: 0.4rem;
+                }
+            }
+            footer {
+                border-top: 1px solid var(--line);
+                padding: 1.6rem 1.25rem;
+                text-align: center;
+                color: var(--muted);
+                font-family: var(--mono);
+                font-size: 0.78rem;
+            }
+            footer p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+                flex-wrap: wrap;
+            }
+            a.icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                color: var(--muted);
+            }
+            a.icon:hover {
+                color: var(--accent);
+            }
+            .contact-icons {
+                display: flex;
+                gap: 0.4rem;
+                margin-top: 0.2rem;
+            }
+            @media print {
+                body {
+                    background: #fff;
+                    color: #111;
+                }
+                .lang,
+                #qubits {
+                    display: none;
+                }
+                .skills > li,
+                .cards > li {
+                    border-color: #ccc;
+                    background: #fff;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a class="skip-link" href="#main" data-i18n="ui.skip"
+            >Skip to content</a
+        >
+        <header class="site">
+            <div class="bar">
+                <nav class="main" aria-label="Primary">
+                    <ul>
+                        <li>
+                            <a href="#overview" data-i18n="nav.overview"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#experience" data-i18n="nav.experience"
+                                >Experience</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#skills" data-i18n="nav.skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#education" data-i18n="nav.education"
+                                >Education</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#other" data-i18n="nav.other">Other</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div
+                    class="lang"
+                    role="group"
+                    aria-label="Language / Langue / 语言"
+                >
+                    <button
+                        type="button"
+                        lang="en"
+                        data-lang="en"
+                        aria-pressed="true"
+                    >
+                        EN
+                    </button>
+                    <button
+                        type="button"
+                        lang="fr"
+                        data-lang="fr"
+                        aria-pressed="false"
+                    >
+                        FR
+                    </button>
+                    <button
+                        type="button"
+                        lang="zh"
+                        data-lang="zh"
+                        aria-pressed="false"
+                    >
+                        中文
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero" id="top">
+            <canvas id="qubits" aria-hidden="true"></canvas>
+            <button
+                type="button"
+                class="anim-toggle"
+                id="anim-toggle"
+                aria-pressed="false"
+                aria-label="Pause background animation"
+                hidden
+            >
+                ⏸
+            </button>
+            <div class="hero-in">
+                <div>
+                    <h1>Mark A. Conway-Greenslade</h1>
+                    <p class="tagline" data-i18n="hero.tagline">
+                        Software Architect &amp; Technology Leader
+                    </p>
+                    <address class="contact">
+                        <span class="contact-icons">
+                            <a
+                                class="icon"
+                                href="mailto:macg@enthropic.io"
+                                data-i18n-aria="ui.email"
+                                aria-label="Email"
+                                ><svg
+                                    viewBox="0 0 16 16"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M1.75 2A1.75 1.75 0 0 0 0 3.75v8.5C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0 0 16 12.25v-8.5A1.75 1.75 0 0 0 14.25 2H1.75Zm-.25 2.482 6.07 4.045a.75.75 0 0 0 .86 0L14.5 4.482v7.768a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25V4.482ZM13.7 3.5 8 7.298 2.3 3.5h11.4Z"
+                                    /></svg
+                            ></a>
+                            <a
+                                class="icon"
+                                href="https://github.com/siajsal"
+                                rel="me"
+                                aria-label="GitHub"
+                                title="GitHub"
+                                ><svg
+                                    viewBox="0 0 16 16"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+                                    /></svg
+                            ></a>
+                            <a
+                                class="icon"
+                                href="https://www.linkedin.com/in/mark-conway-greenslade/"
+                                rel="me"
+                                aria-label="LinkedIn"
+                                title="LinkedIn"
+                                ><svg
+                                    viewBox="0 0 16 16"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                                    /></svg
+                            ></a>
+                        </span>
+                    </address>
+                    <a
+                        class="btn-cv"
+                        href="assets/Mark-Conway-Greenslade-CV.pdf"
+                        download
+                        ><svg
+                            viewBox="0 0 16 16"
+                            width="15"
+                            height="15"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                            />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                            /></svg
+                        ><span data-i18n="ui.cvshort">Download CV</span></a
+                    >
+                </div>
+                <img
+                    class="headshot"
+                    src="assets/headshot-web.jpg"
+                    width="480"
+                    height="480"
+                    data-i18n-alt="hero.alt"
+                    alt="Portrait of Mark A. Conway-Greenslade"
+                />
+            </div>
+        </div>
+
+        <main id="main" tabindex="-1">
+            <section id="overview" aria-labelledby="h-overview">
+                <h2 id="h-overview" data-i18n="nav.overview">Overview</h2>
+                <p class="lead" data-i18n="overview">
+                    Swiss-based technology leader and polyglot software
+                    architect with 25+ years delivering complex systems across
+                    the private and public sectors in Europe and beyond. Proven
+                    at the frontier of R&amp;D — quantum instrumentation,
+                    zero-knowledge cryptography, blockchain financial
+                    infrastructure and climate-science computing — and equally
+                    at home setting technical strategy, advising c-suite
+                    executives and shaping the processes that let engineering
+                    organisations scale. Leadership grounded in values:
+                    integrity over expediency, candour with kindness, and the
+                    conviction that technology should serve people and planet —
+                    reflected in years devoted to climate research and
+                    privacy-preserving systems. Builds cultures of trust where
+                    exceptional teams do the best work of their careers. Member
+                    of the IEEE and the Central Bank Research Association.
+                </p>
+            </section>
+
+            <section id="experience" aria-labelledby="h-experience">
+                <h2 id="h-experience" data-i18n="nav.experience">Experience</h2>
+                <ol class="timeline" id="work-list"></ol>
+                <noscript
+                    ><p>
+                        2021–2026 Head of Software, QZabre @ ETH · 2025–2026
+                        Head of Technical Strategy, Inversed Tech · 2022–2024
+                        Head of R&amp;D, Casper Association · 2019–2021 Software
+                        Architect, Casper Labs · 2018–2019 Software Engineer,
+                        Trinkler Software · 2009–2022 Software Architect, IPSL @
+                        La Sorbonne · 2008–2013 Software Architect, NTT Data ·
+                        earlier roles at British Telecom, DeCare Systems, SnapOn
+                        Diagnostics, Securicor Systems, Cap Gemini and others.
+                    </p></noscript
+                >
+            </section>
+
+            <section id="skills" aria-labelledby="h-skills">
+                <h2 id="h-skills" data-i18n="nav.skills">Skills</h2>
+                <ul class="skills" id="skills-list"></ul>
+                <noscript
+                    ><p>
+                        C# · Python · Rust · TypeScript · Bash · React · Vue ·
+                        Svelte · PostgreSQL · MongoDB · Docker · Kubernetes ·
+                        Terraform · AWS · Blockchain · Event-Driven Architecture
+                        · Agile/Scrum/XP/TDD · Claude Code
+                    </p></noscript
+                >
+            </section>
+
+            <section id="education" aria-labelledby="h-education">
+                <h2 id="h-education" data-i18n="nav.education">Education</h2>
+                <ul class="cards" id="edu-list"></ul>
+            </section>
+
+            <section id="other" aria-labelledby="h-other">
+                <h2 id="h-other" data-i18n="nav.other">Other</h2>
+                <dl class="other" id="other-list"></dl>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <a
+                    class="icon"
+                    href="mailto:macg@enthropic.io"
+                    data-i18n-aria="ui.email"
+                    aria-label="Email"
+                    ><svg
+                        viewBox="0 0 16 16"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M1.75 2A1.75 1.75 0 0 0 0 3.75v8.5C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0 0 16 12.25v-8.5A1.75 1.75 0 0 0 14.25 2H1.75Zm-.25 2.482 6.07 4.045a.75.75 0 0 0 .86 0L14.5 4.482v7.768a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25V4.482ZM13.7 3.5 8 7.298 2.3 3.5h11.4Z"
+                        /></svg
+                ></a>
+                <a
+                    class="icon"
+                    href="https://github.com/siajsal"
+                    rel="me"
+                    aria-label="GitHub"
+                    title="GitHub"
+                    ><svg
+                        viewBox="0 0 16 16"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+                        /></svg
+                ></a>
+                <a
+                    class="icon"
+                    href="https://www.linkedin.com/in/mark-conway-greenslade/"
+                    rel="me"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                    ><svg
+                        viewBox="0 0 16 16"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                        /></svg
+                ></a>
+                <a
+                    class="icon"
+                    href="assets/Mark-Conway-Greenslade-CV.pdf"
+                    download
+                    data-i18n-aria="ui.cv"
+                    aria-label="Download CV (PDF)"
+                    ><svg
+                        viewBox="0 0 16 16"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                        />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                        /></svg
+                ></a>
+                · © 2026 Mark A. Conway-Greenslade
+            </p>
+        </footer>
+        <script type="application/json" id="i18n">
+            {
+                "en": {
+                    "ui": {
+                        "skip": "Skip to content",
+                        "navlabel": "Primary navigation",
+                        "email": "Email",
+                        "cv": "Download CV (PDF)",
+                        "cvshort": "Download CV",
+                        "pause": "Pause background animation",
+                        "play": "Play background animation"
+                    },
+                    "nav": {
+                        "overview": "Overview",
+                        "skills": "Skills",
+                        "experience": "Experience",
+                        "education": "Education",
+                        "other": "Other"
+                    },
+                    "hero": {
+                        "tagline": "Software Architect & Technology Leader",
+                        "alt": "Portrait of Mark A. Conway-Greenslade"
+                    },
+                    "meta": {
+                        "title": "Mark A. Conway-Greenslade — Software Architect & Technology Leader | Zug, Switzerland",
+                        "description": "CV of Mark A. Conway-Greenslade: polyglot software architect and technology leader in Zug, Switzerland. Rust, blockchain, cryptography, quantum instrumentation and R&D leadership across Europe."
+                    },
+                    "overview": "Swiss-based technology leader and polyglot software architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Proven at the frontier of R&D — quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing — and equally at home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Leadership grounded in values: integrity over expediency, candour with kindness, and the conviction that technology should serve people and planet — reflected in years devoted to climate research and privacy-preserving systems. Builds cultures of trust where exceptional teams do the best work of their careers. Member of the IEEE and the Central Bank Research Association.",
+                    "skills": [
+                        {
+                            "category": "Languages & Frameworks",
+                            "items": [
+                                "C#",
+                                "Python",
+                                "Rust",
+                                "TypeScript",
+                                "Bash",
+                                "React",
+                                "Vue",
+                                "Svelte"
+                            ]
+                        },
+                        {
+                            "category": "Architecture",
+                            "items": [
+                                "Blockchain",
+                                "Event Driven Architecture",
+                                "Message Brokers",
+                                "Micro-Services",
+                                "Agentic Systems"
+                            ]
+                        },
+                        {
+                            "category": "Agentic (CCA-F Curriculum)",
+                            "items": [
+                                "Agentic Architecture",
+                                "Claude Agent SDK",
+                                "Model Context Protocol (MCP)",
+                                "Prompt Engineering",
+                                "Structured Output",
+                                "Tool Design & Integration",
+                                "Context & Reliability"
+                            ]
+                        },
+                        {
+                            "category": "Data & Messaging",
+                            "items": [
+                                "PostgreSQL",
+                                "MongoDB",
+                                "Elasticsearch",
+                                "Oracle",
+                                "SQL Server",
+                                "RabbitMQ"
+                            ]
+                        },
+                        {
+                            "category": "DevOps & Platforms",
+                            "items": [
+                                "Docker",
+                                "Kubernetes",
+                                "Terraform",
+                                "Ansible",
+                                "AWS Cloud",
+                                "Linux"
+                            ]
+                        },
+                        {
+                            "category": "Process",
+                            "items": [
+                                "Agile",
+                                "Scrum",
+                                "XP",
+                                "Kanban",
+                                "TDD",
+                                "CI/CD",
+                                "GitHub"
+                            ]
+                        }
+                    ],
+                    "work": [
+                        {
+                            "when": "2021 – Present",
+                            "role": "Head of Software",
+                            "org": "QZabre @ ETH · Zurich, Switzerland",
+                            "url": "https://qzabre.com",
+                            "summary": "Leading software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and led the adoption of Rust across the in-house QS3 platform. Mentor to both the engineering team and the executive suite."
+                        },
+                        {
+                            "when": "2025 – 2026",
+                            "role": "Head of Technical Strategy",
+                            "org": "Inversed Tech · Madrid, Spain",
+                            "summary": "A hybrid role across an R&D company specialising in cryptography and distributed systems. As Rust engineer, built the genesis protocol and tooling for a biometric identity platform based on secure multi-party computation. As technical product owner, steered customer-facing projects including a regulated privacy-focused stablecoin and a privacy-preserving loyalty programme. As business development lead, represented the company at industry events, shaped strategy and tracked emerging trends."
+                        },
+                        {
+                            "when": "2022 – 2024",
+                            "role": "Head of R&D",
+                            "org": "Casper Association · Zug, Switzerland",
+                            "url": "https://casper.network",
+                            "summary": "Led R&D in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup and a ZK light client."
+                        },
+                        {
+                            "when": "2009 – 2022",
+                            "role": "Software Architect",
+                            "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
+                            "url": "https://www.ipsl.fr",
+                            "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project, and a driver of process change across the institute."
+                        },
+                        {
+                            "when": "2019 – 2021",
+                            "role": "Software Architect",
+                            "org": "Casper Labs AG · Zug, Switzerland",
+                            "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven, scalable fuzz-testing platform for surfacing consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
+                        },
+                        {
+                            "when": "2018 – 2019",
+                            "role": "Software Architect",
+                            "org": "Trinkler Software · Zug, Switzerland",
+                            "summary": "Helped build a decentralised finance ecosystem for a Zug start-up. Delivered a GraphQL trading API, a feature-rich command-line application, a multi-chain digital wallet and a Vue.js front end, while mentoring junior colleagues and reviewing ecosystem design."
+                        },
+                        {
+                            "when": "2008 – 2013",
+                            "role": "Software Architect",
+                            "org": "NTT Data · Fribourg, Switzerland",
+                            "url": "https://www.nttdata.com",
+                            "summary": "Drove technology and process change in the Swiss arm of a global IT services company: introduced agile practice — Scrum, XP, CI/CD — designed a .NET SOA framework and mentored a seven-person development team."
+                        },
+                        {
+                            "when": "2007 – 2008",
+                            "role": "Software Architect",
+                            "org": "British Telecom · Dublin, Ireland",
+                            "url": "https://www.bt.com",
+                            "summary": "Designed and led development of an interoperable B2B order-processing web service, applying .NET 3.0, domain-driven design and SOA. Also designed a rules-based workflow engine."
+                        },
+                        {
+                            "when": "2006 – 2007",
+                            "role": "Software Engineer",
+                            "org": "DeCare Systems · Cork, Ireland",
+                            "summary": "Designed and led development of a high-volume, real-time enrolment service for a US insurance provider, using an n-tier architecture with WCF communication between tiers."
+                        },
+                        {
+                            "when": "2006",
+                            "role": "Software Engineer",
+                            "org": "SnapOn Diagnostics · Cork, Ireland",
+                            "summary": "Migrated C++ systems to .NET 2.0 under an agile process, and built web services sharing real-time automotive diagnostics across a suite of listening applications. Scrum, XP and TDD throughout."
+                        },
+                        {
+                            "when": "2005",
+                            "role": "Software Engineer",
+                            "org": "Classic Car Collection · Paris, France",
+                            "summary": "Full-stack .NET engineer on a sales and management information system, covering architecture and design, web development, testing and deployment."
+                        },
+                        {
+                            "when": "1989 – 2001",
+                            "role": "Earlier Career",
+                            "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — UK",
+                            "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini)."
+                        }
+                    ],
+                    "edu": [
+                        {
+                            "year": "2026",
+                            "name": "Claude Certified Architect Foundation (in progress)",
+                            "where": "Anthropic"
+                        },
+                        {
+                            "year": "2008",
+                            "name": "Microsoft Certified Software Architect",
+                            "where": "Microsoft Campus, San Francisco, USA"
+                        },
+                        {
+                            "year": "1989",
+                            "name": "B.Sc. Economics & Operational Research",
+                            "where": "University of Leeds, UK"
+                        }
+                    ],
+                    "other": [
+                        [
+                            "Residency",
+                            "UK & Ireland citizen with Swiss Residency Permit"
+                        ],
+                        ["Civil status", "Married with 2 children."],
+                        [
+                            "Languages",
+                            "English (fluent), French (fluent), Italian (advanced), German (average)"
+                        ],
+                        [
+                            "Travel",
+                            "Japan, China, Europe, India, Middle East, North & Central America"
+                        ],
+                        [
+                            "Interests",
+                            "Tennis, cricket, swimming, cycling, singing, history, art"
+                        ]
+                    ]
+                },
+                "fr": {
+                    "ui": {
+                        "skip": "Aller au contenu",
+                        "navlabel": "Navigation principale",
+                        "email": "E-mail",
+                        "cv": "Télécharger le CV (PDF)",
+                        "cvshort": "Télécharger le CV",
+                        "pause": "Suspendre l'animation d'arrière-plan",
+                        "play": "Reprendre l'animation d'arrière-plan"
+                    },
+                    "nav": {
+                        "overview": "Aperçu",
+                        "skills": "Compétences",
+                        "experience": "Expérience",
+                        "education": "Formation",
+                        "other": "Divers"
+                    },
+                    "hero": {
+                        "tagline": "Architecte logiciel & leader technologique",
+                        "alt": "Portrait de Mark A. Conway-Greenslade"
+                    },
+                    "meta": {
+                        "title": "Mark A. Conway-Greenslade — Architecte logiciel & leader technologique | Zoug, Suisse",
+                        "description": "CV de Mark A. Conway-Greenslade : architecte logiciel polyglotte et leader technologique à Zoug, Suisse. Rust, blockchain, cryptographie, instrumentation quantique et direction R&D en Europe."
+                    },
+                    "overview": "Leader technologique établi en Suisse et architecte logiciel polyglotte fort de plus de 25 ans d'expérience dans la livraison de systèmes complexes pour les secteurs privé et public, en Europe et au-delà. Éprouvé aux frontières de la R&D — instrumentation quantique, cryptographie à divulgation nulle de connaissance, infrastructures financières blockchain, calcul climatique haute performance — et tout aussi à l'aise pour définir la stratégie technique, conseiller les directions générales et façonner les processus qui permettent aux organisations d'ingénierie de passer à l'échelle. Un leadership ancré dans les valeurs : l'intégrité plutôt que la facilité, la franchise alliée à la bienveillance, et la conviction que la technologie doit servir l'humain et la planète — en témoignent des années consacrées à la recherche climatique et aux systèmes respectueux de la vie privée. Bâtit des cultures de confiance où les équipes d'exception accomplissent le meilleur travail de leur carrière. Membre de l'IEEE et de la Central Bank Research Association.",
+                    "skills": [
+                        {
+                            "category": "Langages & frameworks",
+                            "items": [
+                                "C#",
+                                "Python",
+                                "Rust",
+                                "TypeScript",
+                                "Bash",
+                                "React",
+                                "Vue",
+                                "Svelte"
+                            ]
+                        },
+                        {
+                            "category": "Architecture",
+                            "items": [
+                                "Blockchain",
+                                "Architecture événementielle",
+                                "Courtiers de messages",
+                                "Micro-services",
+                                "Systèmes agentiques"
+                            ]
+                        },
+                        {
+                            "category": "Agentique (programme CCA-F)",
+                            "items": [
+                                "Architecture agentique",
+                                "Claude Agent SDK",
+                                "Model Context Protocol (MCP)",
+                                "Prompt engineering",
+                                "Sorties structurées",
+                                "Conception et intégration d'outils",
+                                "Contexte & fiabilité"
+                            ]
+                        },
+                        {
+                            "category": "Données & messagerie",
+                            "items": [
+                                "PostgreSQL",
+                                "MongoDB",
+                                "Elasticsearch",
+                                "Oracle",
+                                "SQL Server",
+                                "RabbitMQ"
+                            ]
+                        },
+                        {
+                            "category": "DevOps & plateformes",
+                            "items": [
+                                "Docker",
+                                "Kubernetes",
+                                "Terraform",
+                                "Ansible",
+                                "AWS Cloud",
+                                "Linux"
+                            ]
+                        },
+                        {
+                            "category": "Processus",
+                            "items": [
+                                "Agile",
+                                "Scrum",
+                                "XP",
+                                "Kanban",
+                                "TDD",
+                                "CI/CD",
+                                "GitHub"
+                            ]
+                        }
+                    ],
+                    "work": [
+                        {
+                            "when": "2021 – aujourd'hui",
+                            "role": "Directeur du logiciel",
+                            "org": "QZabre @ ETH · Zurich, Suisse",
+                            "url": "https://qzabre.com",
+                            "summary": "Direction du logiciel au sein d'une spin-off de l'ETH qui construit des microscopes nanométriques fondés sur la magnétométrie quantique. Accompagnement de la transition vers un processus agile léger et structuré ; conception et développement de contrôleurs de dispositifs photoniques et magnétiques ; refonte de l'application de bureau ; pilotage de l'adoption de Rust au sein de la plateforme interne QS3. Mentor de l'équipe d'ingénierie comme de la direction."
+                        },
+                        {
+                            "when": "2025 – 2026",
+                            "role": "Directeur de la stratégie technique",
+                            "org": "Inversed Tech · Madrid, Espagne",
+                            "summary": "Rôle hybride au sein d'une société de R&D spécialisée en cryptographie et systèmes distribués. Ingénieur Rust : développement du protocole de genèse et de l'outillage d'une plateforme d'identité biométrique fondée sur le calcul multipartite sécurisé. Product owner technique : pilotage de projets clients, dont un stablecoin réglementé axé sur la confidentialité et un programme de fidélité respectueux de la vie privée. Responsable technique du développement commercial : représentation de l'entreprise lors d'événements, contribution à la stratégie et veille sectorielle."
+                        },
+                        {
+                            "when": "2022 – 2024",
+                            "role": "Directeur R&D",
+                            "org": "Casper Association · Zoug, Suisse",
+                            "url": "https://casper.network",
+                            "summary": "Direction de la R&D dans un environnement blockchain complexe et très exposé. En partenariat avec le directeur de l'ingénierie, intégration des preuves de concept au produit principal ; conception, avec une équipe de macro-économistes, d'une plateforme bancaire centrale fondée sur la blockchain et un standard financier émergent. Programmation Rust soutenue et cryptographie à divulgation nulle de connaissance : livraison d'un rollup ZK et d'un client léger ZK."
+                        },
+                        {
+                            "when": "2009 – 2022",
+                            "role": "Architecte logiciel",
+                            "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
+                            "url": "https://www.ipsl.fr",
+                            "summary": "Au cœur de la recherche climatique : extension de l'environnement de simulation HPC de l'IPSL par une plateforme de messagerie temps réel orientée événements, au service de la documentation automatisée, de la surveillance en direct, de l'analyse de performance et de l'intelligence machine. Responsable technique d'es-doc.org, projet international de documentation des modèles climatiques, et moteur du changement des processus."
+                        },
+                        {
+                            "when": "2019 – 2021",
+                            "role": "Architecte logiciel",
+                            "org": "Casper Labs AG · Zoug, Suisse",
+                            "summary": "Membre de l'équipe mondiale ayant livré une plateforme blockchain de couche 1 reposant sur un consensus proof-of-stake basé sur un DAG. Conception et implémentation d'une plateforme de fuzz testing évolutive et orientée événements pour détecter les failles de consensus ; simplification des intégrations pour les partenaires externes. Direction de l'équipe services professionnels et mentorat de dirigeants."
+                        },
+                        {
+                            "when": "2018 – 2019",
+                            "role": "Architecte logiciel",
+                            "org": "Trinkler Software · Zoug, Suisse",
+                            "summary": "Contribution à un écosystème de finance décentralisée pour une start-up de Zoug : API de trading GraphQL, application en ligne de commande complète, portefeuille numérique multi-chaînes et front-end Vue.js, avec mentorat de collègues juniors et supervision de la conception."
+                        },
+                        {
+                            "when": "2008 – 2013",
+                            "role": "Architecte logiciel",
+                            "org": "NTT Data · Fribourg, Suisse",
+                            "url": "https://www.nttdata.com",
+                            "summary": "Conduite du changement technologique et organisationnel dans la filiale suisse d'une société mondiale de services informatiques : introduction des pratiques agiles (Scrum, XP, CI/CD), conception d'un framework SOA .NET et mentorat d'une équipe de sept développeurs."
+                        },
+                        {
+                            "when": "2007 – 2008",
+                            "role": "Architecte logiciel",
+                            "org": "British Telecom · Dublin, Irlande",
+                            "url": "https://www.bt.com",
+                            "summary": "Conception et direction du développement d'un service web B2B interopérable de traitement des commandes, en s'appuyant sur .NET 3.0, le domain-driven design et la SOA. Conception d'un moteur de workflow à base de règles."
+                        },
+                        {
+                            "when": "2006 – 2007",
+                            "role": "Ingénieur logiciel",
+                            "org": "DeCare Systems · Cork, Irlande",
+                            "summary": "Conception et direction du développement d'un service d'inscription temps réel à fort volume pour un assureur américain, sur une architecture n-tiers avec communication WCF entre les couches."
+                        },
+                        {
+                            "when": "2006",
+                            "role": "Ingénieur logiciel",
+                            "org": "SnapOn Diagnostics · Cork, Irlande",
+                            "summary": "Migration agile de systèmes C++ vers .NET 2.0 et développement de services web partageant en temps réel les diagnostics automobiles entre plusieurs applications. Scrum, XP et TDD au quotidien."
+                        },
+                        {
+                            "when": "2005",
+                            "role": "Ingénieur logiciel",
+                            "org": "Classic Car Collection · Paris, France",
+                            "summary": "Ingénieur .NET full stack sur un système de vente et de gestion : architecture et conception, développement web, tests et déploiements."
+                        },
+                        {
+                            "when": "1989 – 2001",
+                            "role": "Débuts de carrière",
+                            "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — Royaume-Uni",
+                            "summary": "Postes d'ingénierie et d'architecture logicielles au Royaume-Uni : systèmes client-serveur n-tiers, frameworks COM en Visual Basic, conception de bases de données et rédaction technique. Points marquants : l'architecture du système d'adjudication des infractions routières du centre de Londres à la tête d'une équipe de douze personnes (Securicor) et la livraison du plus grand projet IBM AS-400 d'Europe (Cap Gemini)."
+                        }
+                    ],
+                    "edu": [
+                        {
+                            "year": "2026",
+                            "name": "Claude Certified Architect Foundation (en cours)",
+                            "where": "Anthropic"
+                        },
+                        {
+                            "year": "2008",
+                            "name": "Microsoft Certified Software Architect",
+                            "where": "Microsoft Campus, San Francisco, États-Unis"
+                        },
+                        {
+                            "year": "1989",
+                            "name": "B.Sc. Économie et recherche opérationnelle",
+                            "where": "Université de Leeds, Royaume-Uni"
+                        }
+                    ],
+                    "other": [
+                        [
+                            "Résidence",
+                            "Citoyen britannique et irlandais titulaire d'un permis de séjour suisse"
+                        ],
+                        ["État civil", "Marié, deux enfants."],
+                        [
+                            "Langues",
+                            "Anglais (courant), Français (courant), Italien (avancé), Allemand (moyen)"
+                        ],
+                        [
+                            "Voyages",
+                            "Japon, Chine, Europe, Inde, Moyen-Orient, Amérique du Nord et centrale"
+                        ],
+                        [
+                            "Centres d'intérêt",
+                            "Tennis, cricket, natation, cyclisme, chant, histoire, art"
+                        ]
+                    ]
+                },
+                "zh": {
+                    "ui": {
+                        "skip": "跳到主要内容",
+                        "navlabel": "主导航",
+                        "email": "电子邮箱",
+                        "cv": "下载简历（PDF）",
+                        "cvshort": "下载简历",
+                        "pause": "暂停背景动画",
+                        "play": "播放背景动画"
+                    },
+                    "nav": {
+                        "overview": "概述",
+                        "skills": "技能",
+                        "experience": "工作经历",
+                        "education": "教育背景",
+                        "other": "其他"
+                    },
+                    "hero": {
+                        "tagline": "软件架构师 · 技术领导者",
+                        "alt": "Mark A. Conway-Greenslade 肖像照"
+                    },
+                    "meta": {
+                        "title": "Mark A. Conway-Greenslade — 软件架构师与技术领导者 | 瑞士楚格",
+                        "description": "Mark A. Conway-Greenslade 的个人简历：常驻瑞士楚格的多语言软件架构师与技术领导者。专长 Rust、区块链、密码学、量子仪器与欧洲研发管理。"
+                    },
+                    "overview": "常驻瑞士的技术领导者与多语言软件架构师，拥有逾 25 年为欧洲及全球公共与私营部门交付复杂系统的经验。长期奋战在研发前沿——量子仪器、零知识密码学、区块链金融基础设施与气候科学高性能计算；同样擅长制定技术战略、为高管层提供咨询，并建立让工程组织规模化发展的流程体系。领导力植根于价值观：坚守诚信而不取巧，坦诚直言而心怀善意，坚信技术应造福人类与地球——多年投身气候研究与隐私保护系统正是这一信念的体现。善于营造信任的文化，让卓越团队成就职业生涯中的最佳作品。IEEE 与中央银行研究协会（CBRA）成员。",
+                    "skills": [
+                        {
+                            "category": "编程语言与框架",
+                            "items": [
+                                "C#",
+                                "Python",
+                                "Rust",
+                                "TypeScript",
+                                "Bash",
+                                "React",
+                                "Vue",
+                                "Svelte"
+                            ]
+                        },
+                        {
+                            "category": "架构",
+                            "items": [
+                                "区块链",
+                                "事件驱动架构",
+                                "消息中间件",
+                                "微服务",
+                                "智能体系统"
+                            ]
+                        },
+                        {
+                            "category": "智能体（CCA-F 课程）",
+                            "items": [
+                                "智能体架构",
+                                "Claude Agent SDK",
+                                "模型上下文协议（MCP）",
+                                "提示工程",
+                                "结构化输出",
+                                "工具设计与集成",
+                                "上下文与可靠性"
+                            ]
+                        },
+                        {
+                            "category": "数据与消息",
+                            "items": [
+                                "PostgreSQL",
+                                "MongoDB",
+                                "Elasticsearch",
+                                "Oracle",
+                                "SQL Server",
+                                "RabbitMQ"
+                            ]
+                        },
+                        {
+                            "category": "运维与平台",
+                            "items": [
+                                "Docker",
+                                "Kubernetes",
+                                "Terraform",
+                                "Ansible",
+                                "AWS 云",
+                                "Linux"
+                            ]
+                        },
+                        {
+                            "category": "流程方法",
+                            "items": [
+                                "敏捷",
+                                "Scrum",
+                                "XP",
+                                "看板",
+                                "TDD",
+                                "CI/CD",
+                                "GitHub"
+                            ]
+                        }
+                    ],
+                    "work": [
+                        {
+                            "when": "2021 – 至今",
+                            "role": "软件负责人",
+                            "org": "QZabre @ ETH · 瑞士苏黎世",
+                            "url": "https://qzabre.com",
+                            "summary": "在 ETH 衍生企业领导软件工作，该公司研制基于量子磁力测量的纳米级显微镜。推动团队转向轻量而规范的敏捷流程；设计并开发光子与磁性设备控制器；重构桌面应用；主导 Rust 在内部 QS3 平台中的落地。同时担任工程团队与管理层的导师。"
+                        },
+                        {
+                            "when": "2025 – 2026",
+                            "role": "技术战略负责人",
+                            "org": "Inversed Tech · 西班牙马德里",
+                            "summary": "在一家专注密码学与分布式系统的研发公司承担跨职能角色。作为 Rust 工程师，为基于安全多方计算的生物识别身份平台开发创世协议与配套工具；作为技术产品负责人，主导面向客户的项目，包括受监管的隐私稳定币与注重隐私的客户忠诚度计划；作为商务拓展技术负责人，代表公司出席行业活动、参与制定战略并跟踪行业趋势。"
+                        },
+                        {
+                            "when": "2022 – 2024",
+                            "role": "研发负责人",
+                            "org": "Casper Association · 瑞士楚格",
+                            "url": "https://casper.network",
+                            "summary": "在复杂且备受关注的区块链环境中领导研发。与工程负责人合作，将研发概念验证融入核心产品；与宏观经济学家团队共同设计基于新兴金融标准的区块链核心银行平台。全程深度参与 Rust 开发，运用零知识密码学交付 ZK rollup 与 ZK 轻客户端。"
+                        },
+                        {
+                            "when": "2009 – 2022",
+                            "role": "软件架构师",
+                            "org": "皮埃尔-西蒙·拉普拉斯研究所 @ 索邦大学 · 法国巴黎",
+                            "url": "https://www.ipsl.fr",
+                            "summary": "投身气候研究核心地带：为 IPSL 的高性能计算模拟环境扩展实时事件驱动消息平台，支撑自动化文档、实时监控、性能分析与机器智能。担任国际气候模型文档项目 es-doc.org 技术负责人，并推动研究所的流程变革。"
+                        },
+                        {
+                            "when": "2019 – 2021",
+                            "role": "软件架构师",
+                            "org": "Casper Labs AG · 瑞士楚格",
+                            "summary": "作为全球团队成员，交付基于 DAG 权益证明共识的 Layer 1 区块链平台。设计并实现事件驱动、可扩展的模糊测试平台以发现共识缺陷，并简化外部合作伙伴的平台集成。同时带领专业服务团队并指导高管。"
+                        },
+                        {
+                            "when": "2018 – 2019",
+                            "role": "软件架构师",
+                            "org": "Trinkler Software · 瑞士楚格",
+                            "summary": "参与为楚格初创公司构建去中心化金融生态：交付 GraphQL 交易 API、功能完备的命令行应用、多链数字钱包与 Vue.js 前端，并指导初级同事、把关生态设计。"
+                        },
+                        {
+                            "when": "2008 – 2013",
+                            "role": "软件架构师",
+                            "org": "NTT Data · 瑞士弗里堡",
+                            "url": "https://www.nttdata.com",
+                            "summary": "在全球 IT 服务公司瑞士分部推动技术与流程变革：引入 Scrum、XP、CI/CD 等敏捷实践，设计 .NET SOA 框架，并指导七人开发团队。"
+                        },
+                        {
+                            "when": "2007 – 2008",
+                            "role": "软件架构师",
+                            "org": "英国电信 · 爱尔兰都柏林",
+                            "url": "https://www.bt.com",
+                            "summary": "设计并主导开发可互操作的 B2B 订单处理 Web 服务，运用 .NET 3.0、领域驱动设计与 SOA，并设计了基于规则的工作流引擎。"
+                        },
+                        {
+                            "when": "2006 – 2007",
+                            "role": "软件工程师",
+                            "org": "DeCare Systems · 爱尔兰科克",
+                            "summary": "为美国保险公司设计并主导开发高并发实时投保服务，采用 N 层架构、层间以 WCF 通信。"
+                        },
+                        {
+                            "when": "2006",
+                            "role": "软件工程师",
+                            "org": "SnapOn Diagnostics · 爱尔兰科克",
+                            "summary": "以敏捷方式将 C++ 系统迁移至 .NET 2.0，并构建 Web 服务在多个应用间实时共享汽车诊断数据。全程实践 Scrum、XP 与 TDD。"
+                        },
+                        {
+                            "when": "2005",
+                            "role": "软件工程师",
+                            "org": "Classic Car Collection · 法国巴黎",
+                            "summary": "作为全栈 .NET 工程师支持销售与管理信息系统：架构设计、Web 开发、测试与部署。"
+                        },
+                        {
+                            "when": "1989 – 2001",
+                            "role": "早期职业生涯",
+                            "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · 凯捷 — 英国",
+                            "summary": "在英国担任软件工程与架构职位：N 层客户端-服务器系统、Visual Basic COM 框架、数据库设计与技术文档撰写。亮点包括带领十二人团队设计伦敦市中心交通违章裁决系统（Securicor），以及交付欧洲最大的 IBM AS-400 项目（凯捷）。"
+                        }
+                    ],
+                    "edu": [
+                        {
+                            "year": "2026",
+                            "name": "Claude Certified Architect Foundation（进行中）",
+                            "where": "Anthropic"
+                        },
+                        {
+                            "year": "2008",
+                            "name": "微软认证软件架构师",
+                            "where": "微软园区，美国旧金山"
+                        },
+                        {
+                            "year": "1989",
+                            "name": "经济学与运筹学学士",
+                            "where": "英国利兹大学"
+                        }
+                    ],
+                    "other": [
+                        ["居留身份", "英国及爱尔兰公民，持瑞士居留许可"],
+                        ["个人状况", "已婚，育有两个孩子。"],
+                        [
+                            "语言能力",
+                            "英语（流利）、法语（流利）、意大利语（高级）、德语（中等）"
+                        ],
+                        [
+                            "旅行经历",
+                            "日本、中国、欧洲、印度、中东、北美及中美洲"
+                        ],
+                        ["兴趣爱好", "网球、板球、游泳、骑行、歌唱、历史、艺术"]
+                    ]
+                }
+            }
+        </script>
+        <script>
+            (function () {
+                "use strict";
+                var I18N = JSON.parse(
+                    document.getElementById("i18n").textContent,
+                );
+                var reduceMotion = window.matchMedia(
+                    "(prefers-reduced-motion: reduce)",
+                ).matches;
+                var currentLang = "en";
+                var animRunning = false;
+                function updateAnimToggle() {
+                    var t = document.getElementById("anim-toggle");
+                    if (!t) return;
+                    t.setAttribute("aria-pressed", String(!animRunning));
+                    t.setAttribute(
+                        "aria-label",
+                        I18N[currentLang].ui[animRunning ? "pause" : "play"],
+                    );
+                    t.textContent = animRunning ? "⏸" : "▶";
+                }
+
+                function el(tag, cls, text) {
+                    var e = document.createElement(tag);
+                    if (cls) e.className = cls;
+                    if (text != null) e.textContent = text;
+                    return e;
+                }
+
+                function renderSkills(d) {
+                    var ul = document.getElementById("skills-list");
+                    ul.textContent = "";
+                    d.skills.forEach(function (g) {
+                        var li = el("li");
+                        li.appendChild(el("h3", null, g.category));
+                        var chips = el("ul", "chips");
+                        g.items.forEach(function (it) {
+                            chips.appendChild(el("li", null, it));
+                        });
+                        li.appendChild(chips);
+                        ul.appendChild(li);
+                    });
+                }
+                function renderWork(d) {
+                    var ol = document.getElementById("work-list");
+                    ol.textContent = "";
+                    d.work.forEach(function (w) {
+                        var li = el("li");
+                        li.appendChild(el("span", "when", w.when));
+                        li.appendChild(el("h3", "role", w.role));
+                        var org = el("div", "org");
+                        if (w.url) {
+                            var a = document.createElement("a");
+                            a.href = w.url;
+                            a.target = "_blank";
+                            a.rel = "noopener";
+                            a.textContent = w.org;
+                            org.appendChild(a);
+                        } else {
+                            org.textContent = w.org;
+                        }
+                        li.appendChild(org);
+                        li.appendChild(el("p", null, w.summary));
+                        ol.appendChild(li);
+                    });
+                }
+                function renderEdu(d) {
+                    var ul = document.getElementById("edu-list");
+                    ul.textContent = "";
+                    d.edu.forEach(function (e2) {
+                        var li = el("li");
+                        li.appendChild(el("span", "y", e2.year));
+                        li.appendChild(el("h3", null, e2.name));
+                        li.appendChild(el("p", null, e2.where));
+                        ul.appendChild(li);
+                    });
+                }
+                function renderOther(d) {
+                    var dl = document.getElementById("other-list");
+                    dl.textContent = "";
+                    d.other.forEach(function (row) {
+                        dl.appendChild(el("dt", null, row[0]));
+                        dl.appendChild(el("dd", null, row[1]));
+                    });
+                }
+                function get(obj, path) {
+                    return path.split(".").reduce(function (o, k) {
+                        return o && o[k];
+                    }, obj);
+                }
+
+                function setLang(lang) {
+                    var d = I18N[lang];
+                    if (!d) return;
+                    document.documentElement.lang =
+                        lang === "zh" ? "zh-CN" : lang;
+                    document.title = d.meta.title;
+                    var md = document.querySelector('meta[name="description"]');
+                    if (md) md.setAttribute("content", d.meta.description);
+                    document
+                        .querySelectorAll("[data-i18n]")
+                        .forEach(function (n) {
+                            var v = get(d, n.getAttribute("data-i18n"));
+                            if (typeof v === "string") n.textContent = v;
+                        });
+                    document
+                        .querySelectorAll("[data-i18n-alt]")
+                        .forEach(function (n) {
+                            var v = get(d, n.getAttribute("data-i18n-alt"));
+                            if (typeof v === "string") n.setAttribute("alt", v);
+                        });
+                    document
+                        .querySelectorAll("[data-i18n-aria]")
+                        .forEach(function (n) {
+                            var v = get(d, n.getAttribute("data-i18n-aria"));
+                            if (typeof v === "string") {
+                                n.setAttribute("aria-label", v);
+                                n.setAttribute("title", v);
+                            }
+                        });
+                    renderSkills(d);
+                    renderWork(d);
+                    renderEdu(d);
+                    renderOther(d);
+                    document
+                        .querySelectorAll(".lang button")
+                        .forEach(function (b) {
+                            b.setAttribute(
+                                "aria-pressed",
+                                String(b.getAttribute("data-lang") === lang),
+                            );
+                        });
+                    var nv = document.querySelector("nav.main");
+                    if (nv) nv.setAttribute("aria-label", d.ui.navlabel);
+                    currentLang = lang;
+                    updateAnimToggle();
+                    try {
+                        localStorage.setItem("cv-lang", lang);
+                    } catch (e) {}
+                    var url = new URL(window.location);
+                    url.searchParams.set("lang", lang);
+                    history.replaceState(null, "", url);
+                }
+                document.querySelectorAll(".lang button").forEach(function (b) {
+                    b.addEventListener("click", function () {
+                        setLang(b.getAttribute("data-lang"));
+                    });
+                });
+                var initial = new URLSearchParams(window.location.search).get(
+                    "lang",
+                );
+                if (!initial) {
+                    try {
+                        initial = localStorage.getItem("cv-lang");
+                    } catch (e) {}
+                }
+                if (!I18N[initial]) initial = "en";
+                setLang(initial);
+
+                /* entangled qubit canvas (skipped on small screens to save battery) */
+                var cv = document.getElementById("qubits");
+                var smallScreen =
+                    window.matchMedia("(max-width: 46em)").matches;
+                if (cv && !reduceMotion && !smallScreen && cv.getContext) {
+                    var ctx = cv.getContext("2d"),
+                        ps = [],
+                        W,
+                        H;
+                    function size() {
+                        W = cv.width = cv.offsetWidth;
+                        H = cv.height = cv.offsetHeight;
+                    }
+                    size();
+                    window.addEventListener("resize", size);
+                    for (var k = 0; k < 34; k++)
+                        ps.push({
+                            x: Math.random(),
+                            y: Math.random(),
+                            vx: (Math.random() - 0.5) * 0.0006,
+                            vy: (Math.random() - 0.5) * 0.0006,
+                        });
+                    function loop() {
+                        ctx.clearRect(0, 0, W, H);
+                        ps.forEach(function (p) {
+                            p.x += p.vx;
+                            p.y += p.vy;
+                            if (p.x < 0 || p.x > 1) p.vx *= -1;
+                            if (p.y < 0 || p.y > 1) p.vy *= -1;
+                        });
+                        for (var a = 0; a < ps.length; a++) {
+                            for (var b2 = a + 1; b2 < ps.length; b2++) {
+                                var dx = (ps[a].x - ps[b2].x) * W,
+                                    dy = (ps[a].y - ps[b2].y) * H,
+                                    dist = Math.hypot(dx, dy);
+                                if (dist < 130) {
+                                    ctx.strokeStyle =
+                                        "rgba(126,240,168," +
+                                        0.1 * (1 - dist / 130) +
+                                        ")";
+                                    ctx.beginPath();
+                                    ctx.moveTo(ps[a].x * W, ps[a].y * H);
+                                    ctx.lineTo(ps[b2].x * W, ps[b2].y * H);
+                                    ctx.stroke();
+                                }
+                            }
+                        }
+                        ps.forEach(function (p) {
+                            ctx.fillStyle = "rgba(126,240,168,.45)";
+                            ctx.beginPath();
+                            ctx.arc(p.x * W, p.y * H, 1.5, 0, 7);
+                            ctx.fill();
+                        });
+                        if (animRunning) requestAnimationFrame(loop);
+                    }
+                    animRunning = true;
+                    loop();
+                    var toggle = document.getElementById("anim-toggle");
+                    toggle.hidden = false;
+                    updateAnimToggle();
+                    toggle.addEventListener("click", function () {
+                        animRunning = !animRunning;
+                        if (animRunning) loop();
+                        updateAnimToggle();
+                    });
+                }
+            })();
+        </script>
+    </body>
+</html>
