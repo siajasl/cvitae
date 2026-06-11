@@ -9,7 +9,7 @@ This folder contains assets for generating a **single-page CV website**.
 - The website MUST be AI optimised
 - The website MUST be web accessibile
 - The website MUST be i18n optimised:
-  - It MUST support English, French and Chinese
+  - It MUST support English, French, German and Chinese
 
 ## Directories
 

@@ -217,8 +217,7 @@
     }
   ],
   "other": {
-    "residency": "UK & Ireland citizen with Swiss Residency Permit",
-    "civilStatus": "Married with 2 children.",
+    "residency": "UK citizen with Swiss Residency Permit",
     "languages": [
       {
         "language": "English",
@@ -248,9 +247,11 @@
     "interests": [
       "Tennis",
       "Cricket",
+      "Rugby",
       "Swimming",
       "Cycling",
       "Singing",
+      "Writing",
       "History",
       "Art"
     ]
