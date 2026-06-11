@@ -32,6 +32,11 @@
         />
         <link
             rel="alternate"
+            hreflang="de"
+            href="https://markconwaygreenslade.com/?lang=de"
+        />
+        <link
+            rel="alternate"
             hreflang="x-default"
             href="https://markconwaygreenslade.com/"
         />
@@ -53,6 +58,7 @@
         <meta property="og:locale" content="en_GB" />
         <meta property="og:locale:alternate" content="fr_FR" />
         <meta property="og:locale:alternate" content="zh_CN" />
+        <meta property="og:locale:alternate" content="de_DE" />
         <meta name="twitter:card" content="summary" />
         <!-- Structured data for search engines & AI agents -->
         <script type="application/ld+json">
@@ -60,7 +66,7 @@
                 "@context": "https://schema.org",
                 "@type": "ProfilePage",
                 "dateModified": "2026-06-10",
-                "inLanguage": ["en", "fr", "zh"],
+                "inLanguage": ["en", "fr", "zh", "de"],
                 "mainEntity": {
                     "@type": "Person",
                     "name": "Mark A. Conway-Greenslade",
@@ -74,7 +80,7 @@
                         "https://github.com/siajasl",
                         "https://www.linkedin.com/in/mark-conway-greenslade/"
                     ],
-                    "nationality": ["GB", "IE"],
+                    "nationality": ["GB"],
                     "address": {
                         "@type": "PostalAddress",
                         "addressLocality": "Zug",
@@ -379,14 +385,24 @@
                 border-color: var(--accent);
             }
             .headshot {
+                display: block;
                 width: 13rem;
                 height: 13rem;
                 border-radius: 50%;
-                object-fit: cover;
+                overflow: hidden;
                 border: 2px solid var(--accent);
                 box-shadow:
                     0 0 0 8px rgba(126, 240, 168, 0.07),
                     0 20px 50px rgba(0, 0, 0, 0.5);
+            }
+            .headshot img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* zoom in on the face, anchored near the top of the frame */
+                object-position: 50% 18%;
+                transform: scale(1.18);
+                transform-origin: 50% 18%;
             }
             @media (max-width: 46rem) {
                 .headshot {
@@ -520,22 +536,6 @@
                 color: var(--accent);
                 border-bottom-color: var(--accent);
             }
-            .btn-cv {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                margin-top: 0.9rem;
-                padding: 0.5rem 1.05rem;
-                border: 1px solid var(--accent);
-                border-radius: 999px;
-                color: var(--accent);
-                text-decoration: none;
-                font-family: var(--mono);
-                font-size: 0.82rem;
-            }
-            .btn-cv:hover {
-                background: rgba(126, 240, 168, 0.08);
-            }
             .timeline p {
                 margin-top: 0.45rem;
                 color: var(--text);
@@ -625,18 +625,76 @@
                 margin-top: 0.2rem;
             }
             @media print {
+                @page {
+                    margin: 1.5cm;
+                }
                 body {
                     background: #fff;
                     color: #111;
                 }
-                .lang,
-                #qubits {
+                header.site,
+                #qubits,
+                .anim-toggle,
+                .skip-link,
+                [data-cv-download],
+                footer a.icon {
                     display: none;
+                }
+                .hero {
+                    background: #fff;
+                    border-bottom: 1px solid #ccc;
+                }
+                a {
+                    color: #111;
+                }
+                h1,
+                h2,
+                h3.role,
+                .skills h3,
+                .cards h3,
+                dl.other dt {
+                    color: #111;
+                }
+                .tagline,
+                .when,
+                .cards .y,
+                h2::before {
+                    color: #444;
+                }
+                .contact,
+                .org,
+                .timeline p,
+                .cards p,
+                dl.other dd,
+                .lead {
+                    color: #222;
+                }
+                .chips li {
+                    background: #f3f3f3;
+                    border-color: #ccc;
+                    color: #111;
                 }
                 .skills > li,
                 .cards > li {
                     border-color: #ccc;
                     background: #fff;
+                }
+                .timeline::before {
+                    background: #999;
+                }
+                .timeline > li::before {
+                    background: #fff;
+                    border-color: #666;
+                    box-shadow: none;
+                }
+                section {
+                    padding-top: 1.2rem;
+                }
+                .timeline > li,
+                .skills > li,
+                .cards > li {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
                 }
             }
         </style>
@@ -692,6 +750,14 @@
                         aria-pressed="false"
                     >
                         FR
+                    </button>
+                    <button
+                        type="button"
+                        lang="de"
+                        data-lang="de"
+                        aria-pressed="false"
+                    >
+                        DE
                     </button>
                     <button
                         type="button"
@@ -775,36 +841,39 @@
                                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
                                     /></svg
                             ></a>
+                            <a
+                                class="icon"
+                                href="assets/Mark-Conway-Greenslade-CV-en.pdf"
+                                download
+                                data-cv-download
+                                data-i18n-aria="ui.cv"
+                                aria-label="Download CV (PDF)"
+                                ><svg
+                                    viewBox="0 0 16 16"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                                    />
+                                    <path
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                                    /></svg
+                            ></a>
                         </span>
                     </address>
-                    <a
-                        class="btn-cv"
-                        href="assets/Mark-Conway-Greenslade-CV.pdf"
-                        download
-                        ><svg
-                            viewBox="0 0 16 16"
-                            width="15"
-                            height="15"
-                            fill="currentColor"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
-                            />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
-                            /></svg
-                        ><span data-i18n="ui.cvshort">Download CV</span></a
-                    >
                 </div>
-                <img
-                    class="headshot"
-                    src="assets/headshot-web.jpg"
-                    width="480"
-                    height="480"
-                    data-i18n-alt="hero.alt"
-                    alt="Portrait of Mark A. Conway-Greenslade"
-                />
+                <span class="headshot">
+                    <img
+                        src="assets/headshot-web.jpg"
+                        width="480"
+                        height="480"
+                        data-i18n-alt="hero.alt"
+                        alt="Portrait of Mark A. Conway-Greenslade"
+                    />
+                </span>
             </div>
         </div>
 
@@ -925,8 +994,9 @@
                 ></a>
                 <a
                     class="icon"
-                    href="assets/Mark-Conway-Greenslade-CV.pdf"
+                    href="assets/Mark-Conway-Greenslade-CV-en.pdf"
                     download
+                    data-cv-download
                     data-i18n-aria="ui.cv"
                     aria-label="Download CV (PDF)"
                     ><svg
@@ -953,6 +1023,7 @@
                         "skip": "Skip to content",
                         "navlabel": "Primary navigation",
                         "email": "Email",
+                        "mailsubject": "CV Enquiry",
                         "cv": "Download CV (PDF)",
                         "cvshort": "Download CV",
                         "pause": "Pause background animation",
@@ -1144,20 +1215,19 @@
                     "other": [
                         [
                             "Residency",
-                            "UK & Ireland citizen with Swiss Residency Permit"
+                            "UK citizen with Swiss Residency Permit"
                         ],
-                        ["Civil status", "Married with 2 children."],
                         [
                             "Languages",
-                            "English (fluent), French (fluent), Italian (advanced), German (average)"
+                            "English (fluent). French (fluent). Italian (advanced). German (average)"
                         ],
                         [
                             "Travel",
-                            "Japan, China, Europe, India, Middle East, North & Central America"
+                            "Japan. China. Europe. India. Middle East. North & Central America"
                         ],
                         [
                             "Interests",
-                            "Tennis, cricket, swimming, cycling, singing, history, art"
+                            "Tennis. Cricket. Rugby. Swimming. Cycling. Singing. Writing. History. Art"
                         ]
                     ]
                 },
@@ -1166,6 +1236,7 @@
                         "skip": "Aller au contenu",
                         "navlabel": "Navigation principale",
                         "email": "E-mail",
+                        "mailsubject": "Demande de renseignements",
                         "cv": "Télécharger le CV (PDF)",
                         "cvshort": "Télécharger le CV",
                         "pause": "Suspendre l'animation d'arrière-plan",
@@ -1357,20 +1428,19 @@
                     "other": [
                         [
                             "Résidence",
-                            "Citoyen britannique et irlandais titulaire d'un permis de séjour suisse"
+                            "Citoyen britannique titulaire d'un permis de séjour suisse"
                         ],
-                        ["État civil", "Marié, deux enfants."],
                         [
                             "Langues",
-                            "Anglais (courant), Français (courant), Italien (avancé), Allemand (moyen)"
+                            "Anglais (courant). Français (courant). Italien (avancé). Allemand (moyen)"
                         ],
                         [
                             "Voyages",
-                            "Japon, Chine, Europe, Inde, Moyen-Orient, Amérique du Nord et centrale"
+                            "Japon. Chine. Europe. Inde. Moyen-Orient. Amérique du Nord et centrale"
                         ],
                         [
                             "Centres d'intérêt",
-                            "Tennis, cricket, natation, cyclisme, chant, histoire, art"
+                            "Tennis. Cricket. Rugby. Natation. Cyclisme. Chant. Écriture. Histoire. Art"
                         ]
                     ]
                 },
@@ -1379,6 +1449,7 @@
                         "skip": "跳到主要内容",
                         "navlabel": "主导航",
                         "email": "电子邮箱",
+                        "mailsubject": "简历咨询",
                         "cv": "下载简历（PDF）",
                         "cvshort": "下载简历",
                         "pause": "暂停背景动画",
@@ -1568,17 +1639,229 @@
                         }
                     ],
                     "other": [
-                        ["居留身份", "英国及爱尔兰公民，持瑞士居留许可"],
-                        ["个人状况", "已婚，育有两个孩子。"],
+                        ["居留身份", "英国公民，持瑞士居留许可"],
                         [
                             "语言能力",
-                            "英语（流利）、法语（流利）、意大利语（高级）、德语（中等）"
+                            "英语（流利）。法语（流利）。意大利语（高级）。德语（中等）"
                         ],
                         [
                             "旅行经历",
-                            "日本、中国、欧洲、印度、中东、北美及中美洲"
+                            "日本。中国。欧洲。印度。中东。北美及中美洲"
                         ],
-                        ["兴趣爱好", "网球、板球、游泳、骑行、歌唱、历史、艺术"]
+                        ["兴趣爱好", "网球。板球。橄榄球。游泳。骑行。歌唱。写作。历史。艺术"]
+                    ]
+                },
+                "de": {
+                    "ui": {
+                        "skip": "Zum Inhalt springen",
+                        "navlabel": "Hauptnavigation",
+                        "email": "E-Mail",
+                        "mailsubject": "Lebenslauf-Anfrage",
+                        "cv": "Lebenslauf herunterladen (PDF)",
+                        "cvshort": "Lebenslauf herunterladen",
+                        "pause": "Hintergrundanimation pausieren",
+                        "play": "Hintergrundanimation abspielen"
+                    },
+                    "nav": {
+                        "overview": "Überblick",
+                        "skills": "Kompetenzen",
+                        "experience": "Erfahrung",
+                        "education": "Ausbildung",
+                        "other": "Sonstiges"
+                    },
+                    "hero": {
+                        "tagline": "Softwarearchitekt & Technologieführer",
+                        "alt": "Porträt von Mark A. Conway-Greenslade"
+                    },
+                    "meta": {
+                        "title": "Mark A. Conway-Greenslade — Softwarearchitekt & Technologieführer | Zug, Schweiz",
+                        "description": "Lebenslauf von Mark A. Conway-Greenslade: polyglotter Softwarearchitekt und Technologieführer in Zug, Schweiz. Rust, Blockchain, Kryptografie, Quanteninstrumentierung und F&E-Leitung in ganz Europa."
+                    },
+                    "overview": "In der Schweiz ansässiger Technologieführer und polyglotter Softwarearchitekt mit über 25 Jahren Erfahrung in der Umsetzung komplexer Systeme für den privaten und öffentlichen Sektor in Europa und darüber hinaus. Bewährt an der Spitze der F&E — Quanteninstrumentierung, Zero-Knowledge-Kryptografie, blockchainbasierte Finanzinfrastruktur und klimawissenschaftliches Hochleistungsrechnen — und ebenso versiert darin, technische Strategien zu definieren, Führungskräfte der C-Ebene zu beraten und die Prozesse zu gestalten, die Engineering-Organisationen das Skalieren ermöglichen. Führung, die in Werten verwurzelt ist: Integrität vor Zweckmäßigkeit, Offenheit gepaart mit Freundlichkeit und die Überzeugung, dass Technologie den Menschen und dem Planeten dienen sollte — was sich in Jahren widerspiegelt, die der Klimaforschung und datenschutzfreundlichen Systemen gewidmet waren. Schafft Kulturen des Vertrauens, in denen außergewöhnliche Teams die beste Arbeit ihrer Laufbahn leisten. Mitglied des IEEE und der Central Bank Research Association.",
+                    "skills": [
+                        {
+                            "category": "Sprachen & Frameworks",
+                            "items": [
+                                "C#",
+                                "Python",
+                                "Rust",
+                                "TypeScript",
+                                "Bash",
+                                "React",
+                                "Vue",
+                                "Svelte"
+                            ]
+                        },
+                        {
+                            "category": "Architektur",
+                            "items": [
+                                "Blockchain",
+                                "Ereignisgesteuerte Architektur",
+                                "Message-Broker",
+                                "Microservices",
+                                "Agentische Systeme"
+                            ]
+                        },
+                        {
+                            "category": "Agentik (CCA-F-Lehrplan)",
+                            "items": [
+                                "Agentische Architektur",
+                                "Claude Agent SDK",
+                                "Model Context Protocol (MCP)",
+                                "Prompt-Engineering",
+                                "Strukturierte Ausgaben",
+                                "Tool-Design & -Integration",
+                                "Kontext & Zuverlässigkeit"
+                            ]
+                        },
+                        {
+                            "category": "Daten & Messaging",
+                            "items": [
+                                "PostgreSQL",
+                                "MongoDB",
+                                "Elasticsearch",
+                                "Oracle",
+                                "SQL Server",
+                                "RabbitMQ"
+                            ]
+                        },
+                        {
+                            "category": "DevOps & Plattformen",
+                            "items": [
+                                "Docker",
+                                "Kubernetes",
+                                "Terraform",
+                                "Ansible",
+                                "AWS Cloud",
+                                "Linux"
+                            ]
+                        },
+                        {
+                            "category": "Prozesse",
+                            "items": [
+                                "Agile",
+                                "Scrum",
+                                "XP",
+                                "Kanban",
+                                "TDD",
+                                "CI/CD",
+                                "GitHub"
+                            ]
+                        }
+                    ],
+                    "work": [
+                        {
+                            "when": "2021 – heute",
+                            "role": "Leiter Software",
+                            "org": "QZabre @ ETH · Zürich, Schweiz",
+                            "url": "https://qzabre.com",
+                            "summary": "Leitung der Softwareentwicklung bei einem ETH-Spin-off, das nanoskalige Mikroskope auf Basis der Quantenmagnetometrie baut. Begleitete den Übergang des Teams zu einem schlanken, strukturierten agilen Prozess; entwarf und entwickelte Controller für photonische und magnetische Geräte; gestaltete die Desktop-Anwendung neu; und leitete die Einführung von Rust in der internen QS3-Plattform. Mentor sowohl für das Engineering-Team als auch für die Geschäftsleitung."
+                        },
+                        {
+                            "when": "2025 – 2026",
+                            "role": "Leiter Technische Strategie",
+                            "org": "Inversed Tech · Madrid, Spanien",
+                            "summary": "Eine hybride Rolle in einem F&E-Unternehmen mit Spezialisierung auf Kryptografie und verteilte Systeme. Als Rust-Ingenieur entwickelte das Genesis-Protokoll und die Werkzeuge für eine biometrische Identitätsplattform auf Basis sicherer Mehrparteienberechnung. Als technischer Product Owner steuerte kundenorientierte Projekte, darunter einen regulierten, datenschutzorientierten Stablecoin und ein datenschutzfreundliches Treueprogramm. Als Leiter der Geschäftsentwicklung vertrat das Unternehmen auf Branchenveranstaltungen, prägte die Strategie und verfolgte aufkommende Trends."
+                        },
+                        {
+                            "when": "2022 – 2024",
+                            "role": "Leiter F&E",
+                            "org": "Casper Association · Zug, Schweiz",
+                            "url": "https://casper.network",
+                            "summary": "Leitung der F&E in einem komplexen, hochkarätigen Blockchain-Umfeld. In Partnerschaft mit dem Leiter Engineering wurden Forschungs-Proofs-of-Concept in das Kernprodukt überführt; gemeinsam mit einem Team von Makroökonomen wurde eine blockchainbasierte Kernbankenplattform rund um einen aufkommenden Finanzstandard entworfen. Durchgängig praktische Rust-Arbeit unter Anwendung von Zero-Knowledge-Kryptografie zur Lieferung eines ZK-Rollups und eines ZK-Light-Clients."
+                        },
+                        {
+                            "when": "2009 – 2022",
+                            "role": "Softwarearchitekt",
+                            "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, Frankreich",
+                            "url": "https://www.ipsl.fr",
+                            "summary": "Tätig im Herzen der Klimaforschung: Erweiterung der HPC-Simulationsumgebung des IPSL um eine ereignisgesteuerte Echtzeit-Messaging-Plattform für automatisierte Dokumentation, Live-Monitoring, Leistungsanalyse und maschinelle Intelligenz. Technischer Leiter von es-doc.org, einem internationalen Projekt zur Dokumentation von Klimamodellen, und Treiber des Prozesswandels im gesamten Institut."
+                        },
+                        {
+                            "when": "2019 – 2021",
+                            "role": "Softwarearchitekt",
+                            "org": "Casper Labs AG · Zug, Schweiz",
+                            "summary": "Mitglied des globalen Teams, das eine Layer-1-Blockchain-Plattform auf Basis eines DAG-gestützten Proof-of-Stake-Konsenses lieferte. Entwarf und implementierte eine ereignisgesteuerte, skalierbare Fuzz-Testing-Plattform zum Aufdecken von Konsensfehlern und vereinfachte die Plattformintegration für externe Partner. Leitete zudem das Professional-Services-Team und betreute Führungskräfte."
+                        },
+                        {
+                            "when": "2018 – 2019",
+                            "role": "Softwarearchitekt",
+                            "org": "Trinkler Software · Zug, Schweiz",
+                            "summary": "Mitwirkung am Aufbau eines dezentralen Finanzökosystems für ein Start-up in Zug. Lieferte eine GraphQL-Trading-API, eine funktionsreiche Kommandozeilenanwendung, eine Multi-Chain-Digital-Wallet und ein Vue.js-Frontend, während jüngere Kolleginnen und Kollegen betreut und das Ökosystemdesign geprüft wurden."
+                        },
+                        {
+                            "when": "2008 – 2013",
+                            "role": "Softwarearchitekt",
+                            "org": "NTT Data · Freiburg, Schweiz",
+                            "url": "https://www.nttdata.com",
+                            "summary": "Trieb den technologischen und prozessualen Wandel im Schweizer Zweig eines globalen IT-Dienstleisters voran: Einführung agiler Praktiken — Scrum, XP, CI/CD —, Entwurf eines .NET-SOA-Frameworks und Betreuung eines siebenköpfigen Entwicklungsteams."
+                        },
+                        {
+                            "when": "2007 – 2008",
+                            "role": "Softwarearchitekt",
+                            "org": "British Telecom · Dublin, Irland",
+                            "url": "https://www.bt.com",
+                            "summary": "Entwarf und leitete die Entwicklung eines interoperablen B2B-Webdienstes zur Auftragsabwicklung unter Einsatz von .NET 3.0, Domain-Driven Design und SOA. Entwarf zudem eine regelbasierte Workflow-Engine."
+                        },
+                        {
+                            "when": "2006 – 2007",
+                            "role": "Softwareingenieur",
+                            "org": "DeCare Systems · Cork, Irland",
+                            "summary": "Entwarf und leitete die Entwicklung eines hochvolumigen Echtzeit-Anmeldedienstes für einen US-Versicherer auf Basis einer n-Tier-Architektur mit WCF-Kommunikation zwischen den Schichten."
+                        },
+                        {
+                            "when": "2006",
+                            "role": "Softwareingenieur",
+                            "org": "SnapOn Diagnostics · Cork, Irland",
+                            "summary": "Migrierte C++-Systeme im agilen Prozess auf .NET 2.0 und entwickelte Webdienste, die Echtzeit-Fahrzeugdiagnosedaten über mehrere Anwendungen hinweg teilen. Durchgängig Scrum, XP und TDD."
+                        },
+                        {
+                            "when": "2005",
+                            "role": "Softwareingenieur",
+                            "org": "Classic Car Collection · Paris, Frankreich",
+                            "summary": "Full-Stack-.NET-Ingenieur für ein Vertriebs- und Management-Informationssystem: Architektur und Design, Webentwicklung, Tests und Deployment."
+                        },
+                        {
+                            "when": "1989 – 2001",
+                            "role": "Frühere Laufbahn",
+                            "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — Vereinigtes Königreich",
+                            "summary": "Software-Engineering- und Architekturrollen im gesamten Vereinigten Königreich: n-Tier-Client-Server-Systeme, COM-Frameworks in Visual Basic, Datenbankdesign und technische Dokumentation. Höhepunkte sind die Architektur des Systems zur Ahndung von Verkehrsverstößen im Zentrum Londons an der Spitze eines zwölfköpfigen Teams (Securicor) sowie die Lieferung des größten IBM-AS/400-Projekts Europas (Cap Gemini)."
+                        }
+                    ],
+                    "edu": [
+                        {
+                            "year": "2026",
+                            "name": "Claude Certified Architect Foundation (in Bearbeitung)",
+                            "where": "Anthropic"
+                        },
+                        {
+                            "year": "2008",
+                            "name": "Microsoft Certified Software Architect",
+                            "where": "Microsoft Campus, San Francisco, USA"
+                        },
+                        {
+                            "year": "1989",
+                            "name": "B.Sc. Volkswirtschaftslehre & Operations Research",
+                            "where": "University of Leeds, Vereinigtes Königreich"
+                        }
+                    ],
+                    "other": [
+                        [
+                            "Aufenthalt",
+                            "Britischer Staatsbürger mit Schweizer Aufenthaltsbewilligung"
+                        ],
+                        [
+                            "Sprachen",
+                            "Englisch (fließend). Französisch (fließend). Italienisch (fortgeschritten). Deutsch (mittel)"
+                        ],
+                        [
+                            "Reisen",
+                            "Japan. China. Europa. Indien. Naher Osten. Nord- und Mittelamerika"
+                        ],
+                        [
+                            "Interessen",
+                            "Tennis. Cricket. Rugby. Schwimmen. Radfahren. Singen. Schreiben. Geschichte. Kunst"
+                        ]
                     ]
                 }
             }
@@ -1717,6 +2000,28 @@
                         });
                     var nv = document.querySelector("nav.main");
                     if (nv) nv.setAttribute("aria-label", d.ui.navlabel);
+                    // Point the download button(s) at the curated PDF for this
+                    // language so the downloaded CV matches what's on screen.
+                    var cvFile =
+                        "assets/Mark-Conway-Greenslade-CV-" + lang + ".pdf";
+                    document
+                        .querySelectorAll("[data-cv-download]")
+                        .forEach(function (a) {
+                            a.setAttribute("href", cvFile);
+                            a.setAttribute(
+                                "download",
+                                "Mark-Conway-Greenslade-CV-" + lang + ".pdf",
+                            );
+                        });
+                    // Pre-fill a localised subject line on the email links.
+                    var mailHref =
+                        "mailto:macg@enthropic.io?subject=" +
+                        encodeURIComponent(d.ui.mailsubject);
+                    document
+                        .querySelectorAll('a[href^="mailto:"]')
+                        .forEach(function (a) {
+                            a.setAttribute("href", mailHref);
+                        });
                     currentLang = lang;
                     updateAnimToggle();
                     try {
@@ -1731,6 +2036,7 @@
                         setLang(b.getAttribute("data-lang"));
                     });
                 });
+
                 var initial = new URLSearchParams(window.location.search).get(
                     "lang",
                 );
