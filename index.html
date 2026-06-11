@@ -385,24 +385,14 @@
                 border-color: var(--accent);
             }
             .headshot {
-                display: block;
                 width: 13rem;
                 height: 13rem;
                 border-radius: 50%;
-                overflow: hidden;
+                object-fit: cover;
                 border: 2px solid var(--accent);
                 box-shadow:
                     0 0 0 8px rgba(126, 240, 168, 0.07),
                     0 20px 50px rgba(0, 0, 0, 0.5);
-            }
-            .headshot img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                /* zoom in on the face, anchored near the top of the frame */
-                object-position: 50% 18%;
-                transform: scale(1.18);
-                transform-origin: 50% 18%;
             }
             @media (max-width: 46rem) {
                 .headshot {
@@ -865,15 +855,14 @@
                         </span>
                     </address>
                 </div>
-                <span class="headshot">
-                    <img
-                        src="assets/headshot-web.jpg"
-                        width="480"
-                        height="480"
-                        data-i18n-alt="hero.alt"
-                        alt="Portrait of Mark A. Conway-Greenslade"
-                    />
-                </span>
+                <img
+                    class="headshot"
+                    src="assets/headshot-web.jpg"
+                    width="480"
+                    height="480"
+                    data-i18n-alt="hero.alt"
+                    alt="Portrait of Mark A. Conway-Greenslade"
+                />
             </div>
         </div>
 
@@ -883,19 +872,20 @@
                 <p class="lead" data-i18n="overview">
                     Swiss-based technology leader and polyglot software
                     architect with 25+ years delivering complex systems across
-                    the private and public sectors in Europe and beyond. Proven
-                    at the frontier of R&amp;D — quantum instrumentation,
-                    zero-knowledge cryptography, blockchain financial
-                    infrastructure and climate-science computing — and equally
-                    at home setting technical strategy, advising c-suite
-                    executives and shaping the processes that let engineering
-                    organisations scale. Leadership grounded in values:
-                    integrity over expediency, candour with kindness, and the
-                    conviction that technology should serve people and planet —
-                    reflected in years devoted to climate research and
-                    privacy-preserving systems. Builds cultures of trust where
-                    exceptional teams do the best work of their careers. Member
-                    of the IEEE and the Central Bank Research Association.
+                    the private and public sectors in Europe and beyond.
+                    Extensive experience within diverse R&amp;D environments
+                    such as quantum instrumentation, zero-knowledge
+                    cryptography, blockchain financial infrastructure and
+                    climate-science computing. At home setting technical
+                    strategy, advising c-suite executives and shaping the
+                    processes that let engineering organisations scale. Embodies
+                    a leadership style grounded in values such as integrity,
+                    candour, kindness and humour. Of the view that technology
+                    should serve communities and the planet — as reflected in
+                    years devoted to climate research and privacy-preserving
+                    systems. Able to build a culture of trust where exceptional
+                    teams flourish. Member of the IEEE and the Central Bank
+                    Research Association.
                 </p>
             </section>
 
@@ -1044,7 +1034,7 @@
                         "title": "Mark A. Conway-Greenslade — Software Architect & Technology Leader | Zug, Switzerland",
                         "description": "CV of Mark A. Conway-Greenslade: polyglot software architect and technology leader in Zug, Switzerland. Rust, blockchain, cryptography, quantum instrumentation and R&D leadership across Europe."
                     },
-                    "overview": "Swiss-based technology leader and polyglot software architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Proven at the frontier of R&D — quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing — and equally at home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Leadership grounded in values: integrity over expediency, candour with kindness, and the conviction that technology should serve people and planet — reflected in years devoted to climate research and privacy-preserving systems. Builds cultures of trust where exceptional teams do the best work of their careers. Member of the IEEE and the Central Bank Research Association.",
+                    "overview": "Swiss-based technology leader and polyglot software architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Extensive experience within diverse R&D environments such as quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Embodies a leadership style grounded in values such as integrity, candour, kindness and humour. Of the view that technology should serve communities and the planet — as reflected in years devoted to climate research and privacy-preserving systems. Able to build a culture of trust where exceptional teams flourish. Member of the IEEE and the Central Bank Research Association.",
                     "skills": [
                         {
                             "category": "Languages & Frameworks",
@@ -1213,10 +1203,7 @@
                         }
                     ],
                     "other": [
-                        [
-                            "Residency",
-                            "UK citizen with Swiss Residency Permit"
-                        ],
+                        ["Residency", "UK citizen with Swiss Residency Permit"],
                         [
                             "Languages",
                             "English (fluent). French (fluent). Italian (advanced). German (average)"
@@ -1257,7 +1244,7 @@
                         "title": "Mark A. Conway-Greenslade — Architecte logiciel & leader technologique | Zoug, Suisse",
                         "description": "CV de Mark A. Conway-Greenslade : architecte logiciel polyglotte et leader technologique à Zoug, Suisse. Rust, blockchain, cryptographie, instrumentation quantique et direction R&D en Europe."
                     },
-                    "overview": "Leader technologique établi en Suisse et architecte logiciel polyglotte fort de plus de 25 ans d'expérience dans la livraison de systèmes complexes pour les secteurs privé et public, en Europe et au-delà. Éprouvé aux frontières de la R&D — instrumentation quantique, cryptographie à divulgation nulle de connaissance, infrastructures financières blockchain, calcul climatique haute performance — et tout aussi à l'aise pour définir la stratégie technique, conseiller les directions générales et façonner les processus qui permettent aux organisations d'ingénierie de passer à l'échelle. Un leadership ancré dans les valeurs : l'intégrité plutôt que la facilité, la franchise alliée à la bienveillance, et la conviction que la technologie doit servir l'humain et la planète — en témoignent des années consacrées à la recherche climatique et aux systèmes respectueux de la vie privée. Bâtit des cultures de confiance où les équipes d'exception accomplissent le meilleur travail de leur carrière. Membre de l'IEEE et de la Central Bank Research Association.",
+                    "overview": "Leader technologique établi en Suisse et architecte logiciel polyglotte fort de plus de 25 ans d'expérience dans la livraison de systèmes complexes pour les secteurs privé et public, en Europe et au-delà. Forte expérience au sein d'environnements de R&D variés tels que l'instrumentation quantique, la cryptographie à divulgation nulle de connaissance, les infrastructures financières blockchain et le calcul scientifique climatique. À l'aise pour définir la stratégie technique, conseiller les directions générales et façonner les processus qui permettent aux organisations d'ingénierie de passer à l'échelle. Incarne un style de leadership ancré dans des valeurs telles que l'intégrité, la franchise, la bienveillance et l'humour. Convaincu que la technologie doit servir les communautés et la planète — comme en témoignent des années consacrées à la recherche climatique et aux systèmes respectueux de la vie privée. Capable de bâtir une culture de confiance où les équipes d'exception s'épanouissent. Membre de l'IEEE et de la Central Bank Research Association.",
                     "skills": [
                         {
                             "category": "Langages & frameworks",
@@ -1470,7 +1457,7 @@
                         "title": "Mark A. Conway-Greenslade — 软件架构师与技术领导者 | 瑞士楚格",
                         "description": "Mark A. Conway-Greenslade 的个人简历：常驻瑞士楚格的多语言软件架构师与技术领导者。专长 Rust、区块链、密码学、量子仪器与欧洲研发管理。"
                     },
-                    "overview": "常驻瑞士的技术领导者与多语言软件架构师，拥有逾 25 年为欧洲及全球公共与私营部门交付复杂系统的经验。长期奋战在研发前沿——量子仪器、零知识密码学、区块链金融基础设施与气候科学高性能计算；同样擅长制定技术战略、为高管层提供咨询，并建立让工程组织规模化发展的流程体系。领导力植根于价值观：坚守诚信而不取巧，坦诚直言而心怀善意，坚信技术应造福人类与地球——多年投身气候研究与隐私保护系统正是这一信念的体现。善于营造信任的文化，让卓越团队成就职业生涯中的最佳作品。IEEE 与中央银行研究协会（CBRA）成员。",
+                    "overview": "常驻瑞士的技术领导者与多语言软件架构师，拥有逾 25 年为欧洲及全球公共与私营部门交付复杂系统的经验。在多元的研发环境中积累了丰富经验，涵盖量子仪器、零知识密码学、区块链金融基础设施与气候科学计算。擅长制定技术战略、为高管层提供咨询，并建立让工程组织规模化发展的流程体系。所体现的领导风格植根于诚信、坦诚、善意与幽默等价值观。坚信技术应造福社区与地球——多年投身气候研究与隐私保护系统正是这一信念的体现。善于营造信任的文化，让卓越团队蓬勃发展。IEEE 与中央银行研究协会（CBRA）成员。",
                     "skills": [
                         {
                             "category": "编程语言与框架",
@@ -1648,7 +1635,10 @@
                             "旅行经历",
                             "日本。中国。欧洲。印度。中东。北美及中美洲"
                         ],
-                        ["兴趣爱好", "网球。板球。橄榄球。游泳。骑行。歌唱。写作。历史。艺术"]
+                        [
+                            "兴趣爱好",
+                            "网球。板球。橄榄球。游泳。骑行。歌唱。写作。历史。艺术"
+                        ]
                     ]
                 },
                 "de": {
@@ -1677,7 +1667,7 @@
                         "title": "Mark A. Conway-Greenslade — Softwarearchitekt & Technologieführer | Zug, Schweiz",
                         "description": "Lebenslauf von Mark A. Conway-Greenslade: polyglotter Softwarearchitekt und Technologieführer in Zug, Schweiz. Rust, Blockchain, Kryptografie, Quanteninstrumentierung und F&E-Leitung in ganz Europa."
                     },
-                    "overview": "In der Schweiz ansässiger Technologieführer und polyglotter Softwarearchitekt mit über 25 Jahren Erfahrung in der Umsetzung komplexer Systeme für den privaten und öffentlichen Sektor in Europa und darüber hinaus. Bewährt an der Spitze der F&E — Quanteninstrumentierung, Zero-Knowledge-Kryptografie, blockchainbasierte Finanzinfrastruktur und klimawissenschaftliches Hochleistungsrechnen — und ebenso versiert darin, technische Strategien zu definieren, Führungskräfte der C-Ebene zu beraten und die Prozesse zu gestalten, die Engineering-Organisationen das Skalieren ermöglichen. Führung, die in Werten verwurzelt ist: Integrität vor Zweckmäßigkeit, Offenheit gepaart mit Freundlichkeit und die Überzeugung, dass Technologie den Menschen und dem Planeten dienen sollte — was sich in Jahren widerspiegelt, die der Klimaforschung und datenschutzfreundlichen Systemen gewidmet waren. Schafft Kulturen des Vertrauens, in denen außergewöhnliche Teams die beste Arbeit ihrer Laufbahn leisten. Mitglied des IEEE und der Central Bank Research Association.",
+                    "overview": "In der Schweiz ansässiger Technologieführer und polyglotter Softwarearchitekt mit über 25 Jahren Erfahrung in der Umsetzung komplexer Systeme für den privaten und öffentlichen Sektor in Europa und darüber hinaus. Umfangreiche Erfahrung in vielfältigen F&E-Umgebungen wie Quanteninstrumentierung, Zero-Knowledge-Kryptografie, blockchainbasierter Finanzinfrastruktur und klimawissenschaftlichem Rechnen. Versiert darin, technische Strategien zu definieren, Führungskräfte der C-Ebene zu beraten und die Prozesse zu gestalten, die Engineering-Organisationen das Skalieren ermöglichen. Verkörpert einen Führungsstil, der in Werten wie Integrität, Offenheit, Freundlichkeit und Humor verwurzelt ist. Der Überzeugung, dass Technologie den Gemeinschaften und dem Planeten dienen sollte — was sich in Jahren widerspiegelt, die der Klimaforschung und datenschutzfreundlichen Systemen gewidmet waren. Fähig, eine Kultur des Vertrauens aufzubauen, in der außergewöhnliche Teams aufblühen. Mitglied des IEEE und der Central Bank Research Association.",
                     "skills": [
                         {
                             "category": "Sprachen & Frameworks",
