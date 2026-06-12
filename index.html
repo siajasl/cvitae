@@ -24,6 +24,14 @@
             href="assets/favicon-32.png"
         />
         <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+        <!-- Preload the primary body font to reduce flash of unstyled text. -->
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff"
+            href="fonts/Lato-Regular.woff"
+            crossorigin
+        />
         <link rel="canonical" href="https://markconwaygreenslade.com/" />
         <link
             rel="alternate"
@@ -65,17 +73,28 @@
             property="og:image"
             content="https://markconwaygreenslade.com/assets/headshot-web.jpg"
         />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="480" />
+        <meta
+            property="og:image:alt"
+            content="Portrait of Mark A. Conway-Greenslade"
+        />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:locale:alternate" content="fr_FR" />
         <meta property="og:locale:alternate" content="zh_CN" />
         <meta property="og:locale:alternate" content="de_DE" />
         <meta name="twitter:card" content="summary" />
+        <meta
+            name="twitter:image:alt"
+            content="Portrait of Mark A. Conway-Greenslade"
+        />
         <!-- Structured data for search engines & AI agents -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "ProfilePage",
-                "dateModified": "2026-06-10",
+                "dateModified": "2026-06-11",
                 "inLanguage": ["en", "fr", "zh", "de"],
                 "mainEntity": {
                     "@type": "Person",
@@ -83,6 +102,12 @@
                     "givenName": "Mark",
                     "familyName": "Conway-Greenslade",
                     "jobTitle": "Software Architect & Technology Leader",
+                    "description": "Swiss-based technology leader and polyglot software architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Extensive experience within diverse R&D environments such as quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing. Sets technical strategy, advises c-suite executives and shapes the processes that let engineering organisations scale. Member of the IEEE and the Central Bank Research Association.",
+                    "hasOccupation": {
+                        "@type": "Occupation",
+                        "name": "Software Architect & Technology Leader",
+                        "occupationalCategory": "15-1252.00 Software Developers"
+                    },
                     "email": "mailto:macg@enthropic.io",
                     "image": "https://markconwaygreenslade.com/assets/headshot-web.jpg",
                     "url": "https://markconwaygreenslade.com/",
@@ -390,9 +415,21 @@
                 color: var(--accent);
                 font-size: 1rem;
                 cursor: pointer;
+                /* Recede when idle; come to full on hover/focus. */
+                opacity: 0.4;
+                transition:
+                    opacity 0.25s ease,
+                    border-color 0.25s ease;
             }
-            .anim-toggle:hover {
+            .anim-toggle:hover,
+            .anim-toggle:focus-visible {
+                opacity: 1;
                 border-color: var(--accent);
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .anim-toggle {
+                    transition: none;
+                }
             }
             .headshot {
                 width: 13rem;
@@ -870,6 +907,7 @@
                     src="assets/headshot-web.jpg"
                     width="480"
                     height="480"
+                    fetchpriority="high"
                     data-i18n-alt="hero.alt"
                     alt="Portrait of Mark A. Conway-Greenslade"
                 />
@@ -932,11 +970,29 @@
             <section id="education" aria-labelledby="h-education">
                 <h2 id="h-education" data-i18n="nav.education">Education</h2>
                 <ul class="cards" id="edu-list"></ul>
+                <noscript
+                    ><p>
+                        2026 Claude Certified Architect Foundation (in progress),
+                        Anthropic · 2008 Microsoft Certified Software Architect,
+                        Microsoft Campus, San Francisco · 1989 B.Sc. Economics
+                        &amp; Operational Research, University of Leeds
+                    </p></noscript
+                >
             </section>
 
             <section id="other" aria-labelledby="h-other">
                 <h2 id="h-other" data-i18n="nav.other">Other</h2>
                 <dl class="other" id="other-list"></dl>
+                <noscript
+                    ><p>
+                        Residency: UK citizen with Swiss Residency Permit ·
+                        Languages: English (fluent), French (fluent), Italian
+                        (advanced), German (average) · Travel: Japan, China,
+                        Europe, India, Middle East, North &amp; Central America ·
+                        Interests: Tennis, Cricket, Rugby, Swimming, Cycling,
+                        Singing, Writing, History, Art
+                    </p></noscript
+                >
             </section>
         </main>
 
@@ -997,8 +1053,8 @@
                     href="assets/Mark-Conway-Greenslade-CV-en.pdf"
                     download
                     data-cv-download
-                    data-i18n-aria="ui.cv"
-                    aria-label="Download CV (PDF)"
+                    data-i18n-aria="ui.cvshort"
+                    aria-label="Download CV"
                     ><svg
                         viewBox="0 0 16 16"
                         width="18"
@@ -1963,8 +2019,28 @@
                     document.documentElement.lang =
                         lang === "zh" ? "zh-CN" : lang;
                     document.title = d.meta.title;
-                    var md = document.querySelector('meta[name="description"]');
-                    if (md) md.setAttribute("content", d.meta.description);
+                    var setMeta = function (sel, val) {
+                        var m = document.querySelector(sel);
+                        if (m) m.setAttribute("content", val);
+                    };
+                    setMeta('meta[name="description"]', d.meta.description);
+                    // Keep Open Graph tags in sync with the active language so
+                    // shared ?lang= links preview in the right language.
+                    var ogLocale = {
+                        en: "en_GB",
+                        fr: "fr_FR",
+                        zh: "zh_CN",
+                        de: "de_DE",
+                    };
+                    setMeta('meta[property="og:title"]', d.meta.title);
+                    setMeta(
+                        'meta[property="og:description"]',
+                        d.meta.description,
+                    );
+                    setMeta(
+                        'meta[property="og:locale"]',
+                        ogLocale[lang] || "en_GB",
+                    );
                     document
                         .querySelectorAll("[data-i18n]")
                         .forEach(function (n) {
@@ -2045,7 +2121,11 @@
                         initial = localStorage.getItem("cv-lang");
                     } catch (e) {}
                 }
-                if (!I18N[initial]) initial = "en";
+                // hasOwnProperty guards against inherited keys like
+                // "__proto__"/"constructor" sneaking past a truthy check and
+                // crashing setLang on a missing meta block.
+                if (!Object.prototype.hasOwnProperty.call(I18N, initial))
+                    initial = "en";
                 setLang(initial);
 
                 /* entangled qubit canvas (skipped on small screens to save battery) */
