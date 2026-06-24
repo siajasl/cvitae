@@ -95,16 +95,16 @@
   ],
   "work": [
     {
-      "position": "Head of Software",
+      "position": "Software Consultant",
       "company": "QZabre @ ETH",
       "location": "Zurich, Switzerland",
       "startDate": "2021",
       "endDate": "Present",
-      "summary": "Leading software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and led the adoption of Rust across the in-house QS3 platform. Mentor to both the engineering team and the executive suite.",
+      "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite.",
       "url": "https://qzabre.com"
     },
     {
-      "position": "Head of Technical Strategy",
+      "position": "Software Consultant",
       "company": "Inversed Tech",
       "location": "Madrid, Spain",
       "startDate": "2025",
