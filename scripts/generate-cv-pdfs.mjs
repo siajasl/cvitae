@@ -24,7 +24,7 @@ const QA = process.argv.includes("--qa");
 
 const NAME = "Mark A. Conway-Greenslade";
 const CONTACT = {
-    email: "macg@enthropic.io",
+    email: "siajasl@pm.me",
     github: "github.com/siajasl",
 };
 // Localised micro-labels not present in the site i18n block.
