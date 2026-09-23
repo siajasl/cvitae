@@ -22,7 +22,11 @@ All copy lives in the `#i18n` JSON block in `index.html`, one subtree per langua
 node scripts/generate-cv-pdfs.mjs
 ```
 
-Requires Node.js and Google Chrome (used headlessly for rendering).
+Requires Node.js, Google Chrome (used headlessly for rendering) and pikepdf for PDF metadata stamping:
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install pikepdf
+```
 
 ## Local preview
 
