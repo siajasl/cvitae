@@ -20,7 +20,7 @@
       "countryCode": "CH",
       "country": "Switzerland"
     },
-    "summary": "Technology leader and polyglot software engineer/architect with 25+ years delivering complex systems across the private and public sectors in Europe and beyond. Continual learner that fully embraces agentic engineering practises. Extensive experience within diverse R&D environments such as quantum instrumentation, zero-knowledge cryptography, blockchain financial infrastructure and climate-science computing. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Track record of building a culture of trust where exceptional teams flourish. Member of the IEEE and the Central Bank Research Association."
+    "summary": "Technology leader and software engineer/architect with 20+ years delivering complex systems across both the private and public sectors in domains such as climatology, quantum instrumentation, cryptography, blockchain, finance & telecoms. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Track record of building a culture of trust where exceptional teams flourish. Member of the Institute of Electrical and Electronics Engineers (IEEE) and the Central Bank Research Association."
   },
   "skills": [
     {
@@ -255,6 +255,5 @@
       "History",
       "Art"
     ]
-  },
-  "summary": "Technology leader and software engineer/architect with 20+ years delivering complex systems across both the private and public sectors in domains such as climatology, quantum instrumentation, cryptography, blockchain, finance & telecoms. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Track record of building a culture of trust where exceptional teams flourish. Member of the Institute of Electrical and Electronics Engineers (IEEE) and the Central Bank Research Association."
+  }
 }
