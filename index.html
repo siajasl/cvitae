@@ -28,8 +28,8 @@
         <link
             rel="preload"
             as="font"
-            type="font/woff"
-            href="fonts/Lato-Regular.woff"
+            type="font/woff2"
+            href="fonts/Lato-Regular.woff2"
             crossorigin
         />
         <link rel="canonical" href="https://markconwaygreenslade.com/" />
@@ -85,6 +85,14 @@
         <meta property="og:locale:alternate" content="zh_CN" />
         <meta property="og:locale:alternate" content="de_DE" />
         <meta name="twitter:card" content="summary" />
+        <meta
+            name="twitter:title"
+            content="Mark A. Conway-Greenslade — Software Consultant & Technology Leader"
+        />
+        <meta
+            name="twitter:description"
+            content="CV of Mark A. Conway-Greenslade: software consultant and technology leader in Zug, Switzerland. Rust, blockchain, cryptography, quantum instrumentation and R&D leadership across Europe."
+        />
         <meta
             name="twitter:image:alt"
             content="Portrait of Mark A. Conway-Greenslade"
@@ -217,28 +225,36 @@
         <style>
             @font-face {
                 font-family: "Lato";
-                src: url("fonts/Lato-Light.woff") format("woff");
+                src:
+                    url("fonts/Lato-Light.woff2") format("woff2"),
+                    url("fonts/Lato-Light.woff") format("woff");
                 font-weight: 300;
                 font-style: normal;
                 font-display: swap;
             }
             @font-face {
                 font-family: "Lato";
-                src: url("fonts/Lato-Regular.woff") format("woff");
+                src:
+                    url("fonts/Lato-Regular.woff2") format("woff2"),
+                    url("fonts/Lato-Regular.woff") format("woff");
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
             }
             @font-face {
                 font-family: "Lato";
-                src: url("fonts/Lato-Bold.woff") format("woff");
+                src:
+                    url("fonts/Lato-Bold.woff2") format("woff2"),
+                    url("fonts/Lato-Bold.woff") format("woff");
                 font-weight: 700;
                 font-style: normal;
                 font-display: swap;
             }
             @font-face {
                 font-family: "Lato";
-                src: url("fonts/Lato-Black.woff") format("woff");
+                src:
+                    url("fonts/Lato-Black.woff2") format("woff2"),
+                    url("fonts/Lato-Black.woff") format("woff");
                 font-weight: 900;
                 font-style: normal;
                 font-display: swap;
@@ -535,6 +551,7 @@
                 gap: 0.2rem;
                 font-size: 0.88rem;
                 color: var(--muted);
+                font-style: normal;
             }
             .contact a {
                 text-decoration: none;
@@ -790,6 +807,7 @@
                 .anim-toggle,
                 .skip-link,
                 [data-cv-download],
+                .contact-icons,
                 footer a.icon {
                     display: none;
                 }
@@ -977,6 +995,13 @@
                         Software Consultant &amp; Technology Leader
                     </p>
                     <address class="contact">
+                        <span class="where">
+                            <span data-i18n="hero.location"
+                                >Zug, Switzerland</span
+                            >
+                            ·
+                            <a href="mailto:siajasl@pm.me">siajasl@pm.me</a>
+                        </span>
                         <span class="contact-icons">
                             <a
                                 class="icon"
@@ -1052,15 +1077,25 @@
                         </span>
                     </address>
                 </div>
-                <img
-                    class="headshot"
-                    src="assets/headshot-web.jpg"
-                    width="480"
-                    height="480"
-                    fetchpriority="high"
-                    data-i18n-alt="hero.alt"
-                    alt="Portrait of Mark A. Conway-Greenslade"
-                />
+                <picture>
+                    <source
+                        srcset="assets/headshot-web.avif"
+                        type="image/avif"
+                    />
+                    <source
+                        srcset="assets/headshot-web.webp"
+                        type="image/webp"
+                    />
+                    <img
+                        class="headshot"
+                        src="assets/headshot-web.jpg"
+                        width="480"
+                        height="480"
+                        fetchpriority="high"
+                        data-i18n-alt="hero.alt"
+                        alt="Portrait of Mark A. Conway-Greenslade"
+                    />
+                </picture>
             </div>
         </div>
 
@@ -1088,9 +1123,9 @@
                     ><p>
                         2025–Present Executive Producer, Hitotoki Collective ·
                         2021–Present Senior Software Consultant, QZabre @ ETH · 2025–2026
-                        Senior Software Consultant, Inversed Tech · 2022–2024
+                        Head of Technical Strategy, Inversed Tech · 2022–2024
                         Head of R&amp;D, Casper Association · 2019–2021 Software
-                        Consultant, Casper Labs · 2018–2019 Software Engineer,
+                        Consultant, Prove AI · 2018–2019 Software Engineer,
                         Trinkler Software · 2009–2022 Software Consultant, IPSL @
                         La Sorbonne · 2008–2013 Software Architect, NTT Data ·
                         earlier roles at British Telecom, DeCare Systems, SnapOn
@@ -1245,7 +1280,8 @@
                     },
                     "hero": {
                         "tagline": "Software Consultant & Technology Leader",
-                        "alt": "Portrait of Mark A. Conway-Greenslade"
+                        "alt": "Portrait of Mark A. Conway-Greenslade",
+                        "location": "Zug, Switzerland"
                     },
                     "meta": {
                         "title": "Mark A. Conway-Greenslade — Software Consultant & Technology Leader | Zug, Switzerland",
@@ -1325,9 +1361,10 @@
                     ],
                     "work": [
                         {
-                            "when": "2025 – Present",
+                            "when": "2025 – Present · concurrent",
                             "role": "Executive Producer",
                             "org": "Hitotoki Collective · Kyoto, Japan",
+                            "url": "https://hitotoki-collective.org",
                             "summary": "Co-founder of an art collective that stages live multi-media performances in Kyoto temples. At the heart of each performance lies an improvised dialogue between a painter-calligrapher and a small ensemble of musicians; each piece may equally be read as an offering to the spirits of place. As producer, coordinating vision, funding, dissemination and wider cultural engagement."
                         },
                         {
@@ -1338,9 +1375,10 @@
                             "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry, supporting the team's growth from 3 to 8 engineers as shipments scaled to many dozens of devices per year. Guided the shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite."
                         },
                         {
-                            "when": "2025 – 2026",
-                            "role": "Senior Software Consultant",
+                            "when": "2025 – 2026 · concurrent",
+                            "role": "Head of Technical Strategy",
                             "org": "Inversed Tech · Madrid, Spain",
+                            "url": "https://www.inversed.tech",
                             "summary": "A hybrid role across an R&D company specialising in cryptography and distributed systems. As Rust engineer, built the genesis protocol and tooling for a biometric identity platform based on secure multi-party computation. As technical product owner, steered customer-facing projects including a regulated privacy-focused stablecoin and a privacy-preserving loyalty programme. As business development lead, represented the company at industry events, shaped strategy and tracked emerging trends."
                         },
                         {
@@ -1351,7 +1389,7 @@
                             "summary": "Led an 11-person R&D team in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup sustaining 4,000 transactions per second and a ZK light client."
                         },
                         {
-                            "when": "2009 – 2022",
+                            "when": "2009 – 2022 · concurrent",
                             "role": "Software Consultant",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
                             "url": "https://www.ipsl.fr",
@@ -1360,7 +1398,8 @@
                         {
                             "when": "2019 – 2021",
                             "role": "Software Consultant",
-                            "org": "Casper Labs AG · Zug, Switzerland",
+                            "org": "Prove AI · Zug, Switzerland",
+                            "url": "https://proveai.com",
                             "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven fuzz-testing platform spanning 100 nodes that surfaced 23 consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
                         },
                         {
@@ -1393,6 +1432,7 @@
                             "when": "2006",
                             "role": "Software Engineer",
                             "org": "SnapOn Diagnostics · Cork, Ireland",
+                            "url": "https://www.snapon.com/EN/US/Diagnostics",
                             "summary": "Migrated C++ systems to .NET 2.0 under an agile process, and built web services sharing real-time automotive diagnostics across a suite of listening applications. Scrum, XP and TDD throughout."
                         },
                         {
@@ -1405,6 +1445,10 @@
                             "when": "1989 – 2001",
                             "role": "Earlier Career",
                             "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — UK",
+                            "links": {
+                                "Securicor Systems": "https://www.g4s.com/",
+                                "Cap Gemini": "https://www.capgemini.com/ch-en/"
+                            },
                             "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini)."
                         }
                     ],
@@ -1451,7 +1495,8 @@
                     },
                     "hero": {
                         "tagline": "Consultant logiciel & leader technologique",
-                        "alt": "Portrait de Mark A. Conway-Greenslade"
+                        "alt": "Portrait de Mark A. Conway-Greenslade",
+                        "location": "Zoug, Suisse"
                     },
                     "meta": {
                         "title": "Mark A. Conway-Greenslade — Consultant logiciel & leader technologique | Zoug, Suisse",
@@ -1531,9 +1576,10 @@
                     ],
                     "work": [
                         {
-                            "when": "2025 – aujourd'hui",
+                            "when": "2025 – aujourd'hui · en parallèle",
                             "role": "Producteur exécutif",
                             "org": "Hitotoki Collective · Kyoto, Japon",
+                            "url": "https://hitotoki-collective.org",
                             "summary": "Cofondateur d'un collectif artistique qui donne des performances multimédias en direct dans des temples de Kyoto. Au cœur de chaque représentation, un dialogue improvisé entre un peintre-calligraphe et un petit ensemble de musiciens ; chaque pièce peut aussi se lire comme une offrande aux esprits du lieu. En tant que producteur, coordination de la vision, du financement, de la diffusion et du rayonnement culturel."
                         },
                         {
@@ -1544,9 +1590,10 @@
                             "summary": "Pilotage du logiciel au sein d'une spin-off de l'ETH qui construit des microscopes nanométriques fondés sur la magnétométrie quantique, avec une équipe passée de 3 à 8 ingénieurs et des livraisons atteignant plusieurs dizaines d'appareils par an. Accompagnement de la transition vers un processus agile léger et structuré ; conception et développement de contrôleurs de dispositifs photoniques et magnétiques ; refonte de l'application de bureau ; promotion de l'adoption de Rust au sein de la plateforme interne QS3. Conseil auprès de l'équipe d'ingénierie comme de la direction."
                         },
                         {
-                            "when": "2025 – 2026",
-                            "role": "Consultant logiciel senior",
+                            "when": "2025 – 2026 · en parallèle",
+                            "role": "Directeur de la stratégie technique",
                             "org": "Inversed Tech · Madrid, Espagne",
+                            "url": "https://www.inversed.tech",
                             "summary": "Rôle hybride au sein d'une société de R&D spécialisée en cryptographie et systèmes distribués. Ingénieur Rust : développement du protocole de genèse et de l'outillage d'une plateforme d'identité biométrique fondée sur le calcul multipartite sécurisé. Product owner technique : pilotage de projets clients, dont un stablecoin réglementé axé sur la confidentialité et un programme de fidélité respectueux de la vie privée. Responsable technique du développement commercial : représentation de l'entreprise lors d'événements, contribution à la stratégie et veille sectorielle."
                         },
                         {
@@ -1557,7 +1604,7 @@
                             "summary": "Direction d'une équipe R&D de 11 personnes dans un environnement blockchain complexe et très exposé. En partenariat avec le directeur de l'ingénierie, intégration des preuves de concept au produit principal ; conception, avec une équipe de macro-économistes, d'une plateforme bancaire centrale fondée sur la blockchain et un standard financier émergent. Programmation Rust soutenue et cryptographie à divulgation nulle de connaissance : livraison d'un rollup ZK soutenant 4 000 transactions par seconde et d'un client léger ZK."
                         },
                         {
-                            "when": "2009 – 2022",
+                            "when": "2009 – 2022 · en parallèle",
                             "role": "Consultant logiciel",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
                             "url": "https://www.ipsl.fr",
@@ -1566,7 +1613,8 @@
                         {
                             "when": "2019 – 2021",
                             "role": "Consultant logiciel",
-                            "org": "Casper Labs AG · Zoug, Suisse",
+                            "org": "Prove AI · Zoug, Suisse",
+                            "url": "https://proveai.com",
                             "summary": "Membre de l'équipe mondiale ayant livré une plateforme blockchain de couche 1 reposant sur un consensus proof-of-stake basé sur un DAG. Conception et implémentation d'une plateforme de fuzz testing orientée événements, déployée sur 100 nœuds, qui a révélé 23 failles de consensus ; simplification des intégrations pour les partenaires externes. Direction de l'équipe services professionnels et mentorat de dirigeants."
                         },
                         {
@@ -1599,6 +1647,7 @@
                             "when": "2006",
                             "role": "Ingénieur logiciel",
                             "org": "SnapOn Diagnostics · Cork, Irlande",
+                            "url": "https://www.snapon.com/EN/US/Diagnostics",
                             "summary": "Migration agile de systèmes C++ vers .NET 2.0 et développement de services web partageant en temps réel les diagnostics automobiles entre plusieurs applications. Scrum, XP et TDD au quotidien."
                         },
                         {
@@ -1611,6 +1660,10 @@
                             "when": "1989 – 2001",
                             "role": "Débuts de carrière",
                             "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — Royaume-Uni",
+                            "links": {
+                                "Securicor Systems": "https://www.g4s.com/",
+                                "Cap Gemini": "https://www.capgemini.com/ch-en/"
+                            },
                             "summary": "Postes d'ingénierie et d'architecture logicielles au Royaume-Uni : systèmes client-serveur n-tiers, frameworks COM en Visual Basic, conception de bases de données et rédaction technique. Points marquants : l'architecture du système d'adjudication des infractions routières du centre de Londres à la tête d'une équipe de douze personnes (Securicor) et la livraison du plus grand projet IBM AS-400 d'Europe (Cap Gemini)."
                         }
                     ],
@@ -1657,7 +1710,8 @@
                     },
                     "hero": {
                         "tagline": "软件顾问 · 技术领导者",
-                        "alt": "Mark A. Conway-Greenslade 肖像照"
+                        "alt": "Mark A. Conway-Greenslade 肖像照",
+                        "location": "瑞士楚格"
                     },
                     "meta": {
                         "title": "Mark A. Conway-Greenslade — 软件顾问与技术领导者 | 瑞士楚格",
@@ -1737,9 +1791,10 @@
                     ],
                     "work": [
                         {
-                            "when": "2025 – 至今",
+                            "when": "2025 – 至今 · 兼任",
                             "role": "执行制作人",
                             "org": "Hitotoki Collective · 日本京都",
+                            "url": "https://hitotoki-collective.org",
                             "summary": "艺术团体联合创始人，该团体在京都寺院举办现场多媒体艺术演出。每场演出的核心，是画家兼书法家与小型乐团之间的即兴对话；每场演出亦可视为献给此地神灵的供奉。作为制作人，统筹愿景、资金、传播与更广泛的文化交流。"
                         },
                         {
@@ -1750,9 +1805,10 @@
                             "summary": "在 ETH 衍生企业推进软件工作，该公司研制基于量子磁力测量的纳米级显微镜；期间团队从 3 人发展到 8 人，设备年出货量增至数十台。推动团队转向轻量而规范的敏捷流程；设计并开发光子与磁性设备控制器；重构桌面应用；推广 Rust 在内部 QS3 平台中的落地。为工程团队与管理层提供咨询。"
                         },
                         {
-                            "when": "2025 – 2026",
-                            "role": "高级软件顾问",
+                            "when": "2025 – 2026 · 兼任",
+                            "role": "技术战略负责人",
                             "org": "Inversed Tech · 西班牙马德里",
+                            "url": "https://www.inversed.tech",
                             "summary": "在一家专注密码学与分布式系统的研发公司承担跨职能角色。作为 Rust 工程师，为基于安全多方计算的生物识别身份平台开发创世协议与配套工具；作为技术产品负责人，主导面向客户的项目，包括受监管的隐私稳定币与注重隐私的客户忠诚度计划；作为商务拓展技术负责人，代表公司出席行业活动、参与制定战略并跟踪行业趋势。"
                         },
                         {
@@ -1763,7 +1819,7 @@
                             "summary": "在复杂且备受关注的区块链环境中领导 11 人研发团队。与工程负责人合作，将研发概念验证融入核心产品；与宏观经济学家团队共同设计基于新兴金融标准的区块链核心银行平台。全程深度参与 Rust 开发，运用零知识密码学交付每秒 4000 笔交易的 ZK rollup 与 ZK 轻客户端。"
                         },
                         {
-                            "when": "2009 – 2022",
+                            "when": "2009 – 2022 · 兼任",
                             "role": "软件顾问",
                             "org": "皮埃尔-西蒙·拉普拉斯研究所 @ 索邦大学 · 法国巴黎",
                             "url": "https://www.ipsl.fr",
@@ -1772,7 +1828,8 @@
                         {
                             "when": "2019 – 2021",
                             "role": "软件顾问",
-                            "org": "Casper Labs AG · 瑞士楚格",
+                            "org": "Prove AI · 瑞士楚格",
+                            "url": "https://proveai.com",
                             "summary": "作为全球团队成员，交付基于 DAG 权益证明共识的 Layer 1 区块链平台。设计并实现覆盖 100 个节点的事件驱动模糊测试平台，发现 23 个共识缺陷，并简化外部合作伙伴的平台集成。同时带领专业服务团队并指导高管。"
                         },
                         {
@@ -1805,6 +1862,7 @@
                             "when": "2006",
                             "role": "软件工程师",
                             "org": "SnapOn Diagnostics · 爱尔兰科克",
+                            "url": "https://www.snapon.com/EN/US/Diagnostics",
                             "summary": "以敏捷方式将 C++ 系统迁移至 .NET 2.0，并构建 Web 服务在多个应用间实时共享汽车诊断数据。全程实践 Scrum、XP 与 TDD。"
                         },
                         {
@@ -1817,6 +1875,10 @@
                             "when": "1989 – 2001",
                             "role": "早期职业生涯",
                             "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · 凯捷 — 英国",
+                            "links": {
+                                "Securicor Systems": "https://www.g4s.com/",
+                                "凯捷": "https://www.capgemini.com/ch-en/"
+                            },
                             "summary": "在英国担任软件工程与架构职位：N 层客户端-服务器系统、Visual Basic COM 框架、数据库设计与技术文档撰写。亮点包括带领十二人团队设计伦敦市中心交通违章裁决系统（Securicor），以及交付欧洲最大的 IBM AS-400 项目（凯捷）。"
                         }
                     ],
@@ -1863,7 +1925,8 @@
                     },
                     "hero": {
                         "tagline": "Software-Berater & Technologieführer",
-                        "alt": "Porträt von Mark A. Conway-Greenslade"
+                        "alt": "Porträt von Mark A. Conway-Greenslade",
+                        "location": "Zug, Schweiz"
                     },
                     "meta": {
                         "title": "Mark A. Conway-Greenslade — Software-Berater & Technologieführer | Zug, Schweiz",
@@ -1943,9 +2006,10 @@
                     ],
                     "work": [
                         {
-                            "when": "2025 – heute",
+                            "when": "2025 – heute · parallel",
                             "role": "Executive Producer",
                             "org": "Hitotoki Collective · Kyoto, Japan",
+                            "url": "https://hitotoki-collective.org",
                             "summary": "Mitgründer eines Kunstkollektivs, das Live-Multimedia-Performances in Kyotoer Tempeln aufführt. Im Zentrum jeder Aufführung steht ein improvisierter Dialog zwischen einem Maler und Kalligrafen und einem kleinen Musikerensemble; jede Aufführung lässt sich zugleich als Gabe an die Geister des Ortes verstehen. Als Produzent Koordination von Vision, Finanzierung, Verbreitung und weiterem kulturellem Engagement."
                         },
                         {
@@ -1956,9 +2020,10 @@
                             "summary": "Vorantreiben der Softwareentwicklung bei einem ETH-Spin-off, das nanoskalige Mikroskope auf Basis der Quantenmagnetometrie baut — mit einem von 3 auf 8 Ingenieure gewachsenen Team und Lieferungen von inzwischen mehreren Dutzend Geräten pro Jahr. Begleitete den Übergang des Teams zu einem schlanken, strukturierten agilen Prozess; entwarf und entwickelte Controller für photonische und magnetische Geräte; gestaltete die Desktop-Anwendung neu; und förderte die Einführung von Rust in der internen QS3-Plattform. Beratung sowohl des Engineering-Teams als auch der Geschäftsleitung."
                         },
                         {
-                            "when": "2025 – 2026",
-                            "role": "Senior Software-Berater",
+                            "when": "2025 – 2026 · parallel",
+                            "role": "Leiter Technische Strategie",
                             "org": "Inversed Tech · Madrid, Spanien",
+                            "url": "https://www.inversed.tech",
                             "summary": "Eine hybride Rolle in einem F&E-Unternehmen mit Spezialisierung auf Kryptografie und verteilte Systeme. Als Rust-Ingenieur entwickelte das Genesis-Protokoll und die Werkzeuge für eine biometrische Identitätsplattform auf Basis sicherer Mehrparteienberechnung. Als technischer Product Owner steuerte kundenorientierte Projekte, darunter einen regulierten, datenschutzorientierten Stablecoin und ein datenschutzfreundliches Treueprogramm. Als Leiter der Geschäftsentwicklung vertrat das Unternehmen auf Branchenveranstaltungen, prägte die Strategie und verfolgte aufkommende Trends."
                         },
                         {
@@ -1969,7 +2034,7 @@
                             "summary": "Leitung eines elfköpfigen F&E-Teams in einem komplexen, hochkarätigen Blockchain-Umfeld. In Partnerschaft mit dem Leiter Engineering wurden Forschungs-Proofs-of-Concept in das Kernprodukt überführt; gemeinsam mit einem Team von Makroökonomen wurde eine blockchainbasierte Kernbankenplattform rund um einen aufkommenden Finanzstandard entworfen. Durchgängig praktische Rust-Arbeit unter Anwendung von Zero-Knowledge-Kryptografie zur Lieferung eines ZK-Rollups mit 4.000 Transaktionen pro Sekunde und eines ZK-Light-Clients."
                         },
                         {
-                            "when": "2009 – 2022",
+                            "when": "2009 – 2022 · parallel",
                             "role": "Software-Berater",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, Frankreich",
                             "url": "https://www.ipsl.fr",
@@ -1978,7 +2043,8 @@
                         {
                             "when": "2019 – 2021",
                             "role": "Software-Berater",
-                            "org": "Casper Labs AG · Zug, Schweiz",
+                            "org": "Prove AI · Zug, Schweiz",
+                            "url": "https://proveai.com",
                             "summary": "Mitglied des globalen Teams, das eine Layer-1-Blockchain-Plattform auf Basis eines DAG-gestützten Proof-of-Stake-Konsenses lieferte. Entwarf und implementierte eine ereignisgesteuerte Fuzz-Testing-Plattform über 100 Knoten, die 23 Konsensfehler aufdeckte, und vereinfachte die Plattformintegration für externe Partner. Leitete zudem das Professional-Services-Team und betreute Führungskräfte."
                         },
                         {
@@ -2011,6 +2077,7 @@
                             "when": "2006",
                             "role": "Softwareingenieur",
                             "org": "SnapOn Diagnostics · Cork, Irland",
+                            "url": "https://www.snapon.com/EN/US/Diagnostics",
                             "summary": "Migrierte C++-Systeme im agilen Prozess auf .NET 2.0 und entwickelte Webdienste, die Echtzeit-Fahrzeugdiagnosedaten über mehrere Anwendungen hinweg teilen. Durchgängig Scrum, XP und TDD."
                         },
                         {
@@ -2023,6 +2090,10 @@
                             "when": "1989 – 2001",
                             "role": "Frühere Laufbahn",
                             "org": "Securicor Systems · SSRADU · 3S Electronic Publishing · Customer Interface · Cap Gemini — Vereinigtes Königreich",
+                            "links": {
+                                "Securicor Systems": "https://www.g4s.com/",
+                                "Cap Gemini": "https://www.capgemini.com/ch-en/"
+                            },
                             "summary": "Software-Engineering- und Architekturrollen im gesamten Vereinigten Königreich: n-Tier-Client-Server-Systeme, COM-Frameworks in Visual Basic, Datenbankdesign und technische Dokumentation. Höhepunkte sind die Architektur des Systems zur Ahndung von Verkehrsverstößen im Zentrum Londons an der Spitze eines zwölfköpfigen Teams (Securicor) sowie die Lieferung des größten IBM-AS/400-Projekts Europas (Cap Gemini)."
                         }
                     ],
@@ -2151,13 +2222,45 @@
                         li.appendChild(el("span", "when", w.when));
                         li.appendChild(el("h3", "role", w.role));
                         var org = el("div", "org");
-                        if (w.url) {
+                        var orgLink = function (text, href) {
                             var a = document.createElement("a");
-                            a.href = w.url;
+                            a.href = href;
                             a.target = "_blank";
                             a.rel = "noopener";
-                            a.textContent = w.org;
-                            org.appendChild(a);
+                            a.textContent = text;
+                            return a;
+                        };
+                        if (w.url) {
+                            org.appendChild(orgLink(w.org, w.url));
+                        } else if (w.links) {
+                            // Link individual employer names inside a
+                            // combined org string.
+                            var rest = w.org;
+                            while (rest) {
+                                var key = null;
+                                var at = -1;
+                                Object.keys(w.links).forEach(function (k) {
+                                    var i = rest.indexOf(k);
+                                    if (i > -1 && (at === -1 || i < at)) {
+                                        at = i;
+                                        key = k;
+                                    }
+                                });
+                                if (!key) {
+                                    org.appendChild(
+                                        document.createTextNode(rest),
+                                    );
+                                    break;
+                                }
+                                if (at > 0)
+                                    org.appendChild(
+                                        document.createTextNode(
+                                            rest.slice(0, at),
+                                        ),
+                                    );
+                                org.appendChild(orgLink(key, w.links[key]));
+                                rest = rest.slice(at + key.length);
+                            }
                         } else {
                             org.textContent = w.org;
                         }
@@ -2209,6 +2312,11 @@
                     setMeta('meta[property="og:title"]', d.meta.title);
                     setMeta(
                         'meta[property="og:description"]',
+                        d.meta.description,
+                    );
+                    setMeta('meta[name="twitter:title"]', d.meta.title);
+                    setMeta(
+                        'meta[name="twitter:description"]',
                         d.meta.description,
                     );
                     setMeta(

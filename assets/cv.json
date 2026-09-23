@@ -100,7 +100,9 @@
       "location": "Kyoto, Japan",
       "startDate": "2025",
       "endDate": "Present",
-      "summary": "Co-founder of an art collective that stages live multi-media performances in Kyoto temples. At the heart of each performance lies an improvised dialogue between a painter-calligrapher and a small ensemble of musicians; each piece may equally be read as an offering to the spirits of place. As producer, coordinating vision, funding, dissemination and wider cultural engagement."
+      "summary": "Co-founder of an art collective that stages live multi-media performances in Kyoto temples. At the heart of each performance lies an improvised dialogue between a painter-calligrapher and a small ensemble of musicians; each piece may equally be read as an offering to the spirits of place. As producer, coordinating vision, funding, dissemination and wider cultural engagement.",
+      "concurrent": true,
+      "url": "https://hitotoki-collective.org"
     },
     {
       "position": "Senior Software Consultant",
@@ -112,12 +114,14 @@
       "url": "https://qzabre.com"
     },
     {
-      "position": "Senior Software Consultant",
+      "position": "Head of Technical Strategy",
       "company": "Inversed Tech",
       "location": "Madrid, Spain",
       "startDate": "2025",
       "endDate": "2026",
-      "summary": "A hybrid role across an R&D company specialising in cryptography and distributed systems. As Rust engineer, built the genesis protocol and tooling for a biometric identity platform based on secure multi-party computation. As technical product owner, steered customer-facing projects including a regulated privacy-focused stablecoin and a privacy-preserving loyalty programme. As business development lead, represented the company at industry events, shaped strategy and tracked emerging trends."
+      "summary": "A hybrid role across an R&D company specialising in cryptography and distributed systems. As Rust engineer, built the genesis protocol and tooling for a biometric identity platform based on secure multi-party computation. As technical product owner, steered customer-facing projects including a regulated privacy-focused stablecoin and a privacy-preserving loyalty programme. As business development lead, represented the company at industry events, shaped strategy and tracked emerging trends.",
+      "concurrent": true,
+      "url": "https://www.inversed.tech"
     },
     {
       "position": "Head of R&D",
@@ -135,15 +139,17 @@
       "startDate": "2009",
       "endDate": "2022",
       "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project serving 35 institutes and over 1,000 users, and a driver of process change across the institute.",
-      "url": "https://www.ipsl.fr"
+      "url": "https://www.ipsl.fr",
+      "concurrent": true
     },
     {
       "position": "Software Consultant",
-      "company": "Casper Labs AG",
+      "company": "Prove AI",
       "location": "Zug, Switzerland",
       "startDate": "2019",
       "endDate": "2021",
-      "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven fuzz-testing platform spanning 100 nodes that surfaced 23 consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
+      "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven fuzz-testing platform spanning 100 nodes that surfaced 23 consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives.",
+      "url": "https://proveai.com"
     },
     {
       "position": "Software Architect",
@@ -185,7 +191,8 @@
       "location": "Cork, Ireland",
       "startDate": "2006",
       "endDate": "2006",
-      "summary": "Migrated C++ systems to .NET 2.0 under an agile process, and built web services sharing real-time automotive diagnostics across a suite of listening applications. Scrum, XP and TDD throughout."
+      "summary": "Migrated C++ systems to .NET 2.0 under an agile process, and built web services sharing real-time automotive diagnostics across a suite of listening applications. Scrum, XP and TDD throughout.",
+      "url": "https://www.snapon.com/EN/US/Diagnostics"
     },
     {
       "position": "Software Engineer",
@@ -201,7 +208,11 @@
       "location": "UK",
       "startDate": "1989",
       "endDate": "2001",
-      "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini)."
+      "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini).",
+      "links": {
+        "Securicor Systems": "https://www.g4s.com/",
+        "Cap Gemini": "https://www.capgemini.com/ch-en/"
+      }
     }
   ],
   "education": [
