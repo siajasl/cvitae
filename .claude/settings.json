@@ -1,0 +1,13 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(git submodule status *)",
+            "Bash(npm run check:fast)",
+            "Bash(npm run format:check)",
+            "Bash(npm run lint)",
+            "Bash(npm run typecheck)",
+            "Bash(npm run check)",
+            "mcp__ccd_pr__get_status"
+        ]
+    }
+}
