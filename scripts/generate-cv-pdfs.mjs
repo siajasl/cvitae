@@ -35,6 +35,28 @@ const PROFILE_LABEL = {
     de: "Profil",
 };
 
+/* ---------- keep freshness dates current ------------------------------- */
+// Content edits flow through this script, so bump the JSON-LD dateModified
+// and the sitemap lastmod here rather than by hand.
+const TODAY = new Date().toISOString().slice(0, 10);
+for (const [file, re, sub] of [
+    [
+        "index.html",
+        /"dateModified": "\d{4}-\d{2}-\d{2}"/,
+        `"dateModified": "${TODAY}"`,
+    ],
+    [
+        "sitemap.xml",
+        /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/,
+        `<lastmod>${TODAY}</lastmod>`,
+    ],
+]) {
+    const p = join(ROOT, file);
+    const src = readFileSync(p, "utf8");
+    const next = src.replace(re, sub);
+    if (next !== src) writeFileSync(p, next);
+}
+
 /* ---------- load data + assets ---------------------------------------- */
 const html = readFileSync(join(ROOT, "index.html"), "utf8");
 const i18n = JSON.parse(
