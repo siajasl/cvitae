@@ -13,7 +13,7 @@
         />
         <meta name="author" content="Mark A. Conway-Greenslade" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#0b0f17" />
+        <meta name="theme-color" content="#f7f9fc" />
         <!-- Identicon favicon: a pixel-mosaic derived from the headshot.
              Regenerate with: node scripts/generate-identicon.mjs -->
         <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -167,6 +167,16 @@
                 }
             }
         </script>
+        <script>
+            // Apply the saved theme before first paint. Light is the default.
+            try {
+                if (localStorage.getItem("cv-theme") === "dark")
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        "dark",
+                    );
+            } catch (e) {}
+        </script>
         <style>
             @font-face {
                 font-family: "Lato";
@@ -197,6 +207,36 @@
                 font-display: swap;
             }
             :root {
+                color-scheme: light;
+                --bg: #f7f9fc;
+                --bg-2: #eef2f8;
+                --panel: #ffffff;
+                --line: #d9e1ec;
+                --line-strong: #8ca1bd;
+                --text: #24303f;
+                --muted: #55657d;
+                --heading: #0d1524;
+                --accent: #0a7d4b;
+                --accent-2: #6d28d9;
+                --on-accent: #f4fff9;
+                --header-bg: rgba(247, 249, 252, 0.88);
+                --hero-glow-1: rgba(10, 125, 75, 0.08);
+                --hero-glow-2: rgba(109, 40, 217, 0.07);
+                --toggle-bg: rgba(255, 255, 255, 0.72);
+                --chip-bg: rgba(10, 125, 75, 0.07);
+                --headshot-ring: rgba(10, 125, 75, 0.1);
+                --headshot-shadow: rgba(13, 21, 36, 0.25);
+                --dot-glow: rgba(10, 125, 75, 0.45);
+                --qubit-rgb: 10, 125, 75;
+                --mono:
+                    ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
+                    Menlo, Consolas, monospace;
+                --sans:
+                    "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
+                    "Noto Sans", "Noto Sans SC", sans-serif;
+            }
+            :root[data-theme="dark"] {
+                color-scheme: dark;
                 --bg: #0b0f17;
                 --bg-2: #0f1522;
                 --panel: #121a2b;
@@ -204,14 +244,19 @@
                 --line-strong: #4d6388;
                 --text: #dce3ec;
                 --muted: #93a1b5;
+                --heading: #ffffff;
                 --accent: #7ef0a8;
                 --accent-2: #b48cff;
-                --mono:
-                    ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
-                    Menlo, Consolas, monospace;
-                --sans:
-                    "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
-                    "Noto Sans", "Noto Sans SC", sans-serif;
+                --on-accent: #04221b;
+                --header-bg: rgba(11, 15, 23, 0.88);
+                --hero-glow-1: rgba(126, 240, 168, 0.07);
+                --hero-glow-2: rgba(180, 140, 255, 0.08);
+                --toggle-bg: rgba(8, 11, 18, 0.72);
+                --chip-bg: rgba(126, 240, 168, 0.06);
+                --headshot-ring: rgba(126, 240, 168, 0.07);
+                --headshot-shadow: rgba(0, 0, 0, 0.5);
+                --dot-glow: rgba(126, 240, 168, 0.55);
+                --qubit-rgb: 126, 240, 168;
             }
             * {
                 box-sizing: border-box;
@@ -245,7 +290,7 @@
                 left: -9999px;
                 top: 0;
                 background: var(--accent);
-                color: #04221b;
+                color: var(--on-accent);
                 padding: 0.6rem 1rem;
                 font-weight: 700;
                 z-index: 100;
@@ -268,7 +313,7 @@
                 position: sticky;
                 top: 0;
                 z-index: 50;
-                background: rgba(11, 15, 23, 0.88);
+                background: var(--header-bg);
                 backdrop-filter: blur(8px);
                 border-bottom: 1px solid var(--line);
             }
@@ -328,6 +373,32 @@
             .lang {
                 display: flex;
                 align-items: center;
+                gap: 0.5rem;
+            }
+            .theme-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                background: transparent;
+                color: var(--muted);
+                border: 1px solid var(--line-strong);
+                border-radius: 0.35rem;
+                cursor: pointer;
+            }
+            .theme-toggle:hover {
+                color: var(--text);
+                border-color: var(--accent);
+            }
+            .theme-toggle .icon-sun {
+                display: none;
+            }
+            :root[data-theme="dark"] .theme-toggle .icon-sun {
+                display: block;
+            }
+            :root[data-theme="dark"] .theme-toggle .icon-moon {
+                display: none;
             }
             .lang select,
             .nav-select {
@@ -375,12 +446,12 @@
                 background:
                     radial-gradient(
                         60rem 30rem at 80% -10%,
-                        rgba(126, 240, 168, 0.07),
+                        var(--hero-glow-1),
                         transparent
                     ),
                     radial-gradient(
                         50rem 28rem at 10% 110%,
-                        rgba(180, 140, 255, 0.08),
+                        var(--hero-glow-2),
                         transparent
                     ),
                     var(--bg-2);
@@ -413,7 +484,7 @@
                 font-weight: 900;
                 line-height: 1.15;
                 margin: 0.4rem 0 0.2rem;
-                color: #fff;
+                color: var(--heading);
             }
             .tagline {
                 color: var(--accent);
@@ -443,7 +514,7 @@
                 height: 2.75rem;
                 border-radius: 50%;
                 border: 1px solid var(--line-strong);
-                background: rgba(8, 11, 18, 0.72);
+                background: var(--toggle-bg);
                 color: var(--accent);
                 font-size: 1rem;
                 cursor: pointer;
@@ -470,8 +541,8 @@
                 object-fit: cover;
                 border: 2px solid var(--accent);
                 box-shadow:
-                    0 0 0 8px rgba(126, 240, 168, 0.07),
-                    0 20px 50px rgba(0, 0, 0, 0.5);
+                    0 0 0 8px var(--headshot-ring),
+                    0 20px 50px var(--headshot-shadow);
             }
             @media (max-width: 46rem) {
                 .headshot {
@@ -493,7 +564,7 @@
             h2 {
                 font-family: var(--mono);
                 font-size: 1.15rem;
-                color: #fff;
+                color: var(--heading);
                 display: flex;
                 align-items: center;
                 gap: 0.6rem;
@@ -545,7 +616,7 @@
                 font-family: var(--mono);
                 font-size: 0.74rem;
                 color: var(--text);
-                background: rgba(126, 240, 168, 0.06);
+                background: var(--chip-bg);
                 border: 1px solid var(--line);
                 border-radius: 99px;
                 padding: 0.14rem 0.6rem;
@@ -579,7 +650,7 @@
                 border-radius: 50%;
                 background: var(--bg);
                 border: 2px solid var(--accent);
-                box-shadow: 0 0 10px rgba(126, 240, 168, 0.55);
+                box-shadow: 0 0 10px var(--dot-glow);
             }
             .when {
                 font-family: var(--mono);
@@ -588,7 +659,7 @@
             }
             h3.role {
                 font-size: 1.06rem;
-                color: #fff;
+                color: var(--heading);
                 margin: 0.15rem 0 0.1rem;
             }
             .org {
@@ -631,7 +702,7 @@
             }
             .cards h3 {
                 font-size: 0.98rem;
-                color: #fff;
+                color: var(--heading);
                 margin: 0.15rem 0;
             }
             .cards p {
@@ -826,6 +897,37 @@
                     </select>
                 </nav>
                 <div class="lang">
+                    <button
+                        type="button"
+                        id="theme-toggle"
+                        class="theme-toggle"
+                        aria-label="Switch to dark mode"
+                    >
+                        <svg
+                            class="icon-moon"
+                            viewBox="0 0 16 16"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278Z"
+                            />
+                        </svg>
+                        <svg
+                            class="icon-sun"
+                            viewBox="0 0 16 16"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                            />
+                        </svg>
+                    </button>
                     <label
                         for="lang-select"
                         class="visually-hidden"
@@ -1119,7 +1221,9 @@
                         "cv": "Download CV (PDF)",
                         "cvshort": "Download CV",
                         "pause": "Pause background animation",
-                        "play": "Play background animation"
+                        "play": "Play background animation",
+                        "themedark": "Switch to dark mode",
+                        "themelight": "Switch to light mode"
                     },
                     "nav": {
                         "overview": "Overview",
@@ -1331,7 +1435,9 @@
                         "cv": "Télécharger le CV (PDF)",
                         "cvshort": "Télécharger le CV",
                         "pause": "Suspendre l'animation d'arrière-plan",
-                        "play": "Reprendre l'animation d'arrière-plan"
+                        "play": "Reprendre l'animation d'arrière-plan",
+                        "themedark": "Passer en mode sombre",
+                        "themelight": "Passer en mode clair"
                     },
                     "nav": {
                         "overview": "Aperçu",
@@ -1546,7 +1652,9 @@
                         "cv": "下载简历（PDF）",
                         "cvshort": "下载简历",
                         "pause": "暂停背景动画",
-                        "play": "播放背景动画"
+                        "play": "播放背景动画",
+                        "themedark": "切换到深色模式",
+                        "themelight": "切换到浅色模式"
                     },
                     "nav": {
                         "overview": "概述",
@@ -1758,7 +1866,9 @@
                         "cv": "Lebenslauf herunterladen (PDF)",
                         "cvshort": "Lebenslauf herunterladen",
                         "pause": "Hintergrundanimation pausieren",
-                        "play": "Hintergrundanimation abspielen"
+                        "play": "Hintergrundanimation abspielen",
+                        "themedark": "Zum dunklen Modus wechseln",
+                        "themelight": "Zum hellen Modus wechseln"
                     },
                     "nav": {
                         "overview": "Überblick",
@@ -1985,6 +2095,59 @@
                     );
                     t.textContent = animRunning ? "⏸" : "▶";
                 }
+                var themeToggleEl = document.getElementById("theme-toggle");
+                var qubitRGB =
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue("--qubit-rgb")
+                        .trim() || "10, 125, 75";
+                function currentTheme() {
+                    return document.documentElement.getAttribute(
+                        "data-theme",
+                    ) === "dark"
+                        ? "dark"
+                        : "light";
+                }
+                function updateThemeToggle() {
+                    if (!themeToggleEl) return;
+                    var label =
+                        I18N[currentLang].ui[
+                            currentTheme() === "dark"
+                                ? "themelight"
+                                : "themedark"
+                        ];
+                    themeToggleEl.setAttribute("aria-label", label);
+                    themeToggleEl.setAttribute("title", label);
+                }
+                function setTheme(theme) {
+                    if (theme === "dark")
+                        document.documentElement.setAttribute(
+                            "data-theme",
+                            "dark",
+                        );
+                    else
+                        document.documentElement.removeAttribute("data-theme");
+                    var tc = document.querySelector('meta[name="theme-color"]');
+                    if (tc)
+                        tc.setAttribute(
+                            "content",
+                            theme === "dark" ? "#0b0f17" : "#f7f9fc",
+                        );
+                    try {
+                        localStorage.setItem("cv-theme", theme);
+                    } catch (e) {}
+                    qubitRGB =
+                        getComputedStyle(document.documentElement)
+                            .getPropertyValue("--qubit-rgb")
+                            .trim() || qubitRGB;
+                    updateThemeToggle();
+                }
+                if (themeToggleEl) {
+                    themeToggleEl.addEventListener("click", function () {
+                        setTheme(
+                            currentTheme() === "dark" ? "light" : "dark",
+                        );
+                    });
+                }
 
                 function el(tag, cls, text) {
                     var e = document.createElement(tag);
@@ -2137,6 +2300,7 @@
                         });
                     currentLang = lang;
                     updateAnimToggle();
+                    updateThemeToggle();
                     try {
                         localStorage.setItem("cv-lang", lang);
                     } catch (e) {}
@@ -2215,7 +2379,9 @@
                                     dist = Math.hypot(dx, dy);
                                 if (dist < 130) {
                                     ctx.strokeStyle =
-                                        "rgba(126,240,168," +
+                                        "rgba(" +
+                                        qubitRGB +
+                                        "," +
                                         0.1 * (1 - dist / 130) +
                                         ")";
                                     ctx.beginPath();
@@ -2226,7 +2392,8 @@
                             }
                         }
                         ps.forEach(function (p) {
-                            ctx.fillStyle = "rgba(126,240,168,.45)";
+                            ctx.fillStyle =
+                                "rgba(" + qubitRGB + ",.45)";
                             ctx.beginPath();
                             ctx.arc(p.x * W, p.y * H, 1.5, 0, 7);
                             ctx.fill();
