@@ -114,12 +114,7 @@ function buildHTML(lang) {
         )
         .join("");
 
-    const details = d.other
-        .map(
-            (r) =>
-                `<div class="detail"><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`,
-        )
-        .join("");
+    const details = `<p class="lead">${esc(d.other)}</p>`;
 
     const mailHref =
         `mailto:${CONTACT.email}?subject=` +

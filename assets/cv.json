@@ -217,7 +217,9 @@
     }
   ],
   "other": {
+    "summary": "A UK citizen with Swiss residency, settled in Zug, married with two children. Life and work across Europe have left their linguistic mark: fluent English and French, advanced Italian and serviceable German. Travel has stretched further still — Japan, China, India, the Middle East, and North and Central America. Away from the keyboard: tennis, cricket, rugby, swimming and cycling; singing, writing, history and art.",
     "residency": "UK citizen with Swiss Residency Permit",
+    "family": "Married with two children",
     "languages": [
       {
         "language": "English",

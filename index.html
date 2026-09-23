@@ -746,30 +746,6 @@
                 color: var(--muted);
                 font-size: 0.88rem;
             }
-            dl.other {
-                display: grid;
-                grid-template-columns: max-content 1fr;
-                gap: 0.5rem 1.4rem;
-                max-width: 46rem;
-            }
-            dl.other dt {
-                font-family: var(--mono);
-                color: var(--accent);
-                font-size: 0.85rem;
-                padding-top: 0.1rem;
-            }
-            dl.other dd {
-                color: var(--text);
-                font-size: 0.93rem;
-            }
-            @media (max-width: 34rem) {
-                dl.other {
-                    grid-template-columns: 1fr;
-                }
-                dl.other dd {
-                    margin-bottom: 0.4rem;
-                }
-            }
             footer {
                 border-top: 1px solid var(--line);
                 padding: 1.6rem 1.25rem;
@@ -828,8 +804,7 @@
                 h2,
                 h3.role,
                 .skills h3,
-                .cards h3,
-                dl.other dt {
+                .cards h3 {
                     color: #111;
                 }
                 .tagline,
@@ -842,7 +817,6 @@
                 .org,
                 .timeline p,
                 .cards p,
-                dl.other dd,
                 .lead {
                     color: #222;
                 }
@@ -1152,15 +1126,17 @@
 
             <section id="other" aria-labelledby="h-other">
                 <h2 id="h-other" data-i18n="nav.other">Other</h2>
-                <dl class="other" id="other-list"></dl>
+                <p class="lead" id="other-list"></p>
                 <noscript
                     ><p>
-                        Residency: UK citizen with Swiss Residency Permit ·
-                        Languages: English (fluent), French (fluent), Italian
-                        (advanced), German (average) · Travel: Japan, China,
-                        Europe, India, Middle East, North &amp; Central America ·
-                        Interests: Tennis, Cricket, Rugby, Swimming, Cycling,
-                        Singing, Writing, History, Art
+                        A UK citizen with Swiss residency, settled in Zug,
+                        married with two children. Life and work across Europe
+                        have left their linguistic mark: fluent English and
+                        French, advanced Italian and serviceable German. Travel
+                        has stretched further still — Japan, China, India, the
+                        Middle East, and North and Central America. Away from
+                        the keyboard: tennis, cricket, rugby, swimming and
+                        cycling; singing, writing, history and art.
                     </p></noscript
                 >
             </section>
@@ -1442,21 +1418,7 @@
                             "where": "University of Leeds, UK"
                         }
                     ],
-                    "other": [
-                        ["Residency", "UK citizen with Swiss Residency Permit"],
-                        [
-                            "Languages",
-                            "English (fluent). French (fluent). Italian (advanced). German (average)"
-                        ],
-                        [
-                            "Travel",
-                            "Japan. China. Europe. India. Middle East. North & Central America"
-                        ],
-                        [
-                            "Interests",
-                            "Tennis. Cricket. Rugby. Swimming. Cycling. Singing. Writing. History. Art"
-                        ]
-                    ]
+                    "other": "A UK citizen with Swiss residency, settled in Zug, married with two children. Life and work across Europe have left their linguistic mark: fluent English and French, advanced Italian and serviceable German. Travel has stretched further still — Japan, China, India, the Middle East, and North and Central America. Away from the keyboard: tennis, cricket, rugby, swimming and cycling; singing, writing, history and art."
                 },
                 "fr": {
                     "ui": {
@@ -1656,24 +1618,7 @@
                             "where": "Université de Leeds, Royaume-Uni"
                         }
                     ],
-                    "other": [
-                        [
-                            "Résidence",
-                            "Citoyen britannique titulaire d'un permis de séjour suisse"
-                        ],
-                        [
-                            "Langues",
-                            "Anglais (courant). Français (courant). Italien (avancé). Allemand (moyen)"
-                        ],
-                        [
-                            "Voyages",
-                            "Japon. Chine. Europe. Inde. Moyen-Orient. Amérique du Nord et centrale"
-                        ],
-                        [
-                            "Centres d'intérêt",
-                            "Tennis. Cricket. Rugby. Natation. Cyclisme. Chant. Écriture. Histoire. Art"
-                        ]
-                    ]
+                    "other": "Citoyen britannique au bénéfice d'un permis de séjour suisse, établi à Zoug, marié et père de deux enfants. Une vie menée à travers l'Europe a laissé son empreinte linguistique : anglais et français courants, italien avancé, allemand fonctionnel. Les voyages ont porté plus loin encore — Japon, Chine, Inde, Moyen-Orient, Amérique du Nord et centrale. Loin du clavier : tennis, cricket, rugby, natation et cyclisme, mais aussi chant, écriture, histoire et art."
                 },
                 "zh": {
                     "ui": {
@@ -1873,21 +1818,7 @@
                             "where": "英国利兹大学"
                         }
                     ],
-                    "other": [
-                        ["居留身份", "英国公民，持瑞士居留许可"],
-                        [
-                            "语言能力",
-                            "英语（流利）。法语（流利）。意大利语（高级）。德语（中等）"
-                        ],
-                        [
-                            "旅行经历",
-                            "日本。中国。欧洲。印度。中东。北美及中美洲"
-                        ],
-                        [
-                            "兴趣爱好",
-                            "网球。板球。橄榄球。游泳。骑行。歌唱。写作。历史。艺术"
-                        ]
-                    ]
+                    "other": "英国公民，持瑞士居留许可，定居楚格，已婚，育有两个孩子。多年旅居欧洲工作与生活，留下了语言的印记：英语与法语流利，意大利语娴熟，德语可作日常交流。足迹更远至日本、中国、印度、中东以及北美与中美洲。工作之余，热衷网球、板球、橄榄球、游泳与骑行，亦醉心歌唱、写作、历史与艺术。"
                 },
                 "de": {
                     "ui": {
@@ -2087,24 +2018,7 @@
                             "where": "University of Leeds, Vereinigtes Königreich"
                         }
                     ],
-                    "other": [
-                        [
-                            "Aufenthalt",
-                            "Britischer Staatsbürger mit Schweizer Aufenthaltsbewilligung"
-                        ],
-                        [
-                            "Sprachen",
-                            "Englisch (fließend). Französisch (fließend). Italienisch (fortgeschritten). Deutsch (mittel)"
-                        ],
-                        [
-                            "Reisen",
-                            "Japan. China. Europa. Indien. Naher Osten. Nord- und Mittelamerika"
-                        ],
-                        [
-                            "Interessen",
-                            "Tennis. Cricket. Rugby. Schwimmen. Radfahren. Singen. Schreiben. Geschichte. Kunst"
-                        ]
-                    ]
+                    "other": "Britischer Staatsbürger mit Schweizer Aufenthaltsbewilligung, wohnhaft in Zug, verheiratet und Vater zweier Kinder. Leben und Arbeit quer durch Europa haben sprachliche Spuren hinterlassen: fließendes Englisch und Französisch, fortgeschrittenes Italienisch und solides Alltagsdeutsch. Reisen führten weiter hinaus — nach Japan, China und Indien, in den Nahen Osten sowie nach Nord- und Mittelamerika. Abseits der Tastatur: Tennis, Cricket, Rugby, Schwimmen und Radfahren; dazu Gesang, Schreiben, Geschichte und Kunst."
                 }
             }
         </script>
@@ -2239,12 +2153,8 @@
                     });
                 }
                 function renderOther(d) {
-                    var dl = document.getElementById("other-list");
-                    dl.textContent = "";
-                    d.other.forEach(function (row) {
-                        dl.appendChild(el("dt", null, row[0]));
-                        dl.appendChild(el("dd", null, row[1]));
-                    });
+                    document.getElementById("other-list").textContent =
+                        d.other;
                 }
                 function get(obj, path) {
                     return path.split(".").reduce(function (o, k) {
