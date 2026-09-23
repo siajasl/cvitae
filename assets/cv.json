@@ -100,7 +100,7 @@
       "location": "Zurich, Switzerland",
       "startDate": "2021",
       "endDate": "Present",
-      "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite.",
+      "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry, supporting the team's growth from 3 to 8 engineers as shipments scaled to many dozens of devices per year. Guided the shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite.",
       "url": "https://qzabre.com"
     },
     {
@@ -117,7 +117,7 @@
       "location": "Zug, Switzerland",
       "startDate": "2022",
       "endDate": "2024",
-      "summary": "Led R&D in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup and a ZK light client.",
+      "summary": "Led an 11-person R&D team in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup sustaining 4,000 transactions per second and a ZK light client.",
       "url": "https://casper.network"
     },
     {
@@ -126,7 +126,7 @@
       "location": "Paris, France",
       "startDate": "2009",
       "endDate": "2022",
-      "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project, and a driver of process change across the institute.",
+      "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project serving 35 institutes and over 1,000 users, and a driver of process change across the institute.",
       "url": "https://www.ipsl.fr"
     },
     {
@@ -135,7 +135,7 @@
       "location": "Zug, Switzerland",
       "startDate": "2019",
       "endDate": "2021",
-      "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven, scalable fuzz-testing platform for surfacing consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
+      "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven fuzz-testing platform spanning 100 nodes that surfaced 23 consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
     },
     {
       "position": "Software Architect",

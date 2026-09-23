@@ -1,0 +1,23 @@
+# Mark A. Conway-Greenslade
+
+> Technology leader and software engineer/architect with 20+ years delivering complex systems across both the private and public sectors in domains such as climatology, quantum instrumentation, cryptography, blockchain, finance & telecoms. Member of the Institute of Electrical and Electronics Engineers (IEEE) and the Central Bank Research Association. Based in Zug, Switzerland.
+
+This site is a single-page CV available in English, French, German and Chinese. Append `?lang=en|fr|de|zh` to select a language. Machine-readable profile data is embedded in the page as JSON-LD (schema.org ProfilePage).
+
+## CV
+
+- [CV website](https://markconwaygreenslade.com/): single-page CV with full experience, skills, education
+- [CV PDF (English)](https://markconwaygreenslade.com/assets/Mark-Conway-Greenslade-CV-en.pdf)
+- [CV PDF (French)](https://markconwaygreenslade.com/assets/Mark-Conway-Greenslade-CV-fr.pdf)
+- [CV PDF (German)](https://markconwaygreenslade.com/assets/Mark-Conway-Greenslade-CV-de.pdf)
+- [CV PDF (Chinese)](https://markconwaygreenslade.com/assets/Mark-Conway-Greenslade-CV-zh.pdf)
+
+## Profiles
+
+- [GitHub](https://github.com/siajasl)
+- [LinkedIn](https://www.linkedin.com/in/mark-conway-greenslade/)
+
+## Contact
+
+- Email: siajasl@pm.me
+- Location: Zug, Switzerland

@@ -66,7 +66,7 @@
         />
         <meta
             property="og:description"
-            content="Polyglot technologist: Rust, blockchain, cryptography, quantum instrumentation. 25+ years delivering complex systems across Europe."
+            content="CV of Mark A. Conway-Greenslade: software consultant and technology leader in Zug, Switzerland. Rust, blockchain, cryptography, quantum instrumentation and R&D leadership across Europe."
         />
         <meta property="og:url" content="https://markconwaygreenslade.com/" />
         <meta
@@ -94,7 +94,7 @@
             {
                 "@context": "https://schema.org",
                 "@type": "ProfilePage",
-                "dateModified": "2026-06-11",
+                "dateModified": "2026-09-23",
                 "inLanguage": ["en", "fr", "zh", "de"],
                 "mainEntity": {
                     "@type": "Person",
@@ -102,7 +102,24 @@
                     "givenName": "Mark",
                     "familyName": "Conway-Greenslade",
                     "jobTitle": "Software Consultant & Technology Leader",
-                    "description": "Technology leader and software engineer/architect with 20+ years delivering complex systems across both the private and public sectors in domains such as climatology, quantum instrumentation, cryptography, blockchain, finance & telecoms. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Track record of building a culture of trust where exceptional teams flourish. Member of the Institute of Electrical and Electronics Engineers (IEEE) and the Central Bank Research Association.",
+                    "description": [
+                        {
+                            "@language": "en",
+                            "@value": "Technology leader and software engineer/architect with 20+ years delivering complex systems across both the private and public sectors in domains such as climatology, quantum instrumentation, cryptography, blockchain, finance & telecoms. At home setting technical strategy, advising c-suite executives and shaping the processes that let engineering organisations scale. Track record of building a culture of trust where exceptional teams flourish. Member of the Institute of Electrical and Electronics Engineers (IEEE) and the Central Bank Research Association."
+                        },
+                        {
+                            "@language": "fr",
+                            "@value": "Leader technologique et ingénieur/architecte logiciel fort de plus de 20 ans d'expérience dans la livraison de systèmes complexes pour les secteurs privé et public, dans des domaines tels que la climatologie, l'instrumentation quantique, la cryptographie, la blockchain, la finance et les télécoms. À l'aise pour définir la stratégie technique, conseiller les directions générales et façonner les processus qui permettent aux organisations d'ingénierie de passer à l'échelle. Fort d'un parcours de construction d'une culture de confiance où les équipes d'exception s'épanouissent. Membre de l'Institute of Electrical and Electronics Engineers (IEEE) et de la Central Bank Research Association."
+                        },
+                        {
+                            "@language": "zh-CN",
+                            "@value": "技术领导者与软件工程师/架构师，拥有逾 20 年为公共与私营部门交付复杂系统的经验，涉及气候学、量子仪器、密码学、区块链、金融与电信等领域。擅长制定技术战略、为高管层提供咨询，并建立让工程组织规模化发展的流程体系。拥有营造信任文化、让卓越团队蓬勃发展的过往业绩。电气电子工程师学会（IEEE）与中央银行研究协会（CBRA）成员。"
+                        },
+                        {
+                            "@language": "de",
+                            "@value": "Technologieführer und Softwareingenieur/-architekt mit über 20 Jahren Erfahrung in der Umsetzung komplexer Systeme für den privaten und öffentlichen Sektor, in Bereichen wie Klimatologie, Quanteninstrumentierung, Kryptografie, Blockchain, Finanzwesen und Telekommunikation. Versiert darin, technische Strategien zu definieren, Führungskräfte der C-Ebene zu beraten und die Prozesse zu gestalten, die Engineering-Organisationen das Skalieren ermöglichen. Mit nachweislicher Erfahrung im Aufbau einer Kultur des Vertrauens, in der außergewöhnliche Teams aufblühen. Mitglied des Institute of Electrical and Electronics Engineers (IEEE) und der Central Bank Research Association."
+                        }
+                    ],
                     "hasOccupation": {
                         "@type": "Occupation",
                         "name": "Software Consultant & Technology Leader",
@@ -143,6 +160,11 @@
                     "hasCredential": [
                         {
                             "@type": "EducationalOccupationalCredential",
+                            "name": "Claude Certified Architect Foundation (in progress)",
+                            "dateCreated": "2026"
+                        },
+                        {
+                            "@type": "EducationalOccupationalCredential",
                             "name": "Microsoft Certified Software Architect",
                             "dateCreated": "2008"
                         },
@@ -168,14 +190,29 @@
             }
         </script>
         <script>
-            // Apply the saved theme before first paint. Light is the default.
-            try {
-                if (localStorage.getItem("cv-theme") === "dark")
+            // Apply the saved theme before first paint. A stored choice wins;
+            // otherwise follow the OS preference. Light is the fallback.
+            (function () {
+                var stored = null;
+                try {
+                    stored = localStorage.getItem("cv-theme");
+                } catch (e) {}
+                if (
+                    stored === "dark" ||
+                    (!stored &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches)
+                ) {
                     document.documentElement.setAttribute(
                         "data-theme",
                         "dark",
                     );
-            } catch (e) {}
+                    var tc = document.querySelector(
+                        'meta[name="theme-color"]',
+                    );
+                    if (tc) tc.setAttribute("content", "#0b0f17");
+                }
+            })();
         </script>
         <style>
             @font-face {
@@ -1075,7 +1112,7 @@
                 <ol class="timeline" id="work-list"></ol>
                 <noscript
                     ><p>
-                        2021–2026 Senior Software Consultant, QZabre @ ETH · 2025–2026
+                        2021–Present Senior Software Consultant, QZabre @ ETH · 2025–2026
                         Senior Software Consultant, Inversed Tech · 2022–2024
                         Head of R&amp;D, Casper Association · 2019–2021 Software
                         Consultant, Casper Labs · 2018–2019 Software Engineer,
@@ -1315,7 +1352,7 @@
                             "role": "Senior Software Consultant",
                             "org": "QZabre @ ETH · Zurich, Switzerland",
                             "url": "https://qzabre.com",
-                            "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry. Guided the team's shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite."
+                            "summary": "Driving software at an ETH spin-off that builds nanoscale microscopes based on quantum magnetometry, supporting the team's growth from 3 to 8 engineers as shipments scaled to many dozens of devices per year. Guided the shift to a lightweight, structured agile process; designed and built controllers for photonic and magnetic devices; redesigned the desktop application; and championed the adoption of Rust across the in-house QS3 platform. Advising both the engineering team and the executive suite."
                         },
                         {
                             "when": "2025 – 2026",
@@ -1328,20 +1365,20 @@
                             "role": "Head of R&D",
                             "org": "Casper Association · Zug, Switzerland",
                             "url": "https://casper.network",
-                            "summary": "Led R&D in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup and a ZK light client."
+                            "summary": "Led an 11-person R&D team in a complex, high-visibility blockchain environment. Partnered with the Head of Engineering to fold research proofs of concept into the core product, and worked with a team of macro-economists to design a blockchain-enabled core banking platform built around an emerging financial standard. Hands-on Rust throughout, applying zero-knowledge cryptography to deliver a ZK rollup sustaining 4,000 transactions per second and a ZK light client."
                         },
                         {
                             "when": "2009 – 2022",
                             "role": "Software Consultant",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
                             "url": "https://www.ipsl.fr",
-                            "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project, and a driver of process change across the institute."
+                            "summary": "Worked at the heart of climate research, extending the IPSL's HPC simulation environment with a real-time, event-driven messaging platform powering automated documentation, live monitoring, performance analytics and machine intelligence. Technical lead of es-doc.org, an international climate-model documentation project serving 35 institutes and over 1,000 users, and a driver of process change across the institute."
                         },
                         {
                             "when": "2019 – 2021",
                             "role": "Software Consultant",
                             "org": "Casper Labs AG · Zug, Switzerland",
-                            "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven, scalable fuzz-testing platform for surfacing consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
+                            "summary": "Part of the global team that delivered a layer-1 blockchain platform built on DAG-based proof-of-stake consensus. Designed and implemented an event-driven fuzz-testing platform spanning 100 nodes that surfaced 23 consensus flaws, and streamlined platform integration for external partners. Also led the professional-services team and mentored executives."
                         },
                         {
                             "when": "2018 – 2019",
@@ -1529,7 +1566,7 @@
                             "role": "Consultant logiciel senior",
                             "org": "QZabre @ ETH · Zurich, Suisse",
                             "url": "https://qzabre.com",
-                            "summary": "Pilotage du logiciel au sein d'une spin-off de l'ETH qui construit des microscopes nanométriques fondés sur la magnétométrie quantique. Accompagnement de la transition vers un processus agile léger et structuré ; conception et développement de contrôleurs de dispositifs photoniques et magnétiques ; refonte de l'application de bureau ; promotion de l'adoption de Rust au sein de la plateforme interne QS3. Conseil auprès de l'équipe d'ingénierie comme de la direction."
+                            "summary": "Pilotage du logiciel au sein d'une spin-off de l'ETH qui construit des microscopes nanométriques fondés sur la magnétométrie quantique, avec une équipe passée de 3 à 8 ingénieurs et des livraisons atteignant plusieurs dizaines d'appareils par an. Accompagnement de la transition vers un processus agile léger et structuré ; conception et développement de contrôleurs de dispositifs photoniques et magnétiques ; refonte de l'application de bureau ; promotion de l'adoption de Rust au sein de la plateforme interne QS3. Conseil auprès de l'équipe d'ingénierie comme de la direction."
                         },
                         {
                             "when": "2025 – 2026",
@@ -1542,20 +1579,20 @@
                             "role": "Directeur R&D",
                             "org": "Casper Association · Zoug, Suisse",
                             "url": "https://casper.network",
-                            "summary": "Direction de la R&D dans un environnement blockchain complexe et très exposé. En partenariat avec le directeur de l'ingénierie, intégration des preuves de concept au produit principal ; conception, avec une équipe de macro-économistes, d'une plateforme bancaire centrale fondée sur la blockchain et un standard financier émergent. Programmation Rust soutenue et cryptographie à divulgation nulle de connaissance : livraison d'un rollup ZK et d'un client léger ZK."
+                            "summary": "Direction d'une équipe R&D de 11 personnes dans un environnement blockchain complexe et très exposé. En partenariat avec le directeur de l'ingénierie, intégration des preuves de concept au produit principal ; conception, avec une équipe de macro-économistes, d'une plateforme bancaire centrale fondée sur la blockchain et un standard financier émergent. Programmation Rust soutenue et cryptographie à divulgation nulle de connaissance : livraison d'un rollup ZK soutenant 4 000 transactions par seconde et d'un client léger ZK."
                         },
                         {
                             "when": "2009 – 2022",
                             "role": "Consultant logiciel",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, France",
                             "url": "https://www.ipsl.fr",
-                            "summary": "Au cœur de la recherche climatique : extension de l'environnement de simulation HPC de l'IPSL par une plateforme de messagerie temps réel orientée événements, au service de la documentation automatisée, de la surveillance en direct, de l'analyse de performance et de l'intelligence machine. Responsable technique d'es-doc.org, projet international de documentation des modèles climatiques, et moteur du changement des processus."
+                            "summary": "Au cœur de la recherche climatique : extension de l'environnement de simulation HPC de l'IPSL par une plateforme de messagerie temps réel orientée événements, au service de la documentation automatisée, de la surveillance en direct, de l'analyse de performance et de l'intelligence machine. Responsable technique d'es-doc.org, projet international de documentation des modèles climatiques au service de 35 instituts et de plus de 1 000 utilisateurs, et moteur du changement des processus."
                         },
                         {
                             "when": "2019 – 2021",
                             "role": "Consultant logiciel",
                             "org": "Casper Labs AG · Zoug, Suisse",
-                            "summary": "Membre de l'équipe mondiale ayant livré une plateforme blockchain de couche 1 reposant sur un consensus proof-of-stake basé sur un DAG. Conception et implémentation d'une plateforme de fuzz testing évolutive et orientée événements pour détecter les failles de consensus ; simplification des intégrations pour les partenaires externes. Direction de l'équipe services professionnels et mentorat de dirigeants."
+                            "summary": "Membre de l'équipe mondiale ayant livré une plateforme blockchain de couche 1 reposant sur un consensus proof-of-stake basé sur un DAG. Conception et implémentation d'une plateforme de fuzz testing orientée événements, déployée sur 100 nœuds, qui a révélé 23 failles de consensus ; simplification des intégrations pour les partenaires externes. Direction de l'équipe services professionnels et mentorat de dirigeants."
                         },
                         {
                             "when": "2018 – 2019",
@@ -1746,7 +1783,7 @@
                             "role": "高级软件顾问",
                             "org": "QZabre @ ETH · 瑞士苏黎世",
                             "url": "https://qzabre.com",
-                            "summary": "在 ETH 衍生企业推进软件工作，该公司研制基于量子磁力测量的纳米级显微镜。推动团队转向轻量而规范的敏捷流程；设计并开发光子与磁性设备控制器；重构桌面应用；推广 Rust 在内部 QS3 平台中的落地。为工程团队与管理层提供咨询。"
+                            "summary": "在 ETH 衍生企业推进软件工作，该公司研制基于量子磁力测量的纳米级显微镜；期间团队从 3 人发展到 8 人，设备年出货量增至数十台。推动团队转向轻量而规范的敏捷流程；设计并开发光子与磁性设备控制器；重构桌面应用；推广 Rust 在内部 QS3 平台中的落地。为工程团队与管理层提供咨询。"
                         },
                         {
                             "when": "2025 – 2026",
@@ -1759,20 +1796,20 @@
                             "role": "研发负责人",
                             "org": "Casper Association · 瑞士楚格",
                             "url": "https://casper.network",
-                            "summary": "在复杂且备受关注的区块链环境中领导研发。与工程负责人合作，将研发概念验证融入核心产品；与宏观经济学家团队共同设计基于新兴金融标准的区块链核心银行平台。全程深度参与 Rust 开发，运用零知识密码学交付 ZK rollup 与 ZK 轻客户端。"
+                            "summary": "在复杂且备受关注的区块链环境中领导 11 人研发团队。与工程负责人合作，将研发概念验证融入核心产品；与宏观经济学家团队共同设计基于新兴金融标准的区块链核心银行平台。全程深度参与 Rust 开发，运用零知识密码学交付每秒 4000 笔交易的 ZK rollup 与 ZK 轻客户端。"
                         },
                         {
                             "when": "2009 – 2022",
                             "role": "软件顾问",
                             "org": "皮埃尔-西蒙·拉普拉斯研究所 @ 索邦大学 · 法国巴黎",
                             "url": "https://www.ipsl.fr",
-                            "summary": "投身气候研究核心地带：为 IPSL 的高性能计算模拟环境扩展实时事件驱动消息平台，支撑自动化文档、实时监控、性能分析与机器智能。担任国际气候模型文档项目 es-doc.org 技术负责人，并推动研究所的流程变革。"
+                            "summary": "投身气候研究核心地带：为 IPSL 的高性能计算模拟环境扩展实时事件驱动消息平台，支撑自动化文档、实时监控、性能分析与机器智能。担任国际气候模型文档项目 es-doc.org 技术负责人——该项目服务 35 家研究机构、逾 1000 名用户——并推动研究所的流程变革。"
                         },
                         {
                             "when": "2019 – 2021",
                             "role": "软件顾问",
                             "org": "Casper Labs AG · 瑞士楚格",
-                            "summary": "作为全球团队成员，交付基于 DAG 权益证明共识的 Layer 1 区块链平台。设计并实现事件驱动、可扩展的模糊测试平台以发现共识缺陷，并简化外部合作伙伴的平台集成。同时带领专业服务团队并指导高管。"
+                            "summary": "作为全球团队成员，交付基于 DAG 权益证明共识的 Layer 1 区块链平台。设计并实现覆盖 100 个节点的事件驱动模糊测试平台，发现 23 个共识缺陷，并简化外部合作伙伴的平台集成。同时带领专业服务团队并指导高管。"
                         },
                         {
                             "when": "2018 – 2019",
@@ -1960,7 +1997,7 @@
                             "role": "Senior Software-Berater",
                             "org": "QZabre @ ETH · Zürich, Schweiz",
                             "url": "https://qzabre.com",
-                            "summary": "Vorantreiben der Softwareentwicklung bei einem ETH-Spin-off, das nanoskalige Mikroskope auf Basis der Quantenmagnetometrie baut. Begleitete den Übergang des Teams zu einem schlanken, strukturierten agilen Prozess; entwarf und entwickelte Controller für photonische und magnetische Geräte; gestaltete die Desktop-Anwendung neu; und förderte die Einführung von Rust in der internen QS3-Plattform. Beratung sowohl des Engineering-Teams als auch der Geschäftsleitung."
+                            "summary": "Vorantreiben der Softwareentwicklung bei einem ETH-Spin-off, das nanoskalige Mikroskope auf Basis der Quantenmagnetometrie baut — mit einem von 3 auf 8 Ingenieure gewachsenen Team und Lieferungen von inzwischen mehreren Dutzend Geräten pro Jahr. Begleitete den Übergang des Teams zu einem schlanken, strukturierten agilen Prozess; entwarf und entwickelte Controller für photonische und magnetische Geräte; gestaltete die Desktop-Anwendung neu; und förderte die Einführung von Rust in der internen QS3-Plattform. Beratung sowohl des Engineering-Teams als auch der Geschäftsleitung."
                         },
                         {
                             "when": "2025 – 2026",
@@ -1973,20 +2010,20 @@
                             "role": "Leiter F&E",
                             "org": "Casper Association · Zug, Schweiz",
                             "url": "https://casper.network",
-                            "summary": "Leitung der F&E in einem komplexen, hochkarätigen Blockchain-Umfeld. In Partnerschaft mit dem Leiter Engineering wurden Forschungs-Proofs-of-Concept in das Kernprodukt überführt; gemeinsam mit einem Team von Makroökonomen wurde eine blockchainbasierte Kernbankenplattform rund um einen aufkommenden Finanzstandard entworfen. Durchgängig praktische Rust-Arbeit unter Anwendung von Zero-Knowledge-Kryptografie zur Lieferung eines ZK-Rollups und eines ZK-Light-Clients."
+                            "summary": "Leitung eines elfköpfigen F&E-Teams in einem komplexen, hochkarätigen Blockchain-Umfeld. In Partnerschaft mit dem Leiter Engineering wurden Forschungs-Proofs-of-Concept in das Kernprodukt überführt; gemeinsam mit einem Team von Makroökonomen wurde eine blockchainbasierte Kernbankenplattform rund um einen aufkommenden Finanzstandard entworfen. Durchgängig praktische Rust-Arbeit unter Anwendung von Zero-Knowledge-Kryptografie zur Lieferung eines ZK-Rollups mit 4.000 Transaktionen pro Sekunde und eines ZK-Light-Clients."
                         },
                         {
                             "when": "2009 – 2022",
                             "role": "Software-Berater",
                             "org": "Institut Pierre Simon Laplace @ La Sorbonne · Paris, Frankreich",
                             "url": "https://www.ipsl.fr",
-                            "summary": "Tätig im Herzen der Klimaforschung: Erweiterung der HPC-Simulationsumgebung des IPSL um eine ereignisgesteuerte Echtzeit-Messaging-Plattform für automatisierte Dokumentation, Live-Monitoring, Leistungsanalyse und maschinelle Intelligenz. Technischer Leiter von es-doc.org, einem internationalen Projekt zur Dokumentation von Klimamodellen, und Treiber des Prozesswandels im gesamten Institut."
+                            "summary": "Tätig im Herzen der Klimaforschung: Erweiterung der HPC-Simulationsumgebung des IPSL um eine ereignisgesteuerte Echtzeit-Messaging-Plattform für automatisierte Dokumentation, Live-Monitoring, Leistungsanalyse und maschinelle Intelligenz. Technischer Leiter von es-doc.org, einem internationalen Projekt zur Dokumentation von Klimamodellen mit 35 beteiligten Instituten und über 1.000 Nutzern, und Treiber des Prozesswandels im gesamten Institut."
                         },
                         {
                             "when": "2019 – 2021",
                             "role": "Software-Berater",
                             "org": "Casper Labs AG · Zug, Schweiz",
-                            "summary": "Mitglied des globalen Teams, das eine Layer-1-Blockchain-Plattform auf Basis eines DAG-gestützten Proof-of-Stake-Konsenses lieferte. Entwarf und implementierte eine ereignisgesteuerte, skalierbare Fuzz-Testing-Plattform zum Aufdecken von Konsensfehlern und vereinfachte die Plattformintegration für externe Partner. Leitete zudem das Professional-Services-Team und betreute Führungskräfte."
+                            "summary": "Mitglied des globalen Teams, das eine Layer-1-Blockchain-Plattform auf Basis eines DAG-gestützten Proof-of-Stake-Konsenses lieferte. Entwarf und implementierte eine ereignisgesteuerte Fuzz-Testing-Plattform über 100 Knoten, die 23 Konsensfehler aufdeckte, und vereinfachte die Plattformintegration für externe Partner. Leitete zudem das Professional-Services-Team und betreute Führungskräfte."
                         },
                         {
                             "when": "2018 – 2019",
@@ -2331,6 +2368,24 @@
                     try {
                         initial = localStorage.getItem("cv-lang");
                     } catch (e) {}
+                }
+                if (!initial) {
+                    // First visit: fall back to the browser's preferred
+                    // languages before defaulting to English.
+                    var prefs = navigator.languages || [
+                        navigator.language || "",
+                    ];
+                    for (var pi = 0; pi < prefs.length; pi++) {
+                        var code = String(prefs[pi])
+                            .toLowerCase()
+                            .slice(0, 2);
+                        if (
+                            Object.prototype.hasOwnProperty.call(I18N, code)
+                        ) {
+                            initial = code;
+                            break;
+                        }
+                    }
                 }
                 // hasOwnProperty guards against inherited keys like
                 // "__proto__"/"constructor" sneaking past a truthy check and
