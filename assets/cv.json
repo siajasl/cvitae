@@ -2,7 +2,7 @@
   "basics": {
     "name": "Mark A. Conway-Greenslade",
     "label": "Software Consultant & Technology Leader",
-    "email": "siajasl@pm.me",
+    "email": "quantumcortex@gmail.com",
     "profiles": [
       {
         "network": "GitHub",
@@ -213,6 +213,52 @@
         "Securicor Systems": "https://www.g4s.com/",
         "Cap Gemini": "https://www.capgemini.com/ch-en/"
       }
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kairos ZK Rollup",
+      "url": "https://casper.network",
+      "years": "2022-2024",
+      "description": "Zero-knowledge rollup for the Casper network, sustaining 4,000 transactions per second, delivered alongside a companion ZK light client.",
+      "technologies": [
+        "Scaling",
+        "ZK Proofs",
+        "Blockchain"
+      ]
+    },
+    {
+      "name": "Earth System Documentation",
+      "url": "https://es-doc.org",
+      "years": "2009-2022",
+      "description": "International climate-model documentation platform serving 35 institutes and over 1,000 users; technical lead across architecture and delivery.",
+      "technologies": [
+        "RDF/OWL",
+        "Climatology",
+        "Ontologies"
+      ]
+    },
+    {
+      "name": "QS3 Microscope",
+      "url": "https://qzabre.com",
+      "years": "2021-Present",
+      "description": "QZabre's in-house control platform for quantum-magnetometry microscopes: device controllers, a redesigned desktop application and a Rust-first architecture.",
+      "technologies": [
+        "Quantum",
+        "Microscope",
+        "FPGA"
+      ]
+    },
+    {
+      "name": "Hitotoki Collective",
+      "url": "https://hitotoki-collective.org",
+      "years": "2025-Present",
+      "description": "Live multi-media art performances in Kyoto temples: improvised dialogue between a painter-calligrapher and musicians, produced end to end.",
+      "technologies": [
+        "Production",
+        "Art",
+        "Performance"
+      ]
     }
   ],
   "education": [

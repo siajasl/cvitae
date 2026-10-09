@@ -30,7 +30,7 @@ const QA = process.argv.includes("--qa");
 const NAME = "Mark A. Conway-Greenslade";
 const SITE = "markconwaygreenslade.com";
 const CONTACT = {
-    email: "siajasl@pm.me",
+    email: "quantumcortex@gmail.com",
     github: "github.com/siajasl",
     linkedin: "linkedin.com/in/mark-conway-greenslade",
 };
@@ -157,6 +157,17 @@ function buildHTML(lang) {
         )
         .join("");
 
+    const projects = d.projects
+        .map(
+            (p) => `<li>
+        <span class="y">${esc(p.year)}</span>
+        <h4>${p.url ? `<a href="${p.url}">${esc(p.name)}</a>` : esc(p.name)}</h4>
+        <p>${esc(p.desc)}</p>
+        <p class="tech">${p.tech.map(esc).join(" · ")}</p>
+      </li>`,
+        )
+        .join("");
+
     const edu = d.edu
         .map(
             (e) => `<li>
@@ -248,6 +259,7 @@ section{margin-bottom:14px}
 .edu .y{font-family:var(--mono);font-size:8.2px;color:var(--accent2)}
 .edu h4{font-size:9.6px;color:var(--ink);font-weight:700;margin:1px 0}
 .edu p{font-size:8.6px;color:var(--muted)}
+.edu .tech{font-family:var(--mono);font-size:7.8px;color:var(--accent);margin-top:1px}
 
 /* other — key/value rows */
 .detail{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:baseline;
@@ -278,6 +290,10 @@ section{margin-bottom:14px}
     <section>
       <div class="h">${esc(d.nav.experience)}</div>
       <ol class="timeline">${work}</ol>
+    </section>
+    <section>
+      <div class="h">${esc(d.nav.projectsTitle)}</div>
+      <ul class="edu">${projects}</ul>
     </section>
     <section>
       <div class="h">${esc(d.nav.skills)}</div>

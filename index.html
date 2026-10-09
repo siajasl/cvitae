@@ -102,8 +102,34 @@
             {
                 "@context": "https://schema.org",
                 "@type": "ProfilePage",
-                "dateModified": "2026-09-23",
+                "dateModified": "2026-10-09",
                 "inLanguage": ["en", "fr", "zh", "de"],
+                "hasPart": [
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Kairos ZK Rollup",
+                        "url": "https://casper.network",
+                        "description": "Zero-knowledge rollup for the Casper network, sustaining 4,000 transactions per second, delivered alongside a companion ZK light client."
+                    },
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Earth System Documentation",
+                        "url": "https://es-doc.org",
+                        "description": "International climate-model documentation platform serving 35 institutes and over 1,000 users."
+                    },
+                    {
+                        "@type": "CreativeWork",
+                        "name": "QS3 Microscope",
+                        "url": "https://qzabre.com",
+                        "description": "QZabre's in-house control platform for quantum-magnetometry microscopes, built Rust-first."
+                    },
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Hitotoki Collective",
+                        "url": "https://hitotoki-collective.org",
+                        "description": "Live multi-media art performances in Kyoto temples, produced end to end."
+                    }
+                ],
                 "mainEntity": {
                     "@type": "Person",
                     "name": "Mark A. Conway-Greenslade",
@@ -140,7 +166,7 @@
                             "occupationalCategory": "27-2012.00 Producers and Directors"
                         }
                     ],
-                    "email": "mailto:siajasl@pm.me",
+                    "email": "mailto:quantumcortex@gmail.com",
                     "image": "https://markconwaygreenslade.com/assets/headshot-web.jpg",
                     "url": "https://markconwaygreenslade.com/",
                     "sameAs": [
@@ -780,6 +806,18 @@
                 color: var(--muted);
                 font-size: 0.88rem;
             }
+            .cards h3 a {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px dotted var(--line-strong);
+            }
+            .cards h3 a:hover {
+                color: var(--accent);
+                border-bottom-color: var(--accent);
+            }
+            .cards .chips {
+                margin-top: 0.5rem;
+            }
             footer {
                 border-top: 1px solid var(--line);
                 padding: 1.6rem 1.25rem;
@@ -904,6 +942,11 @@
                             >
                         </li>
                         <li>
+                            <a href="#projects" data-i18n="nav.projects"
+                                >Projects</a
+                            >
+                        </li>
+                        <li>
                             <a href="#skills" data-i18n="nav.skills">Skills</a>
                         </li>
                         <li>
@@ -930,6 +973,9 @@
                         </option>
                         <option value="#experience" data-i18n="nav.experience">
                             Experience
+                        </option>
+                        <option value="#projects" data-i18n="nav.projects">
+                            Projects
                         </option>
                         <option value="#skills" data-i18n="nav.skills">
                             Skills
@@ -1017,12 +1063,12 @@
                                 >Zug, Switzerland</span
                             >
                             ·
-                            <a href="mailto:siajasl@pm.me">siajasl@pm.me</a>
+                            <a href="mailto:quantumcortex@gmail.com">quantumcortex@gmail.com</a>
                         </span>
                         <span class="contact-icons">
                             <a
                                 class="icon"
-                                href="mailto:siajasl@pm.me"
+                                href="mailto:quantumcortex@gmail.com"
                                 data-i18n-aria="ui.email"
                                 aria-label="Email"
                                 ><svg
@@ -1151,6 +1197,18 @@
                 >
             </section>
 
+            <section id="projects" aria-labelledby="h-projects">
+                <h2 id="h-projects" data-i18n="nav.projectsTitle">Selected Projects</h2>
+                <ul class="cards" id="projects-list"></ul>
+                <noscript
+                    ><p>
+                        Kairos ZK Rollup (casper.network) · Earth System
+                        Documentation (es-doc.org) · QS3 Microscope (qzabre.com) ·
+                        Hitotoki Collective (hitotoki-collective.org)
+                    </p></noscript
+                >
+            </section>
+
             <section id="skills" aria-labelledby="h-skills">
                 <h2 id="h-skills" data-i18n="nav.skills">Skills</h2>
                 <ul class="skills" id="skills-list"></ul>
@@ -1207,7 +1265,7 @@
             <p>
                 <a
                     class="icon"
-                    href="mailto:siajasl@pm.me"
+                    href="mailto:quantumcortex@gmail.com"
                     data-i18n-aria="ui.email"
                     aria-label="Email"
                     ><svg
@@ -1300,6 +1358,8 @@
                         "overview": "Overview",
                         "skills": "Skills",
                         "experience": "Experience",
+                        "projects": "Projects",
+                        "projectsTitle": "Selected Projects",
                         "education": "Education",
                         "other": "Other"
                     },
@@ -1477,6 +1537,36 @@
                             "summary": "Software engineering and architecture roles across the UK, spanning n-tier client-server systems, COM frameworks in Visual Basic, database design and technical authorship. Highlights include architecting central London's traffic-violation adjudication system at the head of a twelve-person team (Securicor) and delivering Europe's largest IBM AS-400 project (Cap Gemini)."
                         }
                     ],
+                    "projects": [
+                        {
+                            "year": "2022 – 2024",
+                            "name": "Kairos ZK Rollup",
+                            "url": "https://casper.network",
+                            "desc": "Zero-knowledge rollup for the Casper network, sustaining 4,000 transactions per second, delivered alongside a companion ZK light client.",
+                            "tech": ["Scaling", "ZK Proofs", "Blockchain"]
+                        },
+                        {
+                            "year": "2009 – 2022",
+                            "name": "Earth System Documentation",
+                            "url": "https://es-doc.org",
+                            "desc": "International climate-model documentation platform serving 35 institutes and over 1,000 users; technical lead across architecture and delivery.",
+                            "tech": ["RDF/OWL", "Climatology", "Ontologies"]
+                        },
+                        {
+                            "year": "2021 – Present",
+                            "name": "QS3 Microscope",
+                            "url": "https://qzabre.com",
+                            "desc": "QZabre's in-house control platform for quantum-magnetometry microscopes: device controllers, a redesigned desktop application and a Rust-first architecture.",
+                            "tech": ["Quantum", "Microscope", "FPGA"]
+                        },
+                        {
+                            "year": "2025 – Present",
+                            "name": "Hitotoki Collective",
+                            "url": "https://hitotoki-collective.org",
+                            "desc": "Live multi-media art performances in Kyoto temples: improvised dialogue between a painter-calligrapher and musicians, produced end to end.",
+                            "tech": ["Production", "Art", "Performance"]
+                        }
+                    ],
                     "edu": [
                         {
                             "year": "2026",
@@ -1515,6 +1605,8 @@
                         "overview": "Aperçu",
                         "skills": "Compétences",
                         "experience": "Expérience",
+                        "projects": "Projets",
+                        "projectsTitle": "Projets choisis",
                         "education": "Formation",
                         "other": "Divers"
                     },
@@ -1692,6 +1784,36 @@
                             "summary": "Postes d'ingénierie et d'architecture logicielles au Royaume-Uni : systèmes client-serveur n-tiers, frameworks COM en Visual Basic, conception de bases de données et rédaction technique. Points marquants : l'architecture du système d'adjudication des infractions routières du centre de Londres à la tête d'une équipe de douze personnes (Securicor) et la livraison du plus grand projet IBM AS-400 d'Europe (Cap Gemini)."
                         }
                     ],
+                    "projects": [
+                        {
+                            "year": "2022 – 2024",
+                            "name": "Rollup ZK Kairos",
+                            "url": "https://casper.network",
+                            "desc": "Rollup à divulgation nulle de connaissance pour le réseau Casper, soutenant 4 000 transactions par seconde, livré avec un client léger ZK.",
+                            "tech": ["Scalabilité", "Preuves ZK", "Blockchain"]
+                        },
+                        {
+                            "year": "2009 – 2022",
+                            "name": "Earth System Documentation",
+                            "url": "https://es-doc.org",
+                            "desc": "Plateforme internationale de documentation des modèles climatiques au service de 35 instituts et de plus de 1 000 utilisateurs ; responsable technique de l'architecture et de la livraison.",
+                            "tech": ["RDF/OWL", "Climatologie", "Ontologies"]
+                        },
+                        {
+                            "year": "2021 – aujourd'hui",
+                            "name": "Microscope QS3",
+                            "url": "https://qzabre.com",
+                            "desc": "Plateforme de contrôle interne de QZabre pour les microscopes à magnétométrie quantique : contrôleurs de dispositifs, application de bureau refondue et architecture centrée sur Rust.",
+                            "tech": ["Quantique", "Microscope", "FPGA"]
+                        },
+                        {
+                            "year": "2025 – aujourd'hui",
+                            "name": "Hitotoki Collective",
+                            "url": "https://hitotoki-collective.org",
+                            "desc": "Performances artistiques multimédias en direct dans des temples de Kyoto : dialogue improvisé entre un peintre-calligraphe et des musiciens, produit de bout en bout.",
+                            "tech": ["Production", "Art", "Performance"]
+                        }
+                    ],
                     "edu": [
                         {
                             "year": "2026",
@@ -1730,6 +1852,8 @@
                         "overview": "概述",
                         "skills": "技能",
                         "experience": "工作经历",
+                        "projects": "项目",
+                        "projectsTitle": "精选项目",
                         "education": "教育背景",
                         "other": "其他"
                     },
@@ -1907,6 +2031,36 @@
                             "summary": "在英国担任软件工程与架构职位：N 层客户端-服务器系统、Visual Basic COM 框架、数据库设计与技术文档撰写。亮点包括带领十二人团队设计伦敦市中心交通违章裁决系统（Securicor），以及交付欧洲最大的 IBM AS-400 项目（凯捷）。"
                         }
                     ],
+                    "projects": [
+                        {
+                            "year": "2022 – 2024",
+                            "name": "Kairos ZK Rollup",
+                            "url": "https://casper.network",
+                            "desc": "为 Casper 网络构建的零知识 rollup，可持续处理每秒 4000 笔交易，并配套交付 ZK 轻客户端。",
+                            "tech": ["扩容", "ZK 证明", "区块链"]
+                        },
+                        {
+                            "year": "2009 – 2022",
+                            "name": "Earth System Documentation",
+                            "url": "https://es-doc.org",
+                            "desc": "国际气候模型文档平台，服务 35 家研究机构、逾 1000 名用户；担任架构与交付的技术负责人。",
+                            "tech": ["RDF/OWL", "气候学", "本体"]
+                        },
+                        {
+                            "year": "2021 – 至今",
+                            "name": "QS3 显微镜",
+                            "url": "https://qzabre.com",
+                            "desc": "QZabre 面向量子磁力测量显微镜的内部控制平台：设备控制器、重构的桌面应用与以 Rust 为核心的架构。",
+                            "tech": ["量子", "显微镜", "FPGA"]
+                        },
+                        {
+                            "year": "2025 – 至今",
+                            "name": "Hitotoki Collective",
+                            "url": "https://hitotoki-collective.org",
+                            "desc": "在京都寺院举办的现场多媒体艺术演出：画家兼书法家与乐手的即兴对话，全程制作统筹。",
+                            "tech": ["制作", "艺术", "演出"]
+                        }
+                    ],
                     "edu": [
                         {
                             "year": "2026",
@@ -1945,6 +2099,8 @@
                         "overview": "Überblick",
                         "skills": "Kompetenzen",
                         "experience": "Erfahrung",
+                        "projects": "Projekte",
+                        "projectsTitle": "Ausgewählte Projekte",
                         "education": "Ausbildung",
                         "other": "Sonstiges"
                     },
@@ -2122,6 +2278,36 @@
                             "summary": "Software-Engineering- und Architekturrollen im gesamten Vereinigten Königreich: n-Tier-Client-Server-Systeme, COM-Frameworks in Visual Basic, Datenbankdesign und technische Dokumentation. Höhepunkte sind die Architektur des Systems zur Ahndung von Verkehrsverstößen im Zentrum Londons an der Spitze eines zwölfköpfigen Teams (Securicor) sowie die Lieferung des größten IBM-AS/400-Projekts Europas (Cap Gemini)."
                         }
                     ],
+                    "projects": [
+                        {
+                            "year": "2022 – 2024",
+                            "name": "Kairos ZK-Rollup",
+                            "url": "https://casper.network",
+                            "desc": "Zero-Knowledge-Rollup für das Casper-Netzwerk mit 4.000 Transaktionen pro Sekunde, geliefert samt ZK-Light-Client.",
+                            "tech": ["Skalierung", "ZK-Beweise", "Blockchain"]
+                        },
+                        {
+                            "year": "2009 – 2022",
+                            "name": "Earth System Documentation",
+                            "url": "https://es-doc.org",
+                            "desc": "Internationale Plattform zur Dokumentation von Klimamodellen für 35 Institute und über 1.000 Nutzer; technische Leitung von Architektur und Umsetzung.",
+                            "tech": ["RDF/OWL", "Klimatologie", "Ontologien"]
+                        },
+                        {
+                            "year": "2021 – heute",
+                            "name": "QS3-Mikroskop",
+                            "url": "https://qzabre.com",
+                            "desc": "QZabres hausinterne Steuerplattform für Quantenmagnetometrie-Mikroskope: Gerätecontroller, eine neu gestaltete Desktop-Anwendung und eine Rust-zentrierte Architektur.",
+                            "tech": ["Quantentechnologie", "Mikroskop", "FPGA"]
+                        },
+                        {
+                            "year": "2025 – heute",
+                            "name": "Hitotoki Collective",
+                            "url": "https://hitotoki-collective.org",
+                            "desc": "Live-Multimedia-Kunstperformances in Kyotoer Tempeln: improvisierter Dialog zwischen Maler-Kalligraf und Musikern, von Anfang bis Ende produziert.",
+                            "tech": ["Produktion", "Kunst", "Performance"]
+                        }
+                    ],
                     "edu": [
                         {
                             "year": "2026",
@@ -2294,6 +2480,33 @@
                         ol.appendChild(li);
                     });
                 }
+                function renderProjects(d) {
+                    var ul = document.getElementById("projects-list");
+                    ul.textContent = "";
+                    d.projects.forEach(function (p) {
+                        var li = el("li");
+                        li.appendChild(el("span", "y", p.year));
+                        var h = el("h3");
+                        if (p.url) {
+                            var a = document.createElement("a");
+                            a.href = p.url;
+                            a.target = "_blank";
+                            a.rel = "noopener";
+                            a.textContent = p.name;
+                            h.appendChild(a);
+                        } else {
+                            h.textContent = p.name;
+                        }
+                        li.appendChild(h);
+                        li.appendChild(el("p", null, p.desc));
+                        var chips = el("ul", "chips");
+                        p.tech.forEach(function (t) {
+                            chips.appendChild(el("li", null, t));
+                        });
+                        li.appendChild(chips);
+                        ul.appendChild(li);
+                    });
+                }
                 function renderEdu(d) {
                     var ul = document.getElementById("edu-list");
                     ul.textContent = "";
@@ -2371,6 +2584,7 @@
                         });
                     renderSkills(d);
                     renderWork(d);
+                    renderProjects(d);
                     renderEdu(d);
                     renderOther(d);
                     var langSelect = document.getElementById("lang-select");
@@ -2393,7 +2607,7 @@
                         });
                     // Pre-fill a localised subject line on the email links.
                     var mailHref =
-                        "mailto:siajasl@pm.me?subject=" +
+                        "mailto:quantumcortex@gmail.com?subject=" +
                         encodeURIComponent(d.ui.mailsubject);
                     document
                         .querySelectorAll('a[href^="mailto:"]')
